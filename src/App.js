@@ -13,7 +13,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/aptismech-website">
       <div className="App">
         <Navbar />
         <main>
