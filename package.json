@@ -2,7 +2,7 @@
   "name": "aptismech-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vishvjani.github.io/aptismech-website",
+  "homepage": "https://vishvjani.github.io/aptimech-eng",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
