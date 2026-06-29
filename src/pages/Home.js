@@ -14,7 +14,7 @@ const products = [
     tag: 'Mechanical Series',
     title: 'Heavy-Duty Mechanical Power Press',
     desc: 'Flywheel-driven kinetic energy delivery with zero structural frame deflection. Built for high-volume metal stamping — C-Frame & H-Frame configurations.',
-    image: '/images/Screenshot 2026-06-28 121534.png',
+    image: `${process.env.PUBLIC_URL}/images/Screenshot 2026-06-28 121534.png`,
     specs: ['10T — 400T', 'C/H Frame', 'PLC Control'],
   },
   {
@@ -22,7 +22,7 @@ const products = [
     tag: 'Pneumatic Series',
     title: 'High-Speed Pneumatic Assembly Press',
     desc: 'Compact press running on plant compressed air. Rapid stroke cycles with micro-tolerance alignment — no hydraulics, no complex setup.',
-    image: '/images/Screenshot 2026-06-28 121718.png',
+    image: `${process.env.PUBLIC_URL}/images/Screenshot 2026-06-28 121718.png`,
     specs: ['0.5T — 10T', 'Up to 60 SPM', 'Foot Pedal'],
   },
   {
@@ -30,7 +30,7 @@ const products = [
     tag: 'Hybrid Series',
     title: 'Hydro-Pneumatic Hybrid System',
     desc: 'Pneumatic speed with oil-intensified tonnage. Concentrated pressing force without the noise or bulk of a conventional power pack.',
-    image: '/images/Screenshot 2026-06-28 121815.png',
+    image: `${process.env.PUBLIC_URL}/images/Screenshot 2026-06-28 121815.png`,
     specs: ['1T — 50T', 'Dual-Stroke', 'Energy Efficient'],
   },
 ];
@@ -144,7 +144,7 @@ export default function Home() {
                   <div className="hero-factory-color-grade" />
                   
                   <img
-                    src="/images/hero-factory.jpg"
+                    src={`${process.env.PUBLIC_URL}/images/hero-factory.jpg`}
                     alt="Aptismech Industrial Power Press Facility, Rajkot"
                     className="hero-factory-img"
                   />
@@ -257,7 +257,7 @@ export default function Home() {
             <div className="col-lg-5">
               <div className="about-strip-img">
                 <img
-                  src="/images/Screenshot 2026-06-28 121718.png"
+                  src={`${process.env.PUBLIC_URL}/images/Screenshot 2026-06-28 121718.png`}
                   alt="Aptismech Precision Engineering Facility"
                 />
                 <div className="about-cert-badge">
@@ -270,7 +270,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-lg-7" style={{ paddingLeft: '3rem' }}>
+            <div className="col-lg-7 about-strip-content">
               <span className="eyebrow">About Aptismech</span>
               <h2 className="section-title">Precision Built.<br />Performance Proven.</h2>
               <div className="rule" />

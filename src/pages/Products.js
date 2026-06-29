@@ -10,7 +10,7 @@ const productsData = [
     title: 'Heavy-Duty Mechanical Power Press',
     subtitle: 'C-Frame & H-Frame Configurations',
     category: 'mechanical',
-    image: '/images/Screenshot 2026-06-28 121534.png',
+    image: `${process.env.PUBLIC_URL}/images/Screenshot 2026-06-28 121534.png`,
     badge: 'Bestseller',
     shortDesc: 'Built for intensive, high-volume metal stamping. Flywheel-driven kinetic energy delivery with zero structural frame deflection — consistent accuracy, stroke after stroke.',
     fullDesc: `The Aptismech Mechanical Power Press is engineered for high-volume production stampings where reliability and repeatability are non-negotiable. The flywheel-driven mechanical linkage transfers maximum kinetic energy directly to the tooling bolster plate, eliminating structural deflection even at peak tonnage.
@@ -42,7 +42,7 @@ Available in C-Frame (open-back inclinable) and H-Frame (straight-side) configur
     title: 'High-Speed Pneumatic Assembly Press',
     subtitle: 'Compact Benchtop & Floor-Standing Models',
     category: 'pneumatic',
-    image: '/images/Screenshot 2026-06-28 121718.png',
+    image: `${process.env.PUBLIC_URL}/images/Screenshot 2026-06-28 121718.png`,
     badge: 'Fast Delivery',
     shortDesc: 'Compact press running on plant compressed air. Rapid stroke cycles with precise micro-tolerance alignment — no hydraulics, no complex wiring.',
     fullDesc: `The Aptismech Pneumatic Assembly Press is purpose-built for high-speed assembly and light-duty press-fitting. Powered entirely by plant compressed air, it requires no hydraulic infrastructure — clean, fast, and maintenance-friendly.
@@ -74,7 +74,7 @@ Ergonomic benchtop and floor-standing configurations with foot-pedal operation m
     title: 'Hydro-Pneumatic Hybrid System',
     subtitle: 'Oil Intensifier Units — Energy Efficient Pressing',
     category: 'hydro',
-    image: '/images/Screenshot 2026-06-28 121815.png',
+    image: `${process.env.PUBLIC_URL}/images/Screenshot 2026-06-28 121815.png`,
     badge: 'Premium',
     shortDesc: 'Pneumatic speed meets hydraulic power. Rapid approach stroke followed by concentrated oil-intensified tonnage — without the noise or bulk of a conventional power pack.',
     fullDesc: `The Aptismech Hydro-Pneumatic Hybrid System delivers the best of both worlds — speed of pneumatics and concentrated force of hydraulics, in a self-contained, quiet unit.

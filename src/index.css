@@ -326,3 +326,28 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
   }
 }
+
+/* ── Fix overflow on all screen sizes ── */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scroll on mobile */
+.container-fluid {
+  overflow-x: hidden;
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  /* Keep block elements as-is */
+  p a, li a {
+    display: inline;
+    min-height: auto;
+  }
+}

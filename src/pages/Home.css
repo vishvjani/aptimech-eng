@@ -480,7 +480,19 @@
   }
 }
 
-/* ── PRODUCTS STRIP ── */
+/* About strip content spacing */
+.about-strip-content {
+  padding-left: 3rem;
+}
+@media (max-width: 991px) {
+  .about-strip-content {
+    padding-left: 0;
+  }
+}
+
+/* ================================================================
+   PRODUCTS STRIP
+   ================================================================ */
 .products-strip {
   padding: 90px 0;
   background: var(--off-white);
@@ -1110,5 +1122,178 @@
   font-size: 0.95rem;
   color: rgba(255,255,255,0.55);
   line-height: 1.7;
+}
+
+/* ── PRODUCTS STRIP ── */
+
+/* ================================================================
+   MOBILE RESPONSIVE — Complete fixes
+   ================================================================ */
+
+/* Hero section mobile */
+@media (max-width: 991px) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+  .hero-content {
+    padding: 40px 0 50px;
+    text-align: center;
+  }
+  .hero-label {
+    justify-content: center;
+  }
+  .hero-desc {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta {
+    justify-content: center;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+  .hero-stat:nth-child(2) { border-right: none; }
+  .hero-stat:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.08); }
+}
+
+@media (max-width: 576px) {
+  .hero-heading {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+  .hero-sub-heading {
+    font-size: 1.1rem;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-stat-num {
+    font-size: 1.8rem;
+  }
+  .hero-stat {
+    padding: 1rem 0;
+  }
+}
+
+/* Pillars grid mobile */
+@media (max-width: 991px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .pillar {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 2rem 1.5rem;
+  }
+  .pillar:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Stats bar mobile */
+@media (max-width: 991px) {
+  .stats-bar-inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sbar-item:nth-child(3) { border-right: none; }
+  .sbar-item:nth-child(4),
+  .sbar-item:nth-child(5) {
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .sbar-item:nth-child(5) { border-right: none; }
+}
+
+@media (max-width: 576px) {
+  .stats-bar-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sbar-item { border-right: 1px solid rgba(255,255,255,0.07); }
+  .sbar-item:nth-child(2),
+  .sbar-item:nth-child(4) { border-right: none; }
+  .sbar-item:nth-child(3),
+  .sbar-item:nth-child(4),
+  .sbar-item:nth-child(5) { border-top: 1px solid rgba(255,255,255,0.07); }
+  .sbar-item:nth-child(5) {
+    grid-column: span 2;
+    border-right: none;
+  }
+  .sbar-num { font-size: 2rem; }
+  .sbar-item { padding: 1.5rem 1rem; }
+}
+
+/* Products strip mobile */
+@media (max-width: 768px) {
+  .products-strip,
+  .about-strip,
+  .services-strip,
+  .inquiry-section {
+    padding: 60px 0;
+  }
+  .strip-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .pcard-img { height: 200px; }
+}
+
+@media (max-width: 480px) {
+  .products-strip,
+  .about-strip,
+  .services-strip,
+  .inquiry-section {
+    padding: 50px 0;
+  }
+  .pcard-img { height: 180px; }
+  .pcard-body { padding: 1.2rem; }
+}
+
+/* About strip mobile */
+@media (max-width: 991px) {
+  .about-strip-img img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-strip-img img {
+    height: 240px;
+  }
+}
+
+/* Inquiry section mobile */
+@media (max-width: 991px) {
+  .inquiry-info-block {
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-card {
+    padding: 1.5rem;
+  }
+}
+
+/* CTA banner mobile */
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 60px 0;
+    text-align: center;
+  }
+  .cta-banner .d-flex {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-banner {
+    padding: 50px 0;
+  }
+  .cta-title {
+    font-size: 1.6rem;
+  }
 }
 
