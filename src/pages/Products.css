@@ -226,6 +226,35 @@
 .compare-table tbody tr:hover td { background: rgba(245,166,35,0.04); }
 .compare-table tbody tr:hover td:first-child { background: rgba(245,166,35,0.06); }
 
+/* Modal Back Button — visible on mobile */
+.modal-back-btn {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--navy);
+  padding: 8px 14px;
+  cursor: pointer;
+  margin: 14px 14px 0;
+  transition: background 0.2s ease;
+}
+.modal-back-btn:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+@media (max-width: 768px) {
+  .modal-back-btn {
+    display: inline-flex;
+  }
+}
+
 /* Product Modal */
 .product-modal-backdrop {
   position: fixed; inset: 0;

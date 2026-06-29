@@ -111,6 +111,9 @@ const ProductModal = ({ product, onClose }) => {
     <div className="product-modal-backdrop" onClick={onClose}>
       <div className="product-modal" onClick={e => e.stopPropagation()}>
         <button className="modal-close-btn" onClick={onClose}><FaTimes /></button>
+        <button className="modal-back-btn" onClick={onClose}>
+          ← Back
+        </button>
 
         <div className="row g-0">
           <div className="col-lg-5">

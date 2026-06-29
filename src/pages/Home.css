@@ -9,9 +9,15 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 0;
   overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    padding-top: 70px;
+  }
 }
 
 .hero-texture {
@@ -1132,10 +1138,6 @@
 
 /* Hero section mobile */
 @media (max-width: 991px) {
-  .hero {
-    padding-top: 80px;
-    padding-bottom: 0;
-  }
   .hero-content {
     padding: 40px 0 50px;
     text-align: center;
