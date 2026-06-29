@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0B3C5D" />
+
+    <!-- ══ Security Headers ══ -->
+    <!-- Prevent clickjacking -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <!-- Stop MIME-type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <!-- Force HTTPS for 1 year (in supported browsers via meta) -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://maps.googleapis.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      img-src 'self' data: https:;
+      frame-src https://www.google.com;
+      connect-src 'self';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self' https://wa.me;
+    " />
+    <!-- Referrer policy — don't leak full URLs to third parties -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- Disable browser features not needed -->
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+
+    <!-- SEO Meta -->
+    <title>Aptismech Corporation LLP | Industrial Power Presses &amp; CNC Machining Rajkot</title>
+    <meta name="description" content="High-performance Mechanical Power Presses, Pneumatic Presses, and Hydro-Pneumatic hybrid machinery systems engineered by Aptismech Corporation LLP, Rajkot. Precision CNC job work and certified non-ferrous scrap trading solutions." />
+    <meta name="keywords" content="power press manufacturer rajkot, mechanical power press, pneumatic press, hydro pneumatic press, CNC machining rajkot, non ferrous scrap trading, industrial machinery gujarat, aptismech" />
+    <meta name="author" content="Aptismech Corporation LLP" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aptismech Corporation LLP | Industrial Power Presses Rajkot" />
+    <meta property="og:description" content="Premier manufacturer of Industrial Power Presses and CNC Machined components. Located in Vavdi Industrial Area, Rajkot, Gujarat." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Bootstrap Icons -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Aptismech Corporation LLP",
+      "description": "Industrial Power Press Manufacturer and CNC Machining Service",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shed No. 3, Jasmatnagar, Street No. 4, Plot No. 6, Vavdi Industrial Area",
+        "addressLocality": "Rajkot",
+        "addressRegion": "Gujarat",
+        "postalCode": "360004",
+        "addressCountry": "IN"
+      },
+      "telephone": "+917046500555",
+      "email": "AptisMech.Corporation.llp@gmail.com"
+    }
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

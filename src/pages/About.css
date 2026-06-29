@@ -1,0 +1,202 @@
+/* ================================================================
+   ABOUT PAGE
+   ================================================================ */
+
+/* Info grid */
+.about-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 576px) {
+  .about-info-grid { grid-template-columns: 1fr; }
+}
+
+.about-info-card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--orange);
+  border-radius: var(--r-md);
+  padding: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: box-shadow 0.2s ease;
+}
+.about-info-card:hover { box-shadow: var(--shadow-md); }
+
+.about-info-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.about-info-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
+  display: block;
+  margin-bottom: 3px;
+}
+.about-info-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+}
+
+/* Vision cards */
+.vision-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  height: 100%;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.vision-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+.vision-card-top {
+  padding: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.vision-card-body { padding: 1.5rem; }
+.vision-card-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+.vision-card-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Partner cards */
+.partner-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 2.5rem;
+  text-align: center;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  height: 100%;
+}
+.partner-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+
+.partner-avatar {
+  width: 72px; height: 72px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--orange);
+  margin: 0 auto 1.2rem;
+  border: 3px solid rgba(245,166,35,0.25);
+}
+.partner-name {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 0.3rem;
+}
+.partner-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+.partner-expertise {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.expertise-tag {
+  font-size: 0.68rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  background: var(--gray-100);
+  border: 1px solid var(--border);
+  color: var(--navy);
+  padding: 4px 10px;
+  border-radius: var(--r);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.partner-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.partner-contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  font-size: 0.82rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  background: var(--off-white);
+}
+.partner-contact-btn:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.partner-wa {
+  background: #e8fef0;
+  border-color: #b8f0cb;
+  color: #1a7a3a;
+}
+.partner-wa:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #fff;
+}
+
+/* Location card */
+.location-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-lg);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ── Mobile Responsive ── */
+@media (max-width: 768px) {
+  .partner-card { padding: 1.5rem; }
+  .partner-avatar { width: 60px; height: 60px; font-size: 1.2rem; }
+  .partner-name { font-size: 1.05rem; }
+  .about-info-grid { grid-template-columns: 1fr; }
+  .vision-card-top { padding: 1.5rem; }
+  .vision-card-body { padding: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+  .partner-contacts { gap: 6px; }
+  .partner-contact-btn { font-size: 0.78rem; padding: 8px 12px; }
+  .about-info-card { padding: 1rem; }
+}

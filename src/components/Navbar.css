@@ -1,0 +1,205 @@
+/* ================================================================
+   NAVBAR — German industrial precision style
+   ================================================================ */
+
+/* Top bar */
+.top-bar {
+  background: var(--navy-dark);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 6px 0;
+  font-size: 0.72rem;
+  position: relative;
+  z-index: 10001;
+}
+.top-bar-text {
+  color: rgba(255,255,255,0.45);
+  font-family: 'Inter', sans-serif;
+}
+.top-bar a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+.top-bar a:hover { color: var(--orange); }
+
+/* Main navbar */
+.aptis-navbar {
+  background: rgba(8, 15, 31, 0.65) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  padding: 0 !important;
+  position: fixed !important;
+  top: 33px;
+  width: 100%;
+  z-index: 10000;
+  transition: top 0.3s ease, background 0.3s ease, box-shadow 0.3s ease !important;
+}
+.aptis-navbar.scrolled {
+  top: 0 !important;
+  background: rgba(8,15,31,0.96) !important;
+  border-bottom-color: rgba(245,166,35,0.18) !important;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.45) !important;
+}
+.aptis-navbar .container { padding-top: 12px; padding-bottom: 12px; }
+
+/* Brand */
+.navbar-brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none !important;
+}
+.brand-logo-box {
+  width: 40px;
+  height: 40px;
+  background: var(--orange);
+  border-radius: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--navy-dark);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+.navbar-brand-wrapper:hover .brand-logo-box {
+  transform: scale(1.06);
+}
+.brand-text-main {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #fff !important;
+  line-height: 1;
+  letter-spacing: 1px;
+  display: block;
+}
+.brand-text-sub {
+  font-size: 0.58rem;
+  font-family: 'Inter', sans-serif;
+  color: rgba(245,166,35,0.75);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Nav links */
+.aptis-nav-link {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 0.5rem 0.9rem !important;
+  position: relative;
+  transition: color 0.2s ease !important;
+}
+.aptis-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0.9rem;
+  right: 0.9rem;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.aptis-nav-link:hover,
+.aptis-nav-link.active {
+  color: #fff !important;
+}
+.aptis-nav-link:hover::after,
+.aptis-nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* CTA button in nav */
+.nav-cta-btn {
+  background: var(--orange) !important;
+  color: var(--navy-dark) !important;
+  font-weight: 700 !important;
+  padding: 8px 20px !important;
+  border-radius: var(--r) !important;
+  margin-left: 8px;
+  font-size: 0.76rem !important;
+  transition: background 0.2s ease, transform 0.2s ease !important;
+}
+.nav-cta-btn::after { display: none !important; }
+.nav-cta-btn:hover {
+  background: var(--orange-dark) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Toggler */
+.navbar-toggler {
+  border: 1.5px solid rgba(245,166,35,0.35) !important;
+  padding: 6px 10px;
+  border-radius: var(--r) !important;
+}
+.navbar-toggler:focus { box-shadow: none !important; }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245,166,35,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .top-bar { display: none !important; }
+  .aptis-navbar { top: 0 !important; }
+  .aptis-navbar .navbar-collapse {
+    background: rgba(8,15,31,0.98);
+    border-top: 1px solid rgba(245,166,35,0.12);
+    padding: 0.75rem 1rem 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0 0 var(--r-md) var(--r-md);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  .aptis-nav-link {
+    padding: 0.7rem 0.8rem !important;
+    display: block;
+    border-radius: var(--r);
+    transition: background 0.2s ease, color 0.2s ease !important;
+  }
+  .aptis-nav-link:hover {
+    background: rgba(245,166,35,0.08) !important;
+  }
+  .aptis-nav-link::after { display: none; }
+  .nav-cta-btn {
+    margin: 0.5rem 0 0;
+    display: block;
+    text-align: center;
+    border-radius: var(--r) !important;
+    padding: 12px 20px !important;
+    width: 100%;
+  }
+  .navbar-brand-wrapper { gap: 10px; }
+  .brand-logo-box { width: 36px; height: 36px; font-size: 0.95rem; }
+  .brand-text-main { font-size: 1.05rem; }
+}
+
+@media (max-width: 480px) {
+  .aptis-navbar .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .brand-text-main { font-size: 0.95rem; }
+  .brand-text-sub { font-size: 0.52rem; }
+}
+
+@media (min-width: 992px) {
+  .aptis-navbar { top: 33px; }
+  .aptis-navbar.scrolled { top: 0; }
+}
