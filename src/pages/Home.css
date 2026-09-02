@@ -1,5 +1,5 @@
 /* ================================================================
-   HOME PAGE — Clean Original Corporate Styling (Perfect Alignment)
+   HOME PAGE — Clean Corporate Styling (100% Mobile & Desktop Perfection)
    AptisMech Corporation LLP
    ================================================================ */
 
@@ -819,8 +819,11 @@
     height: 230px;
     max-width: 100%;
   }
+  .hud-bg-grid {
+    inset: 0;
+  }
   .floating-badge {
-    display: none;
+    display: none !important;
   }
   .hud-readout {
     font-size: 0.55rem;
@@ -831,6 +834,20 @@
   }
   .about-strip-visual {
     height: 230px;
+  }
+  .about-cert-badge {
+    padding: 8px 12px;
+    gap: 8px;
+    bottom: 12px; left: 12px; right: 12px;
+  }
+  .about-cert-icon {
+    font-size: 1.3rem;
+  }
+  .about-cert-main {
+    font-size: 0.9rem;
+  }
+  .about-cert-sub {
+    font-size: 0.65rem;
   }
   .products-strip,
   .about-strip,
