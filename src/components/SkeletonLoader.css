@@ -1,0 +1,87 @@
+/* ================================================================
+   SKELETON LOADER — Premium Shimmering Industrial Theme
+   ================================================================ */
+
+.skeleton-pulse {
+  background: linear-gradient(
+    90deg,
+    #e8edf5 0%,
+    #f5f8fc 50%,
+    #e8edf5 100%
+  );
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.5s infinite linear;
+}
+
+@keyframes skeletonShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.product-card-skeleton {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.skeleton-img-wrap {
+  position: relative;
+  height: 240px;
+  background: #e8edf5;
+  overflow: hidden;
+}
+
+.skeleton-img {
+  width: 100%;
+  height: 100%;
+}
+
+.skeleton-badge-pill {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 60px;
+  height: 20px;
+  background: rgba(245, 166, 35, 0.4);
+  border-radius: 4px;
+}
+
+.skeleton-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.skeleton-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+
+.skeleton-spec-box {
+  background: var(--off-white);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-skeleton-container {
+  min-height: 80vh;
+  background: var(--off-white);
+}
+
+.page-skeleton-hero {
+  background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 100%);
+  padding: 140px 0 80px;
+}

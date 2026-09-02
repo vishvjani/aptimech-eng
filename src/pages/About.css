@@ -1,202 +1,482 @@
 /* ================================================================
-   ABOUT PAGE
+   ABOUT US PAGE — Corporate Precision Styling
+   AptisMech Corporation LLP
    ================================================================ */
 
-/* Info grid */
-.about-info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-@media (max-width: 576px) {
-  .about-info-grid { grid-template-columns: 1fr; }
+/* Page Hero */
+.about-hero {
+  background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%);
+  padding: 130px 0 80px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid var(--orange);
 }
 
-.about-info-card {
-  background: var(--off-white);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--orange);
-  border-radius: var(--r-md);
-  padding: 1.2rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  transition: box-shadow 0.2s ease;
-}
-.about-info-card:hover { box-shadow: var(--shadow-md); }
-
-.about-info-icon {
-  font-size: 1.4rem;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.about-info-label {
-  font-size: 0.65rem;
+.about-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 166, 35, 0.12);
+  border: 1px solid rgba(245, 166, 35, 0.35);
+  color: var(--orange-light);
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  padding: 5px 14px;
+  border-radius: var(--r);
+  margin-bottom: 1.2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.dot-pulse {
+  width: 8px; height: 8px;
+  background: var(--orange);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.about-hero-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.about-hero-desc {
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  max-width: 680px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Company Overview */
+.company-overview-section {
+  padding: 85px 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.overview-main-text {
+  margin-bottom: 1.8rem;
+}
+
+.lead-overview-p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--navy-dark);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.sub-overview-p {
+  font-size: 0.92rem;
+  line-height: 1.85;
   color: var(--text-muted);
   font-family: 'Inter', sans-serif;
-  display: block;
-  margin-bottom: 3px;
+  margin: 0;
 }
-.about-info-value {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--navy);
+
+.about-highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
   font-family: 'Inter', sans-serif;
+  color: var(--text);
+}
+
+.highlight-icon {
+  color: var(--orange);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Overview Info Cards */
+.overview-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.overview-info-card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.5rem;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.overview-info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--navy);
+}
+
+.overview-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.overview-card-label {
+  font-size: 0.65rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: block;
+}
+
+.overview-card-val {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 4px 0 2px;
+}
+
+.overview-card-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
   line-height: 1.4;
 }
 
-/* Vision cards */
-.vision-card {
+/* Why Trade & Do Business With Us */
+.why-trade-section {
+  padding: 85px 0;
+  background: var(--off-white);
+  border-bottom: 1px solid var(--border);
+}
+
+.why-card {
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--r-md);
-  overflow: hidden;
+  padding: 2.2rem 2rem;
   height: 100%;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
 }
-.vision-card:hover {
-  box-shadow: var(--shadow-lg);
+
+.why-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(10,57,129,0.12);
+  border-color: var(--navy);
 }
-.vision-card-top {
-  padding: 2rem;
-  border-bottom: 1px solid var(--border);
+
+.why-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
 }
-.vision-card-body { padding: 1.5rem; }
-.vision-card-title {
+
+.why-icon-box {
+  width: 48px; height: 48px;
+  background: rgba(10, 57, 129, 0.08);
+  color: var(--navy);
+  border-radius: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: all 0.25s ease;
+}
+
+.why-card:hover .why-icon-box {
+  background: var(--orange);
+  color: var(--navy-dark);
+}
+
+.why-num {
   font-family: 'Barlow', sans-serif;
-  font-size: 1.05rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: rgba(10, 57, 129, 0.15);
+}
+
+.why-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--navy);
   margin-bottom: 0.6rem;
 }
-.vision-card-text {
-  font-size: 0.85rem;
+
+.why-desc {
+  font-size: 0.88rem;
+  line-height: 1.8;
   color: var(--text-muted);
-  line-height: 1.75;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+/* Vision Statement Banner */
+.vision-banner-section {
+  padding: 80px 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.vision-banner-card {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+  border-radius: var(--r-lg);
+  padding: 3.5rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  border-top: 4px solid var(--orange);
+}
+
+.vision-quote-icon {
+  font-size: 2.5rem;
+  color: var(--orange);
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.vision-badge {
+  display: inline-block;
+  background: rgba(245, 166, 35, 0.15);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  color: var(--orange-light);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 4px 14px;
+  border-radius: var(--r);
+  margin-bottom: 1.5rem;
+}
+
+.vision-quote-text {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.25rem, 2.8vw, 1.8rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  font-style: italic;
+  max-width: 860px;
+  margin: 0 auto 1.8rem;
+}
+
+.vision-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.author-corp {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--orange);
+  letter-spacing: 0.5px;
+}
+
+.author-sub {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
   font-family: 'Inter', sans-serif;
 }
 
-/* Partner cards */
+/* Leadership Section */
+.leadership-section {
+  padding: 85px 0;
+  background: var(--off-white);
+  border-bottom: 1px solid var(--border);
+}
+
 .partner-card {
   background: #fff;
   border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  padding: 2.5rem;
-  text-align: center;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  border-radius: var(--r-md);
+  padding: 2.2rem;
   height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
 }
-.partner-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+
+.partner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--navy);
+}
 
 .partner-avatar {
-  width: 72px; height: 72px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  width: 54px; height: 54px;
+  background: var(--navy);
+  color: var(--orange);
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 900;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--orange);
-  margin: 0 auto 1.2rem;
-  border: 3px solid rgba(245,166,35,0.25);
+  border: 2px solid var(--orange);
+  flex-shrink: 0;
 }
+
 .partner-name {
   font-family: 'Barlow', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--navy);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
+
 .partner-role {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 1.2rem;
-  line-height: 1.5;
-}
-.partner-expertise {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-.expertise-tag {
-  font-size: 0.68rem;
+  font-size: 0.78rem;
+  color: var(--orange-dark);
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  background: var(--gray-100);
+  margin: 0;
+}
+
+.partner-expertise-strip {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 1.2rem 0 1.5rem;
+}
+
+.expertise-tag {
+  font-size: 0.7rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  background: var(--off-white);
   border: 1px solid var(--border);
   color: var(--navy);
   padding: 4px 10px;
   border-radius: var(--r);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
-.partner-contacts {
+
+.partner-contact-links {
   display: flex;
-  flex-direction: column;
   gap: 8px;
+  flex-wrap: wrap;
 }
-.partner-contact-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  padding: 10px 14px;
-  border: 1px solid var(--border);
-  border-radius: var(--r);
-  font-size: 0.82rem;
+
+.partner-c-btn {
+  font-size: 0.75rem;
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  background: var(--off-white);
   color: var(--navy);
   text-decoration: none;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-  background: var(--off-white);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
 }
-.partner-contact-btn:hover {
+
+.partner-c-btn:hover {
   background: var(--navy);
-  border-color: var(--navy);
   color: #fff;
+  border-color: var(--navy);
 }
-.partner-wa {
+
+.partner-wa-btn {
   background: #e8fef0;
   border-color: #b8f0cb;
   color: #1a7a3a;
 }
-.partner-wa:hover {
+
+.partner-wa-btn:hover {
   background: #25D366;
-  border-color: #25D366;
   color: #fff;
+  border-color: #25D366;
 }
 
-/* Location card */
-.location-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--r-lg);
-  padding: 2rem;
+/* Strategic Location */
+.location-section {
+  padding: 85px 0;
+  background: var(--navy);
+  border-top: 4px solid var(--orange);
+}
+
+.location-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.location-desc {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.location-sub-desc {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.location-box-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--r-md);
+  padding: 2.2rem 2rem;
   text-align: center;
 }
 
-/* ── Mobile Responsive ── */
-@media (max-width: 768px) {
-  .partner-card { padding: 1.5rem; }
-  .partner-avatar { width: 60px; height: 60px; font-size: 1.2rem; }
-  .partner-name { font-size: 1.05rem; }
-  .about-info-grid { grid-template-columns: 1fr; }
-  .vision-card-top { padding: 1.5rem; }
-  .vision-card-body { padding: 1.2rem; }
+.location-pin-icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
 }
 
-@media (max-width: 480px) {
-  .partner-contacts { gap: 6px; }
-  .partner-contact-btn { font-size: 0.78rem; padding: 8px 12px; }
-  .about-info-card { padding: 1rem; }
+.location-box-title {
+  color: var(--orange);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.location-box-addr {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .overview-card-grid { grid-template-columns: 1fr; }
+  .vision-banner-card { padding: 2.5rem 1.8rem; }
+}
+
+@media (max-width: 768px) {
+  .about-hero { padding: 110px 0 60px; }
+  .company-overview-section,
+  .why-trade-section,
+  .vision-banner-section,
+  .leadership-section,
+  .location-section { padding: 60px 0; }
+  .partner-card { padding: 1.5rem; }
 }
