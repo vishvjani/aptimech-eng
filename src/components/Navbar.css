@@ -76,8 +76,8 @@
 }
 
 .brand-logo-fallback {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: var(--orange);
   border-radius: var(--r);
   display: flex;
@@ -175,8 +175,8 @@
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: rgba(245,166,35,0.1);
   border: 1.5px solid rgba(245,166,35,0.35);
   border-radius: var(--r);
@@ -238,8 +238,8 @@
   flex-shrink: 0;
 }
 .drawer-close-btn {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--r);

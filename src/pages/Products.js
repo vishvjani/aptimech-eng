@@ -32,6 +32,7 @@ const ProductImage = ({ src, alt, className = '' }) => {
       src={imgSrc}
       alt={alt}
       className={className}
+      loading="lazy"
       onError={handleError}
     />
   );

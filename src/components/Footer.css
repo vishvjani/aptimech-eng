@@ -189,4 +189,22 @@ a.footer-contact-value:hover { color: var(--orange); }
     flex-direction: column;
     text-align: center;
   }
+  /* 11. Mobile WhatsApp button prominence */
+  .wa-float {
+    width: 56px;
+    height: 56px;
+    bottom: 20px;
+    right: 16px;
+    font-size: 1.5rem;
+  }
+}
+
+/* 4. Footer 100% width on small screens */
+@media (max-width: 480px) {
+  .aptis-footer .col-6 {
+    width: 100% !important;
+  }
+  .footer-col-head {
+    font-size: 0.95rem;
+  }
 }
