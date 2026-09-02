@@ -227,7 +227,7 @@
 .product-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.78);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -241,17 +241,17 @@
   background: #fff;
   border-radius: var(--r-lg);
   width: 100%;
-  max-width: 860px;
+  max-width: 880px;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.55);
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
 .modal-header-bar {
-  padding: 1.4rem 1.8rem 1rem;
+  padding: 1.4rem 1.8rem 1.2rem;
   border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
@@ -264,14 +264,14 @@
 
 .modal-title {
   font-family: 'Barlow', sans-serif;
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--navy);
   margin-bottom: 2px;
 }
 
 .modal-subtitle {
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
   margin: 0;
 }
@@ -293,33 +293,40 @@
 .modal-close-btn:hover {
   background: var(--orange);
   color: var(--navy-dark);
+  border-color: var(--orange);
 }
 
-/* Top Image Showcase */
+/* ── Top Image Showcase (flex-shrink: 0 ensures image NEVER squishes!) ── */
 .modal-top-img-showcase {
   position: relative;
   width: 100%;
-  height: 340px;
-  background: #f8fafc;
+  min-height: 340px;
+  height: 360px;
+  flex-shrink: 0;
+  background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  padding: 20px;
   overflow: hidden;
 }
 
 .modal-top-img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 95%;
+  max-height: 95%;
   object-fit: contain;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.12));
+  filter: drop-shadow(0 10px 24px rgba(10,57,129,0.18));
+  transition: transform 0.3s ease;
+}
+.modal-top-img:hover {
+  transform: scale(1.03);
 }
 
 .modal-top-badge {
   position: absolute;
-  bottom: 12px; right: 14px;
-  background: rgba(5, 26, 64, 0.88);
+  bottom: 14px; right: 16px;
+  background: rgba(5, 26, 64, 0.9);
   color: var(--orange-light);
   font-family: 'Inter', sans-serif;
   font-size: 0.72rem;
@@ -327,11 +334,13 @@
   padding: 5px 12px;
   border-radius: var(--r);
   letter-spacing: 0.5px;
+  border: 1px solid rgba(245,166,35,0.3);
 }
 
 /* Modal Body Details */
 .modal-body-content {
   padding: 1.8rem;
+  flex: 1;
 }
 
 .modal-quick-specs {
@@ -374,7 +383,7 @@
   font-size: 0.84rem;
   font-weight: 700;
   color: var(--text-muted);
-  padding: 6px 14px;
+  padding: 8px 16px;
   cursor: pointer;
   border-radius: var(--r);
   transition: all 0.2s ease;
@@ -396,7 +405,7 @@
 
 .modal-desc {
   font-size: 0.92rem;
-  line-height: 1.8;
+  line-height: 1.85;
   color: var(--text-muted);
   font-family: 'Inter', sans-serif;
   white-space: pre-line;
@@ -408,7 +417,7 @@
   color: var(--navy);
   font-size: 0.74rem;
   font-weight: 600;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: var(--r);
 }
 
@@ -453,7 +462,7 @@
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 2rem;
-  padding-top: 1.2rem;
+  padding-top: 1.4rem;
   border-top: 1px solid var(--border);
 }
 
@@ -462,6 +471,11 @@
   justify-content: center;
   padding: 14px;
   font-size: 0.88rem;
+}
+
+.modal-call-btn {
+  padding: 14px 20px;
+  font-size: 0.84rem;
 }
 
 @keyframes fadeIn {
@@ -475,13 +489,15 @@
     padding: 10px 0;
   }
   .modal-top-img-showcase {
-    height: 220px;
+    min-height: 220px;
+    height: 240px;
+    padding: 12px;
   }
   .modal-header-bar {
     padding: 1rem 1.2rem;
   }
   .modal-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
   .modal-body-content {
     padding: 1.2rem;
@@ -489,7 +505,7 @@
   .modal-footer-actions {
     flex-direction: column;
   }
-  .modal-footer-actions .btn-outline {
+  .modal-footer-actions .modal-call-btn {
     width: 100%;
     justify-content: center;
   }

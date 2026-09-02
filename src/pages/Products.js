@@ -1,34 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import {
   FaWhatsapp, FaArrowRight, FaCheckCircle,
-  FaTimes, FaExpand, FaTable
+  FaTimes, FaExpand, FaTable, FaPhoneAlt
 } from 'react-icons/fa';
 import { productsData, categoriesConfig } from '../data/productsData';
 import { ProductCardSkeleton } from '../components/SkeletonLoader';
 import './Products.css';
 
-/* ── Bulletproof High-Res Product Image Component ── */
+/* ── High-Reliability Product Image Component ── */
 const ProductImage = ({ src, alt, className = '' }) => {
   const [imgSrc, setImgSrc] = useState(src);
-  const [retried, setRetried] = useState(false);
 
   useEffect(() => {
     setImgSrc(src);
-    setRetried(false);
   }, [src]);
 
-  const handleError = () => {
-    if (!retried && typeof imgSrc === 'string') {
-      setRetried(true);
-      const filename = imgSrc.split('/').pop();
-      if (imgSrc.startsWith('/aptimech-eng')) {
-        setImgSrc(`/products/${filename}`);
-      } else {
-        setImgSrc(`${process.env.PUBLIC_URL || ''}/products/${filename}`);
-      }
+  const handleError = (e) => {
+    const filename = src.split('/').pop();
+    // Try alternate relative path
+    if (imgSrc !== `./products/${filename}`) {
+      setImgSrc(`./products/${filename}`);
     } else {
       setImgSrc(
-        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23e8edf5'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='15' font-weight='bold' fill='%230A3981'%3E%E2%9A%99%EF%B8%8F AptisMech Equipment%3C/text%3E%3C/svg%3E"
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='320' viewBox='0 0 500 320'%3E%3Crect width='500' height='320' fill='%23e8edf5'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='bold' fill='%230A3981'%3E%E2%9A%99%EF%B8%8F AptisMech Heavy Machinery%3C/text%3E%3C/svg%3E"
       );
     }
   };
@@ -39,12 +33,11 @@ const ProductImage = ({ src, alt, className = '' }) => {
       alt={alt}
       className={className}
       onError={handleError}
-      loading="lazy"
     />
   );
 };
 
-/* ── Product Details Modal (Image on TOP, Description & Specs UNDERNEATH) ── */
+/* ── Industrial Product Modal (Image on TOP, Details UNDERNEATH) ── */
 const ProductModal = ({ product, onClose }) => {
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -59,13 +52,13 @@ const ProductModal = ({ product, onClose }) => {
     return () => { document.body.style.overflow = ''; };
   }, []);
 
-  const waLink = `https://wa.me/918866616585?text=Hello%20AptisMech%2C%20I%20am%20interested%20in%20"${encodeURIComponent(product.title)}"%20(Ref:%20${product.id}).%20Please%20share%20quotation%20and%20technical%20specs.`;
+  const waLink = `https://wa.me/918866616585?text=Hello%20AptisMech%20Corporation%2C%20I%20am%20interested%20in%20"${encodeURIComponent(product.title)}"%20(Model%20Ref:%20${product.id}).%20Please%20share%20quotation%2C%20lead%20time%2C%20and%20technical%20specs.`;
 
   return (
     <div className="product-modal-backdrop" onClick={onClose}>
       <div className="product-modal" onClick={e => e.stopPropagation()}>
         
-        {/* Modal Top Header Bar */}
+        {/* Modal Header */}
         <div className="modal-header-bar">
           <div className="modal-header-titles">
             <span className="prod-tag">{product.tag}</span>
@@ -77,17 +70,17 @@ const ProductModal = ({ product, onClose }) => {
           </button>
         </div>
 
-        {/* 1. TOP SECTION: Prominent Full-Width Image Frame */}
+        {/* 1. TOP SECTION: Prominent Full-Width Image Frame (flex-shrink: 0) */}
         <div className="modal-top-img-showcase">
           <ProductImage
             src={product.image}
             alt={product.title}
             className="modal-top-img"
           />
-          <span className="modal-top-badge">{product.badge || 'Precision Engineering'}</span>
+          <span className="modal-top-badge">{product.badge || 'Industrial Precision'}</span>
         </div>
 
-        {/* 2. UNDERNEATH SECTION: Description, Spec Table & Details */}
+        {/* 2. UNDERNEATH SECTION: Specs, Description, Table, Features */}
         <div className="modal-body-content">
 
           {/* Quick Specs Pill Badges */}
@@ -100,7 +93,7 @@ const ProductModal = ({ product, onClose }) => {
             ))}
           </div>
 
-          {/* Tab Navigation if specTable exists */}
+          {/* Tab Navigation for Multi-Model Specifications */}
           {product.specTable && (
             <div className="modal-tab-bar">
               <button
@@ -113,27 +106,27 @@ const ProductModal = ({ product, onClose }) => {
                 className={`tab-btn ${activeTab === 'specs' ? 'active' : ''}`}
                 onClick={() => setActiveTab('specs')}
               >
-                <FaTable size={12} className="me-1" /> Model Specification Table
+                <FaTable size={13} className="me-1" /> Model Specification Table
               </button>
             </div>
           )}
 
           {activeTab === 'overview' ? (
             <>
-              <div className="modal-section-head">Product Description</div>
+              <div className="modal-section-head">Product Engineering Details</div>
               <p className="modal-desc">{product.fullDesc}</p>
 
-              <div className="modal-section-head mt-4">Engineering Highlights</div>
+              <div className="modal-section-head mt-4">Key Engineering Highlights</div>
               <div className="row gy-2 mb-4">
                 {product.features.map((f, i) => (
-                  <div className="col-md-6 col-12 d-flex align-items-center gap-2" key={i}>
-                    <FaCheckCircle size={14} color="#F5A623" style={{ flexShrink: 0 }} />
-                    <span style={{ fontSize: '0.86rem', fontFamily: 'Inter', color: 'var(--text)' }}>{f}</span>
+                  <div className="col-md-6 col-12 d-flex align-items-start gap-2" key={i}>
+                    <FaCheckCircle size={15} color="#F5A623" style={{ flexShrink: 0, marginTop: 3 }} />
+                    <span style={{ fontSize: '0.88rem', fontFamily: 'Inter', color: 'var(--text)', lineHeight: 1.6 }}>{f}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="modal-section-head mt-3">Industrial Applications</div>
+              <div className="modal-section-head mt-3">Target Manufacturing Applications</div>
               <div className="d-flex flex-wrap gap-2 mb-4">
                 {product.applications.map((app, i) => (
                   <span className="app-tag" key={i}>{app}</span>
@@ -143,7 +136,7 @@ const ProductModal = ({ product, onClose }) => {
           ) : (
             /* Spec Table View */
             <div className="modal-table-container">
-              <div className="modal-section-head">Technical Specification Matrix</div>
+              <div className="modal-section-head">Model Technical Specification Matrix</div>
               <p className="text-muted small mb-2">{product.specTable.title}</p>
               <div className="table-responsive">
                 <table className="modal-spec-table">
@@ -176,11 +169,14 @@ const ProductModal = ({ product, onClose }) => {
               rel="noreferrer"
               className="btn-brand modal-wa-btn"
             >
-              <FaWhatsapp size={16} /> Request Quote & Specs via WhatsApp
+              <FaWhatsapp size={17} /> Request Quotation & Specs via WhatsApp
             </a>
-            <button className="btn-outline" onClick={onClose}>
-              Back to Catalog
-            </button>
+            <a
+              href="tel:+917046500555"
+              className="btn-outline modal-call-btn"
+            >
+              <FaPhoneAlt size={13} /> Call Sales (+91 70465 00555)
+            </a>
           </div>
 
         </div>
@@ -200,7 +196,7 @@ export default function Products() {
     if (catId === activeCat) return;
     setLoading(true);
     setActiveCat(catId);
-    setTimeout(() => setLoading(false), 300);
+    setTimeout(() => setLoading(false), 250);
   };
 
   const filtered = activeCat === 'all'
