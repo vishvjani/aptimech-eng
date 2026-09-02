@@ -78,10 +78,10 @@ export default function Home() {
         <div className="hero-texture" />
         <div className="hero-accent-bar" />
 
-        <div className="container position-relative">
+        <div className="container">
           <div className="row align-items-center gy-5 hero-main-row">
 
-            {/* Left Column: Headline, Subtitle, Description, CTAs, Stats */}
+            {/* Left Column: Value Proposition & CTAs */}
             <div className="col-lg-6 hero-left-col">
               <div className="hero-content">
                 <div className="hero-label">
@@ -114,7 +114,7 @@ export default function Home() {
                   </button>
                 </div>
 
-                {/* Hero Stats */}
+                {/* Hero Quick Stats */}
                 <div className="hero-stats">
                   {[
                     { num: '500+', label: 'Delivered Machines' },
@@ -131,20 +131,17 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column: Prominent Large Visual HUD Frame */}
+            {/* Right Column: Framed Industrial Visual */}
             <div className="col-lg-6 hero-right-col">
               <div className="hero-img-panel">
-                
-                {/* HUD Vector Crosshair Background */}
                 <div className="hud-bg-grid" />
 
                 <div className="hero-img-frame" onClick={() => navigate('/products')}>
-                  {/* Color grading overlay that fades on hover */}
                   <div className="hero-factory-color-grade" />
                   
                   <img
-                    src={`${process.env.PUBLIC_URL}/products/cnc_hydraulic_press_brake.png`}
-                    alt="AptisMech CNC Synchronized Press Brake & Fabrication Facility"
+                    src={`${process.env.PUBLIC_URL}/products/multi_functional_machine.jpg`}
+                    alt="AptisMech Heavy Fabrication Machinery"
                     className="hero-factory-img"
                     onError={(e) => {
                       e.currentTarget.src = `${process.env.PUBLIC_URL}/images/hero-factory.jpg`;
@@ -152,31 +149,29 @@ export default function Home() {
                   />
                   
                   <div className="hero-img-shine" />
-
-                  {/* Laser Scanning Line */}
                   <div className="hero-laser-line" />
 
-                  {/* Precision Target Brackets */}
+                  {/* Corner Reticles */}
                   <div className="hud-corner hud-corner--tl" />
                   <div className="hud-corner hud-corner--tr" />
                   <div className="hud-corner hud-corner--bl" />
                   <div className="hud-corner hud-corner--br" />
 
-                  {/* Central target lock */}
+                  {/* Target Lock */}
                   <div className="hud-target-lock">
                     <div className="target-pulse-circle" />
                     <div className="target-crosshair-h" />
                     <div className="target-crosshair-v" />
                   </div>
 
-                  {/* Technical Spec Reads */}
+                  {/* Technical Spec HUD */}
                   <div className="hud-readout hud-readout--tl">SYS.ON // FEED: OK</div>
-                  <div className="hud-readout hud-readout--tr">MODE: CNC.SYNCHRO</div>
+                  <div className="hud-readout hud-readout--tr">MODE: CNC.PRECISION</div>
                   <div className="hud-readout hud-readout--bl">PRESS: 10T - 500T</div>
                   <div className="hud-readout hud-readout--br">TOLERANCE: ±0.01mm</div>
                 </div>
 
-                {/* Floating Badge 1 - Top Right */}
+                {/* Floating Badges */}
                 <div className="floating-badge badge-motto float-slow">
                   <div className="badge-pulse-dot" />
                   <div>
@@ -185,21 +180,11 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Floating Badge 2 - Bottom Left */}
                 <div className="floating-badge badge-hub float-fast">
                   <div className="badge-icon-box">🛡</div>
                   <div>
                     <span className="badge-label">LOCATION</span>
                     <span className="badge-value">Vavdi Industrial Hub, Rajkot</span>
-                  </div>
-                </div>
-
-                {/* Floating Badge 3 - Bottom Right */}
-                <div className="floating-badge badge-cnc float-medium">
-                  <div className="badge-icon-box">⚙</div>
-                  <div>
-                    <span className="badge-label">MACHINERY</span>
-                    <span className="badge-value">CNC Synchro Press Brakes</span>
                   </div>
                 </div>
 
@@ -210,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ════ PRODUCTS STRIP ════ */}
+      {/* ════ FEATURED PRODUCTS STRIP ════ */}
       <section className="products-strip">
         <div className="container">
           <div className="strip-header">
@@ -259,7 +244,7 @@ export default function Home() {
             <div className="col-lg-5">
               <div className="about-strip-visual">
                 <img
-                  src={`${process.env.PUBLIC_URL}/products/multi_functional_machine.jpg`}
+                  src={`${process.env.PUBLIC_URL}/products/cnc_hydraulic_press_brake.png`}
                   alt="AptisMech Precision Engineering Facility"
                   className="about-strip-img"
                 />
@@ -327,7 +312,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ════ INQUIRY SECTION ════ */}
+      {/* ════ INQUIRY SECTION (RFQ) ════ */}
       <section className="inquiry-section" ref={formRef}>
         <div className="container">
           <div className="row gy-5">
