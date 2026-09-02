@@ -9,19 +9,6 @@
     <!-- ══ Security Headers ══ -->
     <!-- Stop MIME-type sniffing -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <!-- Force HTTPS for 1 year (in supported browsers via meta) -->
-    <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      script-src 'self' 'unsafe-inline' https://maps.googleapis.com;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      font-src 'self' https://fonts.gstatic.com;
-      img-src 'self' data: https:;
-      frame-src https://www.google.com;
-      connect-src 'self';
-      object-src 'none';
-      base-uri 'self';
-      form-action 'self' https://wa.me;
-    " />
     <!-- Referrer policy — don't leak full URLs to third parties -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <!-- Disable browser features not needed -->

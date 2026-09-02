@@ -217,6 +217,7 @@
 }
 
 .product-overlay {
+  pointer-events: none;
   position: absolute;
   inset: 0;
   background: rgba(5, 26, 64, 0.72);
@@ -234,6 +235,7 @@
   z-index: 3;
 }
 .product-card:hover .product-overlay {
+  pointer-events: none;
   opacity: 1;
 }
 
