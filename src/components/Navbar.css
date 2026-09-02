@@ -1,5 +1,5 @@
 /* ================================================================
-   NAVBAR — Aptismech · Desktop + Mobile Drawer
+   NAVBAR — Aptismech · Desktop + Mobile Drawer with Official Logo
    ================================================================ */
 
 /* ── Top info bar (desktop) ── */
@@ -28,10 +28,10 @@
 
 /* ── Main navbar shell ── */
 .aptis-navbar {
-  background: rgba(8, 15, 31, 0.72);
+  background: rgba(8, 15, 31, 0.78);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   position: fixed;
   top: 33px;
   left: 0;
@@ -41,17 +41,17 @@
 }
 .aptis-navbar.scrolled {
   top: 0;
-  background: rgba(8, 15, 31, 0.97);
-  border-bottom-color: rgba(245,166,35,0.18);
-  box-shadow: 0 2px 24px rgba(0,0,0,0.45);
+  background: rgba(8, 15, 31, 0.98);
+  border-bottom-color: rgba(245,166,35,0.22);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.5);
 }
 
 .aptis-navbar-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* ── Brand ── */
@@ -62,7 +62,20 @@
   text-decoration: none;
   flex-shrink: 0;
 }
-.brand-logo-box {
+
+.brand-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.4));
+  transition: transform 0.25s ease;
+}
+.navbar-brand-wrapper:hover .brand-logo-img {
+  transform: scale(1.06);
+}
+
+.brand-logo-fallback {
   width: 40px;
   height: 40px;
   background: var(--orange);
@@ -75,26 +88,26 @@
   font-size: 1.1rem;
   color: var(--navy-dark);
   flex-shrink: 0;
-  transition: transform 0.25s ease;
 }
-.navbar-brand-wrapper:hover .brand-logo-box { transform: scale(1.06); }
+
 .brand-text-main {
   font-family: 'Barlow', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 900;
   color: #fff;
   line-height: 1;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   display: block;
 }
 .brand-text-sub {
   font-size: 0.58rem;
   font-family: 'Inter', sans-serif;
-  color: rgba(245,166,35,0.75);
+  color: var(--orange-light);
   letter-spacing: 2.5px;
   text-transform: uppercase;
   display: block;
   margin-top: 2px;
+  font-weight: 700;
 }
 
 /* ── Desktop nav ── */
@@ -108,7 +121,7 @@
 }
 
 .aptis-nav-link {
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.7);
   font-size: 0.78rem;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
@@ -144,7 +157,7 @@
 .nav-cta-btn {
   background: var(--orange) !important;
   color: var(--navy-dark) !important;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
   padding: 9px 20px !important;
   border-radius: var(--r) !important;
   margin-left: 6px;
@@ -182,26 +195,23 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
 }
-/* X animation when open */
 .hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ── Mobile overlay (backdrop) ── */
+/* ── Mobile overlay ── */
 .mobile-overlay {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.65);
   z-index: 10010;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.mobile-overlay.active {
-  opacity: 1;
-}
+.mobile-overlay.active { opacity: 1; }
 
-/* ── Mobile drawer (slides in from right) ── */
+/* ── Mobile drawer ── */
 .mobile-drawer {
   position: fixed;
   top: 0;
@@ -217,11 +227,8 @@
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
 }
-.mobile-drawer.active {
-  transform: translateX(0);
-}
+.mobile-drawer.active { transform: translateX(0); }
 
-/* Drawer header */
 .mobile-drawer-header {
   display: flex;
   align-items: center;
@@ -249,7 +256,6 @@
   border-color: var(--orange);
 }
 
-/* Drawer nav links */
 .mobile-drawer-nav {
   display: flex;
   flex-direction: column;
@@ -286,7 +292,6 @@
   padding-left: 20px;
 }
 
-/* CTA link in drawer */
 .mobile-cta-link {
   background: var(--orange) !important;
   color: var(--navy-dark) !important;
@@ -307,7 +312,6 @@
   border-left: none !important;
 }
 
-/* Drawer footer */
 .mobile-drawer-footer {
   display: flex;
   flex-direction: column;
@@ -346,32 +350,26 @@
   border-color: #25D366;
 }
 
-/* ================================================================
-   RESPONSIVE
-   ================================================================ */
-
-/* Mobile — hide desktop nav, show hamburger + drawer */
 @media (max-width: 991px) {
   .top-bar { display: none !important; }
   .aptis-navbar { top: 0; }
   .desktop-nav { display: none; }
   .hamburger { display: flex; }
   .mobile-overlay { display: block; }
-  .brand-logo-box { width: 36px; height: 36px; font-size: 0.95rem; }
-  .brand-text-main { font-size: 1.05rem; }
+  .brand-logo-img { height: 38px; }
+  .brand-text-main { font-size: 1.1rem; }
 }
 
 @media (max-width: 480px) {
   .aptis-navbar-inner {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
-  .brand-text-main { font-size: 0.95rem; }
+  .brand-logo-img { height: 32px; }
+  .brand-text-main { font-size: 0.98rem; }
   .brand-text-sub { font-size: 0.52rem; }
-  .brand-logo-box { width: 32px; height: 32px; font-size: 0.85rem; }
 }
 
-/* Desktop — always show desktop nav */
 @media (min-width: 992px) {
   .aptis-navbar { top: 33px; }
   .aptis-navbar.scrolled { top: 0; }

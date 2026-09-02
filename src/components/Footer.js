@@ -11,15 +11,22 @@ const WA = "https://wa.me/918866616585?text=Hello%20Aptismech%2C%20I%20would%20l
 const Footer = () => (
   <>
     <footer className="aptis-footer">
-      <div className="footer-bg-text">AM</div>
       <div className="container position-relative" style={{ zIndex: 1 }}>
         <div className="row gy-5">
 
           {/* Brand */}
           <div className="col-lg-4 col-md-12">
-            <div className="footer-brand-logo">AM</div>
-            <div className="footer-brand-name">APTISMECH</div>
-            <span className="footer-brand-sub">Corporation LLP</span>
+            <div className="d-flex align-items-center gap-3 mb-3">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/logo.png`}
+                alt="AptisMech Corporation LLP"
+                className="footer-brand-logo-img"
+              />
+              <div>
+                <div className="footer-brand-name">APTISMECH</div>
+                <span className="footer-brand-sub">Corporation LLP</span>
+              </div>
+            </div>
             <p className="footer-tagline">
               Engineering high-performance industrial machinery from Vavdi Industrial Hub, Rajkot.
               Mechanical Power Presses, CNC Machining, and Precision Industrial Solutions.
@@ -54,12 +61,12 @@ const Footer = () => (
             <span className="footer-col-head">Products</span>
             <ul className="list-unstyled mb-0">
               {[
-                'Mechanical Power Press (C-Frame)',
-                'Mechanical Power Press (H-Frame)',
-                'Pneumatic Assembly Press',
-                'Hydro-Pneumatic System',
-                'Oil Intensifier Units',
-                'Custom Press Systems',
+                'Mechanical Multi-Functional Ironworker',
+                'Hydraulic C-Type Punching Machine',
+                'Hydraulic H-Type Press Machine',
+                'CNC Hydraulic Press Brake',
+                'NC Hydraulic Shearing Machine',
+                'Industrial Fasteners & Hardware',
               ].map(item => (
                 <li key={item}>
                   <Link to="/products" className="footer-nav-link">
