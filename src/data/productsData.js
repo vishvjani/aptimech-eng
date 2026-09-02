@@ -790,12 +790,41 @@ Our systematic sorting and certified weighing procedures guarantee consistent ma
   }
 ];
 
-/* Categories configuration with counts */
+/* Categories configuration with counts & metadata */
 export const categoriesConfig = [
-  { key: 'all', label: 'All Portfolio', count: productsData.length },
-  { key: 'heavy_machinery', label: 'Heavy Machinery', count: productsData.filter(p => p.category === 'heavy_machinery').length },
-  { key: 'hardware_spares', label: 'Precision Spares & Hardware', count: productsData.filter(p => p.category === 'hardware_spares').length },
-  { key: 'cnc_tooling', label: 'CNC Tooling & Inserts', count: productsData.filter(p => p.category === 'cnc_tooling').length },
-  { key: 'motors', label: 'Induction Motors', count: productsData.filter(p => p.category === 'motors').length },
-  { key: 'scrap_trading', label: 'Metal Scrap Trading', count: productsData.filter(p => p.category === 'scrap_trading').length },
+  {
+    id: 'heavy_machinery',
+    name: 'Heavy Fabrication Machinery',
+    badge: '10T — 500T Machinery',
+    icon: '🏗️',
+    desc: 'Heavy-duty Mechanical Ironworkers, C-Type Punching, H-Frame Hydraulic Presses, Workshop Utility Presses, CNC Synchronized Press Brakes & NC Shearing Machines.'
+  },
+  {
+    id: 'hardware_spares',
+    name: 'Precision Components, Mounts & Hardware',
+    badge: 'CNC Machined Spares',
+    icon: '⚙️',
+    desc: 'Custom Mounting Plates, Knurled Nuts, SPM Shaft Collars, Clevis Linkage Rods, Lifting Eye Bolts, Hydraulic Adapters & Round Flanges.'
+  },
+  {
+    id: 'cnc_tooling',
+    name: 'CNC Tooling & Carbide Inserts',
+    badge: 'High-Precision Cutting',
+    icon: '💎',
+    desc: 'Premium CVD/PVD coated indexable carbide inserts engineered for high-speed CNC turning, facing, and profiling across steel, stainless, and alloy stocks.'
+  },
+  {
+    id: 'motors',
+    name: 'Industrial Three-Phase Motors',
+    badge: 'IP55 High-Torque',
+    icon: '⚡',
+    desc: 'Continuous heavy-duty 415V 50Hz foot/flange mounted three-phase squirrel cage induction motors designed for industrial machine drives and power packs.'
+  },
+  {
+    id: 'scrap_trading',
+    name: 'Categorized Metal Scrap Solutions',
+    badge: 'Certified Recycling',
+    icon: '♻️',
+    desc: 'Wholesale segregated industrial scrap lots — Copper (Millberry), Brass, Extrusion Aluminium, Stainless Steel (SS304/316) & Heavy Melting Steel (HMS).'
+  },
 ];

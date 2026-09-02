@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import {
   FaWhatsapp, FaArrowRight, FaCheckCircle,
-  FaTimes, FaExpand, FaTable, FaPhoneAlt
+  FaTimes, FaExpand, FaTable, FaPhoneAlt,
+  FaLayerGroup
 } from 'react-icons/fa';
 import { productsData, categoriesConfig } from '../data/productsData';
 import { ProductCardSkeleton } from '../components/SkeletonLoader';
 import './Products.css';
 
-/* ── High-Reliability Product Image Component ── */
+/* ── Bulletproof Product Image Component ── */
 const ProductImage = ({ src, alt, className = '' }) => {
   const [imgSrc, setImgSrc] = useState(src);
 
@@ -15,9 +16,8 @@ const ProductImage = ({ src, alt, className = '' }) => {
     setImgSrc(src);
   }, [src]);
 
-  const handleError = (e) => {
+  const handleError = () => {
     const filename = src.split('/').pop();
-    // Try alternate relative path
     if (imgSrc !== `./products/${filename}`) {
       setImgSrc(`./products/${filename}`);
     } else {
@@ -37,7 +37,7 @@ const ProductImage = ({ src, alt, className = '' }) => {
   );
 };
 
-/* ── Industrial Product Modal (Image on TOP, Details UNDERNEATH) ── */
+/* ── Product Details Modal (Image on TOP, Description & Specs UNDERNEATH) ── */
 const ProductModal = ({ product, onClose }) => {
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -70,7 +70,7 @@ const ProductModal = ({ product, onClose }) => {
           </button>
         </div>
 
-        {/* 1. TOP SECTION: Prominent Full-Width Image Frame (flex-shrink: 0) */}
+        {/* 1. TOP SECTION: Prominent Full-Width Image Frame */}
         <div className="modal-top-img-showcase">
           <ProductImage
             src={product.image}
@@ -186,22 +186,30 @@ const ProductModal = ({ product, onClose }) => {
   );
 };
 
-/* ── Main Products Page ── */
+/* ── Main Products Page (Category-Divided Sections) ── */
 export default function Products() {
-  const [activeCat, setActiveCat] = useState('all');
+  const [selectedCat, setSelectedCat] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const handleCategoryChange = (catId) => {
-    if (catId === activeCat) return;
+  const handleCatSelect = (catId) => {
+    if (catId === selectedCat) return;
     setLoading(true);
-    setActiveCat(catId);
-    setTimeout(() => setLoading(false), 250);
+    setSelectedCat(catId);
+    setTimeout(() => {
+      setLoading(false);
+      if (catId !== 'all') {
+        const el = document.getElementById(`cat-sec-${catId}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }, 200);
   };
 
-  const filtered = activeCat === 'all'
-    ? productsData
-    : productsData.filter(p => p.category === activeCat);
+  const displayedCategories = selectedCat === 'all'
+    ? categoriesConfig
+    : categoriesConfig.filter(c => c.id === selectedCat);
 
   return (
     <>
@@ -212,27 +220,35 @@ export default function Products() {
           <h1 className="page-hero-title">Industrial Product Catalog</h1>
           <p className="page-hero-desc">
             Explore 22+ precision engineering solutions manufactured and supplied by AptisMech Corporation LLP.
-            Power presses, synchronized press brakes, shearing machines, industrial fasteners, motors, and metal scrap.
+            Categorized below: heavy fabrication machinery, precision mounts, industrial hardware, CNC tooling, electric motors, and metal scrap solutions.
           </p>
         </div>
       </section>
 
-      {/* ════ CATEGORY FILTER BAR ════ */}
-      <section className="cat-filter-section">
+      {/* ════ CATEGORY STICKY JUMP BAR ════ */}
+      <section className="cat-sticky-bar">
         <div className="container">
-          <div className="cat-filter-pills">
-            {categoriesConfig.map(c => {
-              const count = c.id === 'all'
-                ? productsData.length
-                : productsData.filter(p => p.category === c.id).length;
+          <div className="cat-pills-wrap">
+            <button
+              className={`cat-tab-pill${selectedCat === 'all' ? ' active' : ''}`}
+              onClick={() => handleCatSelect('all')}
+            >
+              <FaLayerGroup size={12} className="me-1" />
+              <span>All Portfolio</span>
+              <span className="cat-pill-badge">{productsData.length}</span>
+            </button>
+
+            {categoriesConfig.map(cat => {
+              const count = productsData.filter(p => p.category === cat.id).length;
               return (
                 <button
-                  key={c.id}
-                  className={`cat-pill${activeCat === c.id ? ' active' : ''}`}
-                  onClick={() => handleCategoryChange(c.id)}
+                  key={cat.id}
+                  className={`cat-tab-pill${selectedCat === cat.id ? ' active' : ''}`}
+                  onClick={() => handleCatSelect(cat.id)}
                 >
-                  <span className="cat-pill-name">{c.name}</span>
-                  <span className="cat-pill-count">{count}</span>
+                  <span className="cat-pill-icon">{cat.icon}</span>
+                  <span>{cat.name}</span>
+                  <span className="cat-pill-badge">{count}</span>
                 </button>
               );
             })}
@@ -240,78 +256,101 @@ export default function Products() {
         </div>
       </section>
 
-      {/* ════ PRODUCTS GRID ════ */}
-      <section className="products-grid-section">
+      {/* ════ CATEGORY-DIVIDED CATALOG SECTIONS ════ */}
+      <div className="catalog-content-wrapper">
         <div className="container">
 
-          <div className="catalog-header-info mb-4">
-            <span className="text-muted" style={{ fontSize: '0.9rem', fontFamily: 'Inter' }}>
-              Showing <strong>{filtered.length}</strong> industrial items
-            </span>
-          </div>
-
-          <div className="row gy-4">
-            {loading ? (
-              Array.from({ length: 6 }).map((_, idx) => (
+          {loading ? (
+            <div className="row gy-4 py-5">
+              {Array.from({ length: 6 }).map((_, idx) => (
                 <div className="col-lg-4 col-md-6" key={idx}>
                   <ProductCardSkeleton />
                 </div>
-              ))
-            ) : (
-              filtered.map(p => (
-                <div className="col-lg-4 col-md-6" key={p.id}>
-                  <div
-                    className="product-card"
-                    onClick={() => setSelectedProduct(p)}
-                  >
-                    {/* Card Image Area */}
-                    <div className="product-card-img-wrap">
-                      <ProductImage
-                        src={p.image}
-                        alt={p.title}
-                        className="product-card-img"
-                      />
-                      <span className="product-badge">{p.badge}</span>
-                      <div className="product-overlay">
-                        <span><FaExpand size={13} className="me-1" /> View Full Specifications</span>
+              ))}
+            </div>
+          ) : (
+            displayedCategories.map(cat => {
+              const catProducts = productsData.filter(p => p.category === cat.id);
+              if (catProducts.length === 0) return null;
+
+              return (
+                <section key={cat.id} id={`cat-sec-${cat.id}`} className="category-section-block">
+                  
+                  {/* Category Section Header Banner */}
+                  <div className="category-section-header">
+                    <div className="cat-header-left">
+                      <div className="cat-header-icon-box">{cat.icon}</div>
+                      <div>
+                        <div className="d-flex align-items-center gap-2 flex-wrap">
+                          <span className="cat-header-badge">{cat.badge}</span>
+                          <span className="cat-header-count">{catProducts.length} Items</span>
+                        </div>
+                        <h2 className="cat-section-title">{cat.name}</h2>
+                        <p className="cat-section-desc">{cat.desc}</p>
                       </div>
-                    </div>
-
-                    {/* Card Body */}
-                    <div className="product-card-body">
-                      <span className="prod-tag">{p.tag}</span>
-                      <h3 className="product-card-title">{p.title}</h3>
-                      <p className="product-card-sub">{p.subtitle}</p>
-                      <p className="product-card-desc">{p.shortDesc}</p>
-
-                      {/* Specs Tags */}
-                      <div className="product-card-specs">
-                        {p.specs.slice(0, 3).map((s, i) => (
-                          <div className="product-spec-badge" key={i}>
-                            <span className="spec-badge-val">{s.value}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Card Action Button */}
-                      <button
-                        className="btn-card-action"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setSelectedProduct(p);
-                        }}
-                      >
-                        View Specifications <FaArrowRight size={11} />
-                      </button>
                     </div>
                   </div>
-                </div>
-              ))
-            )}
-          </div>
+
+                  {/* 3-Column Card Grid for this Category */}
+                  <div className="row gy-4">
+                    {catProducts.map(p => (
+                      <div className="col-lg-4 col-md-6" key={p.id}>
+                        <div
+                          className="product-card"
+                          onClick={() => setSelectedProduct(p)}
+                        >
+                          {/* Image Box with Enhanced Hover */}
+                          <div className="product-card-img-wrap">
+                            <ProductImage
+                              src={p.image}
+                              alt={p.title}
+                              className="product-card-img"
+                            />
+                            <span className="product-badge">{p.badge}</span>
+                            <div className="product-overlay">
+                              <span><FaExpand size={13} className="me-1" /> View Full Specifications</span>
+                            </div>
+                          </div>
+
+                          {/* Card Body */}
+                          <div className="product-card-body">
+                            <span className="prod-tag">{p.tag}</span>
+                            <h3 className="product-card-title">{p.title}</h3>
+                            <p className="product-card-sub">{p.subtitle}</p>
+                            <p className="product-card-desc">{p.shortDesc}</p>
+
+                            {/* Specs Tags */}
+                            <div className="product-card-specs">
+                              {p.specs.slice(0, 3).map((s, i) => (
+                                <div className="product-spec-badge" key={i}>
+                                  <span className="spec-badge-val">{s.value}</span>
+                                </div>
+                              ))}
+                            </div>
+
+                            {/* Action Button */}
+                            <button
+                              className="btn-card-action"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedProduct(p);
+                              }}
+                            >
+                              View Specifications <FaArrowRight size={11} />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                </section>
+              );
+            })
+          )}
 
         </div>
-      </section>
+      </div>
 
       {/* ════ MODAL ════ */}
       {selectedProduct && (

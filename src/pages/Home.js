@@ -113,21 +113,6 @@ export default function Home() {
                     Request Quote <FaArrowRight size={12} />
                   </button>
                 </div>
-
-                {/* Hero Quick Stats */}
-                <div className="hero-stats">
-                  {[
-                    { num: '500+', label: 'Delivered Machines' },
-                    { num: '15+',  label: 'Years Experience'   },
-                    { num: '22+',  label: 'Catalog Products'   },
-                    { num: '100%', label: 'Quality Assured'    },
-                  ].map(s => (
-                    <div className="hero-stat" key={s.label}>
-                      <span className="hero-stat-num">{s.num}</span>
-                      <span className="hero-stat-label">{s.label}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
 

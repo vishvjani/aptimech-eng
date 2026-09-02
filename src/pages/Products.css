@@ -1,71 +1,160 @@
 /* ================================================================
-   PRODUCTS PAGE & MODAL — AptisMech Corporation LLP
+   PRODUCTS PAGE — Category-Divided Sections & High-Impact Hover
+   AptisMech Corporation LLP
    ================================================================ */
 
-/* Category Filter Bar */
-.cat-filter-section {
+/* ── Sticky Category Navigation Bar ── */
+.cat-sticky-bar {
   background: #fff;
   border-bottom: 1px solid var(--border);
-  padding: 16px 0;
+  padding: 14px 0;
   position: sticky;
-  top: 70px;
+  top: 65px;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.cat-filter-pills {
+.cat-pills-wrap {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.cat-pill {
+.cat-tab-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  border: 1px solid var(--border);
+  padding: 8px 18px;
+  border: 1.5px solid var(--border);
   border-radius: 30px;
   background: var(--off-white);
-  color: var(--text);
+  color: var(--navy);
   font-family: 'Inter', sans-serif;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
-.cat-pill:hover {
+.cat-tab-pill:hover {
   border-color: var(--navy);
-  color: var(--navy);
   background: #fff;
+  transform: translateY(-1px);
 }
-.cat-pill.active {
+.cat-tab-pill.active {
   background: var(--navy);
   border-color: var(--navy);
   color: #fff;
+  box-shadow: 0 4px 12px rgba(10,57,129,0.25);
 }
-.cat-pill-count {
+
+.cat-pill-icon {
+  font-size: 1rem;
+}
+
+.cat-pill-badge {
   font-size: 0.72rem;
-  font-weight: 700;
-  padding: 2px 7px;
+  font-weight: 800;
+  padding: 2px 8px;
   border-radius: 12px;
-  background: rgba(0,0,0,0.06);
-  color: inherit;
+  background: rgba(10,57,129,0.08);
+  color: var(--navy);
+  transition: all 0.25s ease;
 }
-.cat-pill.active .cat-pill-count {
+.cat-tab-pill.active .cat-pill-badge {
   background: var(--orange);
   color: var(--navy-dark);
 }
 
-/* Products Grid Section */
-.products-grid-section {
-  padding: 60px 0 90px;
-  background: var(--off-white);
+/* ── Main Catalog Wrapper ── */
+.catalog-content-wrapper {
+  padding: 50px 0 100px;
+  background: #f8fafc;
   min-height: 60vh;
 }
 
-/* Product Card */
+/* ── Category Section Block ── */
+.category-section-block {
+  margin-bottom: 70px;
+  padding-bottom: 50px;
+  border-bottom: 2px dashed var(--border);
+}
+.category-section-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Category Section Header Banner */
+.category-section-header {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--orange);
+  border-radius: var(--r-md);
+  padding: 1.6rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.cat-header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.cat-header-icon-box {
+  width: 52px;
+  height: 52px;
+  background: rgba(245,166,35,0.12);
+  border: 1px solid rgba(245,166,35,0.3);
+  border-radius: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.cat-header-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  background: var(--navy);
+  color: #fff;
+  padding: 3px 9px;
+  border-radius: var(--r);
+  font-family: 'Inter', sans-serif;
+}
+
+.cat-header-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--orange-dark);
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.cat-section-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.cat-section-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Product Card with Premium Hover ── */
 .product-card {
   background: #fff;
   border: 1px solid var(--border);
@@ -76,33 +165,38 @@
   flex-direction: column;
   box-shadow: var(--shadow-sm);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
+
 .product-card:hover {
-  border-color: var(--navy);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(245, 166, 35, 0.6);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(10,57,129,0.14);
 }
 
 .product-card-img-wrap {
   position: relative;
-  height: 240px;
-  background: #f8fafc;
+  height: 250px;
+  background: radial-gradient(circle at center, #ffffff 0%, #edf2f7 100%);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 14px;
 }
 
 .product-card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
+  max-width: 92%;
+  max-height: 92%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.08));
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .product-card:hover .product-card-img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 .product-badge {
@@ -118,12 +212,14 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   z-index: 2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .product-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(5, 26, 64, 0.7);
+  background: rgba(5, 26, 64, 0.72);
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +237,7 @@
 }
 
 .product-card-body {
-  padding: 1.4rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -149,9 +245,9 @@
 
 .prod-tag {
   font-size: 0.68rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   color: var(--orange-dark);
   margin-bottom: 4px;
   display: block;
@@ -159,14 +255,15 @@
 
 .product-card-title {
   font-family: 'Barlow', sans-serif;
-  font-size: 1.18rem;
+  font-size: 1.22rem;
   font-weight: 800;
   color: var(--navy);
-  margin-bottom: 2px;
+  margin-bottom: 3px;
+  line-height: 1.2;
 }
 
 .product-card-sub {
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
   font-weight: 600;
   margin-bottom: 8px;
@@ -190,7 +287,7 @@
 .product-spec-badge {
   background: var(--off-white);
   border: 1px solid var(--border);
-  padding: 4px 8px;
+  padding: 4px 9px;
   border-radius: var(--r);
   font-size: 0.7rem;
   font-weight: 700;
@@ -200,7 +297,7 @@
 
 .btn-card-action {
   width: 100%;
-  padding: 10px;
+  padding: 11px;
   background: transparent;
   border: 1.5px solid var(--navy);
   border-radius: var(--r);
@@ -214,15 +311,16 @@
   justify-content: center;
   gap: 6px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 .product-card:hover .btn-card-action {
   background: var(--navy);
   color: #fff;
+  border-color: var(--navy);
 }
 
 /* ================================================================
-   PRODUCT MODAL (IMAGE ON TOP, SPECS & DETAILS UNDERNEATH)
+   PRODUCT MODAL (PROMINENT TOP IMAGE SHOWCASE + SPECS UNDERNEATH)
    ================================================================ */
 .product-modal-backdrop {
   position: fixed;
@@ -303,7 +401,7 @@
   min-height: 340px;
   height: 360px;
   flex-shrink: 0;
-  background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%);
+  background: radial-gradient(circle at center, #ffffff 0%, #edf2f7 100%);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -484,9 +582,19 @@
 }
 
 @media (max-width: 768px) {
-  .cat-filter-section {
+  .cat-sticky-bar {
     top: 55px;
     padding: 10px 0;
+  }
+  .category-section-header {
+    padding: 1.2rem;
+  }
+  .cat-header-left {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cat-section-title {
+    font-size: 1.3rem;
   }
   .modal-top-img-showcase {
     min-height: 220px;
