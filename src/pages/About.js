@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   FaCheckCircle, FaAward, FaShieldAlt, FaCogs,
   FaArrowRight, FaWhatsapp, FaMapMarkerAlt, FaGlobeAsia,
-  FaPhoneAlt, FaEnvelope
+  FaPhoneAlt, FaEnvelope, FaExternalLinkAlt
 } from 'react-icons/fa';
 import './About.css';
 
@@ -44,7 +44,7 @@ export default function About() {
 
               <div className="row gy-3 mb-4">
                 {[
-                  'Comprehensive Heavy Machinery & Workshop Solutions',
+                  'Heavy Industrial Machinery & Workshop Fabrication Systems',
                   'Prime & Commercial Grade CRC, MS & SS Coils & Sheets',
                   'Precision Turned Spares, Collars, Mounts & Connectors',
                   'Certified Chemical Purity & Fast Dispatch Logistics',
@@ -149,7 +149,7 @@ export default function About() {
                     <FaPhoneAlt size={12} /> +91 70465 00555
                   </a>
                   <a href="mailto:AptisMech.Corporation.llp@gmail.com" className="partner-link">
-                    <FaEnvelope size={12} /> AptisMech.Corporation.llp@gmail.com
+                    <FaEnvelope size={12} /> Email Directly
                   </a>
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default function About() {
 
             <div className="col-md-5 col-12">
               <div className="partner-card">
-                <div className="partner-avatar">MJ</div>
+                <div className="partner-avatar" style={{ background: 'var(--navy-dark)' }}>MJ</div>
                 <h4 className="partner-name">Mr. Mayurbhai Jani</h4>
                 <span className="partner-role">Partner</span>
                 <p className="partner-desc">
@@ -177,30 +177,59 @@ export default function About() {
         </div>
       </section>
 
-      {/* ════ LOCATION & DISPATCH ════ */}
+      {/* ════ CORPORATE LOCATION & GET QUOTE BANNER ════ */}
       <section className="section bg-white">
         <div className="container">
-          <div className="location-banner">
+          <div className="about-location-banner">
             <div className="row align-items-center gy-4">
-              <div className="col-lg-8">
+              <div className="col-lg-7">
                 <div className="d-flex align-items-center gap-2 mb-2">
-                  <FaMapMarkerAlt size={18} color="#F5A623" />
-                  <span style={{ fontFamily: 'Inter', fontWeight: 700, color: '#fff', fontSize: '0.88rem', letterSpacing: 1, textTransform: 'uppercase' }}>
+                  <div className="about-loc-icon-pill">
+                    <FaMapMarkerAlt size={14} color="#F5A623" />
+                  </div>
+                  <span className="about-loc-eyebrow">
                     Industrial Facility &amp; Head Office
                   </span>
                 </div>
-                <h3 style={{ fontFamily: 'Barlow', fontWeight: 800, color: '#fff', fontSize: '1.8rem', marginBottom: '8px' }}>
-                  Vavdi Industrial Area, Rajkot — Logistics &amp; Trade Hub
+                <h3 className="about-loc-title">
+                  Vavdi Industrial Area, Rajkot
                 </h3>
-                <p style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Inter', fontSize: '0.92rem', margin: 0, lineHeight: 1.7 }}>
-                  Shed No. 3, Jasmatnagar, St. No. 4, Plot No. 6, Vavdi Industrial Area, Rajkot-360004, Gujarat, India.<br />
-                  Strategically connected to major state and national highways for prompt dispatch across Gujarat and all Indian states.
+                <p className="about-loc-subtitle">
+                  Premier Logistics, Supply &amp; Machinery Dispatch Center
                 </p>
+                <p className="about-loc-address">
+                  <strong>Shed No. 3, Jasmatnagar, Street No. 4, Plot No. 6,</strong><br />
+                  Vavdi Industrial Area, Rajkot-360004, Gujarat, India.
+                </p>
+                <div className="about-loc-badges">
+                  <span className="about-loc-badge">Pan-India Fast Dispatch</span>
+                  <span className="about-loc-badge">Port &amp; Highway Connectivity</span>
+                  <span className="about-loc-badge">Transparent Weighment</span>
+                </div>
               </div>
-              <div className="col-lg-4 text-lg-end">
-                <Link to="/contact" className="btn-brand" style={{ padding: '14px 28px', fontSize: '0.88rem' }}>
-                  Contact Us <FaArrowRight size={12} />
-                </Link>
+
+              <div className="col-lg-5">
+                <div className="about-loc-actions-card">
+                  <span className="loc-card-tag">Direct Quotation Hub</span>
+                  <h4 className="loc-card-heading">Ready to Discuss Your Requirement?</h4>
+                  <p className="loc-card-sub">
+                    Get instant technical specifications, delivery schedules, and wholesale pricing.
+                  </p>
+                  <div className="d-flex flex-column gap-2 mt-3">
+                    <Link to="/contact" className="btn-brand justify-content-center" style={{ padding: '13px', fontSize: '0.88rem' }}>
+                      Get Official Quote <FaArrowRight size={12} />
+                    </Link>
+                    <a
+                      href="https://maps.google.com/?q=Vavdi+Industrial+Area+Rajkot+Gujarat"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn-outline-white justify-content-center"
+                      style={{ padding: '12px', fontSize: '0.82rem' }}
+                    >
+                      <FaExternalLinkAlt size={11} /> Open in Google Maps
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

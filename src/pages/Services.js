@@ -1,78 +1,68 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaWhatsapp, FaArrowRight, FaCheckCircle, FaIndustry, FaRecycle, FaCogs, FaBoxes } from 'react-icons/fa';
+import { FaWhatsapp, FaArrowRight, FaIndustry, FaRecycle, FaCogs, FaBoxes, FaCheck, FaPhoneAlt } from 'react-icons/fa';
 import './Services.css';
 
-const WA = "https://wa.me/918866616585?text=Hello%20AptisMech%2C%20I%20am%20interested%20in%20your%20industrial%20supplies%20and%20materials.";
-
-const services = [
+const divisions = [
   {
-    id: 1,
-    icon: <FaIndustry size={28} color="#F5A623" />,
-    title: 'Machinery Import, Supply & Export',
-    subtitle: 'Heavy Industrial Fabrication & Workshop Systems',
-    badge: 'Core Division',
-    desc: `Import, procurement, and supply of high-tonnage mechanical ironworkers, hydraulic C-frame & H-frame presses, busbar bending machines, pillar drills, and vertical milling equipment with full warranty and technical spares support.`,
-    features: [
-      'Multi-Functional Mechanical Ironworkers (55T – 125T)',
-      'Hydraulic H-Type Straight-Side Presses (20T – 500T)',
-      'Hydraulic Busbar Bending & Punching Equipment',
-      'Heavy Duty Industrial Radial & Pillar Drills',
-      'Precision Vertical Turret Milling Machines',
-      'Full Technical Spares & Operating Documentation',
+    id: 'div-machinery',
+    icon: <FaIndustry size={26} color="#F5A623" />,
+    badge: 'Machinery Division',
+    title: 'Heavy Industrial Machinery Supply',
+    subtitle: 'High-Tonnage Fabrication & Workshop Equipment',
+    highlights: [
+      'Multi-Functional Ironworkers (55T – 125T)',
+      'Hydraulic H-Type Presses (20T – 500T)',
+      'Hydraulic Busbar Bending & Punching Units',
+      'Heavy Duty Radial Drills & Vertical Milling',
     ],
-    applications: ['Structural Steel Fabrication', 'Automotive Press Shops', 'Control Panel Manufacturing', 'Machine Maintenance Toolrooms'],
+    catalogLink: '/products',
+    waText: 'Hello AptisMech, I would like to inquire about Heavy Industrial Machinery & Presses.',
   },
   {
-    id: 2,
-    icon: <FaBoxes size={28} color="#F5A623" />,
-    title: 'Industrial Raw Material Supply',
-    subtitle: 'Prime CRC Sheets, MS Coils & SS Coils',
-    badge: 'Raw Materials',
-    desc: `Wholesale sourcing and supply of high-grade steel raw materials: Cold Rolled Closed Annealed (CRCA) sheets, structural Mild Steel (MS) coils, and Stainless Steel (SS304/316) coils in standard and custom-slit widths.`,
-    features: [
-      'Prime & Commercial Grade CRC Sheets (0.4mm – 3.2mm)',
-      'Hot Rolled & Cold Rolled MS Coils (IS 2062 / ASTM A36)',
-      'Austenitic Stainless Steel Coils (SS 304, 304L, 316, 316L)',
-      'Precision Coil Slitting & Cut-to-Length Flat Sheets',
-      'Certified Chemical Composition & Tensile Metallurgy',
-      'Prompt Pan-India Bulk Lot Logistics',
+    id: 'div-raw',
+    icon: <FaBoxes size={26} color="#F5A623" />,
+    badge: 'Raw Material Supply',
+    title: 'Industrial Coils & Sheet Metals',
+    subtitle: 'Prime & Commercial CRC, MS & SS Coils',
+    highlights: [
+      'Prime Cold Rolled (CRCA) Sheets (0.4 – 3.2mm)',
+      'Structural Mild Steel (MS) Coils & Plates',
+      'Stainless Steel (SS 304/316) Slit Strips & Sheets',
+      'Precision Coil Slitting & Cut-to-Length Delivery',
     ],
-    applications: ['Electrical Panel Fabrication', 'Automotive Component Stamping', 'Storage Tank & PEB Construction', 'Kitchen & Chemical Equipment'],
+    catalogLink: '/products',
+    waText: 'Hello AptisMech, I need a quotation for CRC Sheets / MS Coils / SS Coils.',
   },
   {
-    id: 3,
-    icon: <FaCogs size={28} color="#F5A623" />,
-    title: 'Precision Hardware Spares & Fasteners',
-    subtitle: 'Engineered Components, Collars & Connectors',
-    badge: 'Spares Hub',
-    desc: `Supply of precision-machined base plates, diamond knurled nuts, SPM shaft collars, drop-forged eye bolts, hydraulic adapters, and three-phase induction electric motors for equipment builders and maintenance plants.`,
-    features: [
-      'Custom Milled Mounting Plates & Flanges',
-      'Diamond Knurled Adjustment Nuts (M6 – M20)',
-      'Single-Split & Clamp-On SPM Shaft Collars',
+    id: 'div-spares',
+    icon: <FaCogs size={26} color="#F5A623" />,
+    badge: 'Precision Spares',
+    title: 'Precision Hardware & Electric Motors',
+    subtitle: 'Mounts, Fasteners, Hydraulic Spares & Motors',
+    highlights: [
+      'Custom Milled Machine Base Plates & Flanges',
+      'SPM Precision Shaft Collars & Knurled Nuts',
       'Drop-Forged High-Tensile Eye Bolts (DIN 580)',
-      'High-Pressure Hydraulic Hex Adapters & Connectors',
       'Three-Phase IP55 Squirrel Cage Induction Motors',
     ],
-    applications: ['Machine Assembly Lines', 'Hydraulic Power Units', 'Heavy Rigging & Lifting', 'Industrial Fluid Plumbing'],
+    catalogLink: '/products',
+    waText: 'Hello AptisMech, I would like to inquire about Hardware Spares, Flanges & Motors.',
   },
   {
-    id: 4,
-    icon: <FaRecycle size={28} color="#F5A623" />,
-    title: 'Categorized Metal Scrap Solutions',
-    subtitle: 'Wholesale Non-Ferrous & Ferrous Scrap Lots',
-    badge: 'Recycling',
-    desc: `Authorized large-scale supply, sortation, and trading for premium raw scrap variants, specializing in high-purity Millberry Copper, Honey Brass, Extrusion Aluminium, and Stainless Steel scrap for melting furnaces and foundries.`,
-    features: [
-      'Millberry Copper Wire Scrap (99.9% Cu)',
+    id: 'div-scrap',
+    icon: <FaRecycle size={26} color="#F5A623" />,
+    badge: 'Recycling Solutions',
+    title: 'Categorized Metal Scrap Trading',
+    subtitle: 'Certified Non-Ferrous & Ferrous Metal Lots',
+    highlights: [
+      'Millberry Copper Wire Scrap (99.9% Purity)',
       '6063 Aluminium Extrusion & Cast Scrap',
-      'Honey Brass Rod & Sheet Scrap',
-      'SS 304 / 316 Non-Magnetic Scrap Lots',
-      'Certified Sortation with Spectrometer Purity Checks',
-      'Accurate Weighbridge Documentation',
+      'Honey Brass Rod & Pipe Scrap Lots',
+      'Spectrometer-Tested SS 304/316 Scrap Supply',
     ],
-    applications: ['Melting Furnaces & Smelters', 'Foundries & Casting Units', 'Extrusion & Billet Plants', 'Recycling Facilities'],
+    catalogLink: '/products',
+    waText: 'Hello AptisMech, I am looking for Wholesale Categorized Metal Scrap supply.',
   },
 ];
 
@@ -80,66 +70,91 @@ const Services = () => (
   <>
     {/* PAGE HERO */}
     <section className="page-hero">
-      <div className="container">
-        <div className="row justify-content-center text-center">
-          <div className="col-lg-8">
-            <span className="page-hero-eyebrow">Enterprise Solutions</span>
-            <h1 className="page-hero-title">
-              Complete Industrial Supply Portfolio
-            </h1>
-            <p className="page-hero-desc mx-auto">
-              From heavy fabrication machinery and raw material coils to precision hardware spares and certified metal scrap trading.
-            </p>
-          </div>
-        </div>
+      <div className="container text-center">
+        <span className="page-hero-eyebrow">Enterprise Divisions</span>
+        <h1 className="page-hero-title">Industrial Supply &amp; Machinery Portfolio</h1>
+        <p className="page-hero-desc mx-auto">
+          Comprehensive supply solutions across heavy fabrication machinery, industrial raw materials, precision hardware spares, and metal recycling.
+        </p>
       </div>
     </section>
 
-    {/* SERVICES LIST */}
-    <section className="section bg-white">
+    {/* 4 DIVISIONS IN STREAMLINED 2-COLUMN GRID */}
+    <section className="services-section bg-white">
       <div className="container">
-        <div className="row gy-5">
-          {services.map((svc) => (
-            <div className="col-lg-6" key={svc.id}>
-              <div className="service-card-full h-100 d-flex flex-column">
-                <div className="d-flex align-items-center gap-3 mb-3">
-                  <div className="service-icon-box">{svc.icon}</div>
-                  <div>
-                    <span className="service-badge">{svc.badge}</span>
-                    <h3 className="service-title">{svc.title}</h3>
-                    <span className="service-sub">{svc.subtitle}</span>
+        <div className="row g-4">
+          {divisions.map((d) => (
+            <div className="col-lg-6 col-12" key={d.id}>
+              <div className="division-card">
+                
+                {/* Header */}
+                <div className="division-card-header">
+                  <div className="d-flex align-items-center gap-3">
+                    <div className="division-icon-box">{d.icon}</div>
+                    <div>
+                      <span className="division-badge">{d.badge}</span>
+                      <h3 className="division-title">{d.title}</h3>
+                      <p className="division-sub">{d.subtitle}</p>
+                    </div>
                   </div>
                 </div>
 
-                <p className="service-desc">{svc.desc}</p>
-
-                <div className="service-features-grid mt-auto mb-4">
-                  {svc.features.map((feat, i) => (
-                    <div className="service-feat-item" key={i}>
-                      <FaCheckCircle size={13} color="#F5A623" style={{ flexShrink: 0 }} />
-                      <span>{feat}</span>
+                {/* Highlights list */}
+                <div className="division-highlights">
+                  {d.highlights.map((h, i) => (
+                    <div className="div-highlight-row" key={i}>
+                      <span className="div-check-icon"><FaCheck size={10} color="#F5A623" /></span>
+                      <span className="div-highlight-text">{h}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="d-flex gap-2 flex-wrap mb-4">
-                  {svc.applications.map((app, i) => (
-                    <span className="svc-app-tag" key={i}>{app}</span>
-                  ))}
-                </div>
-
-                <div className="d-flex gap-3 pt-3 border-top">
-                  <Link to="/products" className="btn-brand" style={{ fontSize: '0.8rem', padding: '10px 18px' }}>
+                {/* Action Buttons */}
+                <div className="division-actions">
+                  <Link to={d.catalogLink} className="btn-brand div-action-btn">
                     View Catalog <FaArrowRight size={11} />
                   </Link>
-                  <a href={WA} target="_blank" rel="noreferrer" className="btn-outline" style={{ fontSize: '0.8rem', padding: '10px 18px' }}>
-                    <FaWhatsapp size={13} /> Quick RfQ
+                  <a
+                    href={`https://wa.me/918866616585?text=${encodeURIComponent(d.waText)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-outline div-action-btn"
+                  >
+                    <FaWhatsapp size={13} /> Instant RfQ
                   </a>
                 </div>
+
               </div>
             </div>
           ))}
         </div>
+
+        {/* ════ BOTTOM QUICK PROCUREMENT CTA BANNER ════ */}
+        <div className="services-bottom-cta mt-5">
+          <div className="row align-items-center gy-4">
+            <div className="col-lg-8">
+              <span className="cta-banner-tag">Wholesale Procurement Desk</span>
+              <h3 className="cta-banner-title">Need a Tailored Quote or Delivery Schedule?</h3>
+              <p className="cta-banner-desc">
+                Contact our key partners directly in Vavdi Industrial Area, Rajkot for prompt quotations, material specifications, and pan-India dispatch details.
+              </p>
+              <div className="d-flex gap-3 flex-wrap mt-3">
+                <a href="tel:+917046500555" className="cta-phone-pill">
+                  <FaPhoneAlt size={11} /> Mr. Ankit: +91 70465 00555
+                </a>
+                <a href="tel:+918866616585" className="cta-phone-pill">
+                  <FaPhoneAlt size={11} /> Mr. Mayurbhai: +91 88666 16585
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 text-lg-end">
+              <Link to="/contact" className="btn-brand" style={{ padding: '14px 28px', fontSize: '0.88rem' }}>
+                Request Official Quote <FaArrowRight size={12} />
+              </Link>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   </>
