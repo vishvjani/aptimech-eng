@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/aptimech-eng/static/css/main.281bc6ce.css",
-    "main.js": "/aptimech-eng/static/js/main.010d0e92.js",
+    "main.css": "/aptimech-eng/static/css/main.e18b6f6c.css",
+    "main.js": "/aptimech-eng/static/js/main.ee8db3a8.js",
     "index.html": "/aptimech-eng/index.html",
-    "main.281bc6ce.css.map": "/aptimech-eng/static/css/main.281bc6ce.css.map",
-    "main.010d0e92.js.map": "/aptimech-eng/static/js/main.010d0e92.js.map"
+    "main.e18b6f6c.css.map": "/aptimech-eng/static/css/main.e18b6f6c.css.map",
+    "main.ee8db3a8.js.map": "/aptimech-eng/static/js/main.ee8db3a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.281bc6ce.css",
-    "static/js/main.010d0e92.js"
+    "static/css/main.e18b6f6c.css",
+    "static/js/main.ee8db3a8.js"
   ]
 }
