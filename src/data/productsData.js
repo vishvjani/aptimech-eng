@@ -1,24 +1,23 @@
 /* ================================================================
-   APTISMECH CORPORATION LLP — PRODUCT CATALOGUE DATA
-   Source: website.pdf & Official Technical Specification Documents
+   APTISMECH CORPORATION LLP — OFFICIAL PRODUCT CATALOGUE DATA
+   Importer, Supplier & Exporter of Industrial Machinery & Materials
    ================================================================ */
 
 export const productsData = [
   /* ══════════════════════════════════════════════════════════════
-     CATEGORY: HEAVY FABRICATION MACHINERY (Pages 1–9)
+     CATEGORY: HEAVY INDUSTRIAL MACHINERY & WORKSHOP EQUIPMENT
      ══════════════════════════════════════════════════════════════ */
   {
     id: 'mach-101',
     category: 'heavy_machinery',
-    categoryName: 'Heavy Fabrication Machinery',
+    categoryName: 'Heavy Industrial Machinery',
     badge: 'Multi-Station',
     tag: 'Mechanical Series',
     title: 'Mechanical Multi-Functional Punching & Shearing Machine',
     subtitle: 'All-In-One Iron Worker — Punching, Shearing, Notching & Cutting',
     image: `${process.env.PUBLIC_URL}/products/multi_functional_machine.jpg`,
-    pdfPage: 1,
     shortDesc: 'A versatile heavy-duty mechanical machine engineered to handle plate shearing, punching, angle/bar cutting, and notch-making in a single compact unit.',
-    fullDesc: `A versatile heavy-duty mechanical machine engineered to handle multiple metal fabrication operations including plate shearing, punching, bar cutting, and notch-making in a single compact unit.
+    fullDesc: `A versatile heavy-duty mechanical ironworker engineered to handle multiple metal fabrication operations including plate shearing, punching, bar cutting, and notch-making in a single compact unit.
 
 Engineered with an all-in-one multi-station design for high workshop productivity, a rigid structural steel frame built to withstand high cyclic mechanical loads, and integrated safety guards with a user-friendly control station for maximum operator security.`,
     features: [
@@ -54,13 +53,12 @@ Engineered with an all-in-one multi-station design for high workshop productivit
   {
     id: 'mach-102',
     category: 'heavy_machinery',
-    categoryName: 'Heavy Fabrication Machinery',
+    categoryName: 'Heavy Industrial Machinery',
     badge: 'Open Throat',
     tag: 'Hydraulic Series',
     title: 'Hydraulic C-Type Punching Machine',
     subtitle: 'High-Tonnage Open Throat C-Frame Punching Operation',
     image: `${process.env.PUBLIC_URL}/products/c_type_punching_machine.png`,
-    pdfPage: 2,
     shortDesc: 'An open-throat C-frame hydraulic punching machine offering wide 3-sided accessibility, designed for accurate, high-tonnage punching on plates, channels, and structural sections.',
     fullDesc: `An open-throat C-frame hydraulic punching machine offering wide accessibility from three sides, designed for accurate, high-tonnage punching operations on plates, channels, and structural sections.
 
@@ -87,686 +85,678 @@ The open C-frame structure provides unobstructed material handling and easy work
   {
     id: 'mach-103',
     category: 'heavy_machinery',
-    categoryName: 'Heavy Fabrication Machinery',
+    categoryName: 'Heavy Industrial Machinery',
     badge: '4-Column Rigid',
     tag: 'Hydraulic Series',
     title: 'Hydraulic H-Type Press Machine',
     subtitle: 'Four-Column Straight-Side Heavy Press for Deep Drawing & Moulding',
     image: `${process.env.PUBLIC_URL}/products/h_type_hydraulic_press.jpg`,
-    pdfPage: 3,
     shortDesc: 'A heavy-duty four-column H-type hydraulic press engineered for high-precision deep drawing, forming, moulding, and heavy industrial pressing with uniform load distribution.',
     fullDesc: `A heavy-duty four-column H-type hydraulic press engineered for high-precision deep drawing, forming, moulding, and heavy industrial pressing applications with uniform load distribution.
 
 Robust H-frame structure ensures maximum rigidity and minimal frame deflection under full tonnage. Features a precision-guided moving ram for exceptional parallel accuracy, and an independent hydraulic power pack with pressure gauge and adjustable tonnage controls.`,
     features: [
-      'Robust H-frame structure ensuring maximum rigidity and minimal deflection under full tonnage',
-      'Precision-guided moving ram for exceptional parallel platen accuracy',
-      'Independent hydraulic power pack with pressure gauge and adjustable tonnage controls',
-      'T-slotted heavy bolster plate for fast and secure die clamping',
-      'Uniform pressing force distribution across large bed surface',
-      'Integrated pressure relief valve and emergency stop safety circuit',
+      'Rigid four-column / H-frame design ensures minimal deflection under heavy tonnage',
+      'Even pressure distribution across large workpiece surfaces',
+      'Independent hydraulic power pack with pressure regulator and dual pressure gauges',
+      'Ideal for metal stamping, deep drawing, straightening, and composite moulding',
+      'Dual-hand safety push buttons and optical safety curtains',
+      'Hard chrome plated columns and ram for extended service life',
     ],
     specs: [
-      { label: 'Structure', value: 'H-Type Fabricated Heavy Steel Structure' },
-      { label: 'Hydraulics', value: 'Motorized hydraulic power unit with control valves' },
-      { label: 'Bed Setup', value: 'T-slotted heavy bolster plate for secure die clamping' },
-      { label: 'Capacity Range', value: '20 Tons to 500 Tons' },
-      { label: 'Operating Pressure', value: 'Up to 315 Bar' },
-      { label: 'Ram Guidance', value: 'Hardened Chrome-Plated Columns with Bronze Bushings' },
+      { label: 'Frame Construction', value: 'Heavy-Duty 4-Column H-Frame Fabricated Steel' },
+      { label: 'Tonnage Range', value: '20 Tons to 500 Tons' },
+      { label: 'Ram Stroke', value: '150mm to 600mm (model dependent)' },
+      { label: 'Bed Size (L×W)', value: '500×500mm up to 1500×1200mm' },
+      { label: 'Daylight Opening', value: '300mm to 1000mm' },
+      { label: 'Hydraulic System', value: 'Compact high-pressure hydraulic unit' },
+      { label: 'Operation Modes', value: 'Manual Inching / Semi-Automatic Cycle' },
     ],
-    applications: ['Metal Forming', 'Deep Drawing', 'Rubber & Plastic Moulding', 'Heavy Assembly Pressing', 'Industrial Component Stamping']
+    applications: ['Automotive Deep Drawing', 'Embossing & Coining', 'Metal Straightening & Forming', 'Rubber & Composite Moulding', 'Heavy Appliance Fabrication']
   },
   {
     id: 'mach-104',
     category: 'heavy_machinery',
-    categoryName: 'Heavy Fabrication Machinery',
+    categoryName: 'Heavy Industrial Machinery',
     badge: 'Power Operated',
     tag: 'Workshop Series',
-    title: 'H-Type Hydraulic Workshop Press — Power Operated',
-    subtitle: 'Motorized Heavy-Duty Workshop Press with Adjustable Bolster Bed',
+    title: 'H-Type Hydraulic Workshop Press (Power Operated)',
+    subtitle: 'Motorized Hydraulic Workshop Press with Movable Bed',
     image: `${process.env.PUBLIC_URL}/products/h_type_workshop_press_power.jpg`,
-    pdfPage: 4,
-    shortDesc: 'A motorized power-operated H-type workshop press built for general engineering maintenance, straightening, bending, and bearing insertion tasks with high speed and precision.',
-    fullDesc: `A motorized power-operated H-type workshop press built for general engineering maintenance, straightening, bending, and bearing insertion tasks with high speed and precision.
+    shortDesc: 'A heavy-duty motorized hydraulic workshop press with adjustable movable bed, designed for bushing removal, bearing pressing, shaft straightening, and repair work.',
+    fullDesc: `A heavy-duty motorized hydraulic workshop press equipped with an adjustable movable bed, designed for industrial maintenance, bushing insertion/removal, bearing pressing, shaft straightening, and general repair operations.
 
-Motorized hydraulic pump unit delivers quick approach and return strokes. The adjustable work table height is effortlessly operated using a winch or lifting mechanism. Equipped with a heavy-duty pressure gauge for accurate load monitoring during critical pressing operations.`,
+Powered hydraulic cylinder with fine-touch lever controls delivers effortless force application. The multi-height adjustable bed with heavy-duty support pins accommodates diverse workpiece sizes.`,
     features: [
-      'Motorized hydraulic pump unit delivering quick approach and return strokes',
-      'Adjustable work table height using a winch or lifting mechanism',
-      'Heavy-duty pressure gauge for accurate load monitoring during operation',
-      'Overload relief valve integrated into the hydraulic circuit',
-      'Rugged welded steel H-frame designed for lifetime workshop service',
-      'Supplied with V-blocks and flat pressing plates as standard',
+      'Motorized hydraulic cylinder for effortless high-tonnage operation',
+      'Multi-level adjustable bed with heavy-duty locking pins for varied workpiece heights',
+      'High-precision pressure gauge for real-time load monitoring',
+      'Heavy-channel fabricated steel frame with high stability',
+      'Fast approach and powerful pressing stroke speeds',
+      'Removable V-blocks and flat bolster plates included',
     ],
     specs: [
-      { label: 'Operation', value: 'Motor-driven hydraulic power pack' },
-      { label: 'Design', value: 'H-Frame floor model with adjustable lower bolster' },
-      { label: 'Safety', value: 'Overload relief valve integrated into hydraulic circuit' },
-      { label: 'Tonnage Range', value: '20T, 30T, 50T, 75T, 100T options' },
-      { label: 'Work Table Adjustment', value: 'Multi-position height with cable winch' },
+      { label: 'Drive Mechanism', value: 'Electric Motor Driven Hydraulic Pump' },
+      { label: 'Available Capacities', value: '10 Ton, 20 Ton, 30 Ton, 50 Ton, 75 Ton, 100 Ton' },
+      { label: 'Frame Width', value: '600mm to 1000mm' },
+      { label: 'Piston Stroke', value: '150mm – 300mm' },
+      { label: 'Operating Pressure', value: 'Up to 300 Bar' },
+      { label: 'Motor Power', value: '1.5 kW – 5.5 kW (3-Phase 415V)' },
     ],
-    applications: ['Automotive Service Garages', 'Machine Maintenance Shops', 'Straightening Shafts & Axles', 'Press-Fit Assembly Work', 'Bearing & Bushing Installation']
+    applications: ['Machine Maintenance Workshops', 'Automobile Service Centers', 'Bearing & Bushing Pressing', 'Shaft & Axle Straightening', 'Heavy Equipment Overhaul']
   },
   {
     id: 'mach-105',
     category: 'heavy_machinery',
-    categoryName: 'Heavy Fabrication Machinery',
-    badge: 'Manual / Hand Pump',
+    categoryName: 'Heavy Industrial Machinery',
+    badge: 'Manual Lever',
     tag: 'Workshop Series',
-    title: 'H-Type Manual Workshop Press',
-    subtitle: 'Hand-Operated Precision Hydraulic Workshop Utility Press',
+    title: 'H-Type Hydraulic Workshop Press (Manual Operated)',
+    subtitle: 'Hand-Pump Hydraulic Workshop Utility Press',
     image: `${process.env.PUBLIC_URL}/products/h_type_workshop_press_manual.png`,
-    pdfPage: 5,
-    shortDesc: 'A reliable hand-operated H-frame hydraulic press designed for precision pressing, bush extraction, bending, and utility jobs without requiring external electric power.',
-    fullDesc: `A reliable hand-operated H-frame mechanical/hydraulic press designed for precision pressing, bush extraction, bending, and small-scale workshop utility jobs without requiring external electric power.
+    shortDesc: 'A standalone manual hand-pump operated hydraulic workshop press for precision low-to-medium volume pressing, bearing fitting, and maintenance tasks without requiring electrical power.',
+    fullDesc: `A standalone manual hand-pump operated hydraulic workshop press designed for precision low-to-medium volume pressing, bearing fitting, gear extraction, and general maintenance tasks without requiring electrical power connections.
 
-Hand-lever or hand-pump hydraulic operation provides tactile, fine control over pressing force. Features a compact and sturdy H-frame construction built from high-grade structural steel with movable work bed positions.`,
+Features a dual-speed manual hydraulic hand pump for rapid piston extension followed by high-pressure pressing stroke. Built with an open-sided H-frame allowing long shafts to pass through horizontally.`,
     features: [
-      'Hand-lever or hand-pump hydraulic operation for fine tactile force control',
-      'No external electric power required — 100% self-contained',
-      'Compact and sturdy H-frame construction built from high-grade structural steel',
-      'Movable work bed positions to accommodate various workpiece heights',
-      'Dual-speed hand pump option for rapid approach and high-pressure pressing',
-      'Pressure gauge with overload protection built-in',
+      'Dual-speed manual hydraulic hand pump — fast approach & high-pressure stroke',
+      'Zero electrical power required — fully portable for flexible workshop placement',
+      'Adjustable work table with winch-assisted elevation mechanism',
+      'High-clarity dial pressure gauge calibrated in metric tons',
+      'Includes V-blocks and hardened cylinder nose cap',
+      'Heavy welded channel frame with wide stance foot plates',
     ],
     specs: [
-      { label: 'Operation', value: 'Manual hand pump / lever mechanism' },
-      { label: 'Capacity Options', value: '10T, 20T, 30T, 50T Tonnage ratings' },
-      { label: 'Construction', value: 'Bolted and welded steel H-frame profile' },
-      { label: 'Power Source', value: 'Manual Hydraulic (Zero Electricity Required)' },
-      { label: 'Accessories', value: 'V-blocks and flat platen plates included' },
+      { label: 'Drive Mechanism', value: 'Dual-Speed Manual Hydraulic Hand Pump' },
+      { label: 'Available Capacities', value: '5 Ton, 10 Ton, 20 Ton, 30 Ton, 50 Ton' },
+      { label: 'Piston Travel', value: '125mm – 200mm' },
+      { label: 'Working Width', value: '500mm – 800mm' },
+      { label: 'Vertical Daylight', value: '100mm – 950mm adjustable' },
     ],
-    applications: ['Tool Rooms', 'Repair Workshops', 'Bearing Fitting & Bushing Removal', 'Light Shaft Straightening', 'Vocational Training Centers']
+    applications: ['Small & Medium Machine Workshops', 'Agricultural Equipment Repair', 'Tool Rooms & Prototype Labs', 'Educational & ITI Workshops']
   },
   {
     id: 'mach-106',
     category: 'heavy_machinery',
-    categoryName: 'Heavy Fabrication Machinery',
-    badge: 'Specialized',
-    tag: 'Electrical Machinery',
-    title: 'Hydraulic Busbar Bending & Cutting Machines (Manual & NC)',
-    subtitle: 'Dedicated Copper & Aluminium Busbar Processing Machinery',
-    image: `${process.env.PUBLIC_URL}/products/reducing_adapters_fittings.jpg`,
-    pdfPage: 6,
-    shortDesc: 'Specialized machinery designed for precise bending, cutting, and punching of copper and aluminium busbars used extensively in electrical switchgear and panel building.',
-    fullDesc: `Specialized machinery designed for precise bending, cutting, and punching of copper and aluminium busbars used extensively in electrical switchgear and panel building.
+    categoryName: 'Heavy Industrial Machinery',
+    badge: 'Compact C-Frame',
+    tag: 'SPM Series',
+    title: 'Hydraulic C-Type Press Machine (SPM)',
+    subtitle: 'Special Purpose Single-Column High-Speed Assembly Press',
+    image: `${process.env.PUBLIC_URL}/products/c_type_press_spm.png`,
+    shortDesc: 'A compact single-column C-type hydraulic special purpose machine (SPM) press engineered for precision component assembly, riveting, crimping, and localized stamping.',
+    fullDesc: `A compact single-column C-type hydraulic special purpose machine (SPM) press engineered for high-precision component assembly, riveting, crimping, localized stamping, and bearing pressing in serial production environments.
 
-Delivers clean, distortion-free cutting and precision radius/angle bending for copper/aluminum busbars. Available in manual and Numerical Control (NC) variations with dedicated tooling dies for rapid, high-volume production.`,
+Engineered with three-side open access for seamless integration with conveyor lines, robotic pick-and-place, or manual loading jigs. Features a rigid welded C-frame with low deformation characteristics and precision ram guidance.`,
     features: [
-      'Clean, distortion-free cutting and radius/angle bending for copper & aluminium busbars',
-      'Available in manual and Numerical Control (NC) variations for high-volume accurate production',
-      'Compact hydraulic units with dedicated tooling dies for flat and edge-wise bending',
-      'Zero burr cutting blades with smooth corner radiuses',
-      'Integrated angle positioning gauge for repeatable bend accuracy',
+      'Compact single-column C-frame footprint saving valuable shop-floor space',
+      'Three-sided accessibility ideal for progressive tooling and automation jigs',
+      'Precise electronic pressure and stroke limit adjustments',
+      'High-speed approach with smooth hydraulic deceleration before contact',
+      'Dual optical safety light curtains and emergency stop switches',
+      'Integrated coolant and oil filtration unit for 24/7 industrial duty',
     ],
     specs: [
-      { label: 'Material Compatibility', value: 'Copper and Aluminium Busbars' },
-      { label: 'Control Options', value: 'Manual hydraulic or NC programmable controller' },
-      { label: 'Operations', value: 'Bending, cutting, punching, and offset forming modules' },
-      { label: 'Max Busbar Size', value: 'Up to 12mm thickness × 200mm width' },
-      { label: 'Hydraulic Pressure', value: '700 Bar high-pressure hydraulic circuit' },
+      { label: 'Capacity Range', value: '5 Ton to 60 Ton options' },
+      { label: 'Frame Structure', value: 'Heavy C-Type Single Column Welded Steel' },
+      { label: 'Throat Depth', value: '150mm – 300mm' },
+      { label: 'Ram Stroke', value: '50mm – 250mm adjustable' },
+      { label: 'Max Daylight', value: '250mm – 500mm' },
+      { label: 'Operating Speed', value: 'Approach: 120 mm/s | Press: 15–30 mm/s | Return: 100 mm/s' },
+      { label: 'Motor Rating', value: '2.2 kW to 7.5 kW' },
     ],
-    applications: ['Electrical Panel Manufacturing', 'Switchgear Fabrication', 'Power Distribution Equipment', 'Transformer Busbars', 'Electrical Contracting']
+    applications: ['Electrical Appliance Assembly', 'Bearing & Bushing Insertion', 'Automotive Sensor & Valve Crimping', 'Hardware & Fastener Riveting', 'SPM Line Integration']
   },
   {
     id: 'mach-107',
     category: 'heavy_machinery',
-    categoryName: 'Heavy Fabrication Machinery',
-    badge: 'Precision',
-    tag: 'Machine Tools',
-    title: 'Imported Universal / Vertical Milling Machine',
-    subtitle: 'Heavy Ribbed Melanite Cast Iron Precision Milling Machine',
-    image: `${process.env.PUBLIC_URL}/products/cnc_carbide_inserts.png`,
-    pdfPage: 6,
-    shortDesc: 'High-precision universal / vertical milling machine imported to deliver superior machining accuracy, rigidity, and versatility for complex workpiece shaping and slotting.',
-    fullDesc: `High-precision universal / vertical milling machine imported to deliver superior machining accuracy, rigidity, and versatility for complex workpiece shaping, slotting, and face milling.
+    categoryName: 'Heavy Industrial Machinery',
+    badge: 'Heavy-Duty',
+    tag: 'Processing Equipment',
+    title: 'Hydraulic Busbar Bending Machine',
+    subtitle: 'Heavy-Duty Copper & Aluminium Busbar Bending, Punching & Cutting Machine',
+    image: `${process.env.PUBLIC_URL}/products/hydraulic_busbar_bending.jpg`,
+    shortDesc: 'High-precision hydraulic busbar bending and processing machine for copper and aluminium flats used in electrical control panels and switchgear.',
+    fullDesc: `High-precision hydraulic busbar bending and processing machine engineered specifically for copper and aluminium flats used in electrical control panels, transformers, and switchgear manufacturing.
 
-Hardened and ground guide ways ensure long-term cutting accuracy and wear resistance. Features a wide speed range gearbox supporting diverse cutting tools and material types, built on a heavy ribbed Melanite cast iron column and knee that absorbs heavy cutting vibrations.`,
+Delivers accurate bend angles up to 90° without cracking or wrinkling the conductive material. Features graduated angle scale, quick-change tooling dies, and powerful hydraulic power pack.`,
     features: [
-      'Hardened and ground guide ways ensuring long-term cutting accuracy and wear resistance',
-      'Wide speed range gearbox supporting diverse cutting tools and material types',
-      'Rigid cast iron column and knee design absorbing heavy cutting vibrations',
-      'Swivel milling head for angular face milling and slotting operations',
-      'Power feed on longitudinal and cross axes for effortless machining',
+      'Accurate bending up to 90° without surface cracking or conductive distortion',
+      'Quick-change die tooling for flat bending, vertical bending, and punching',
+      'High-capacity hydraulic cylinder delivering smooth uniform pressure',
+      'Compact heavy-duty footprint suitable for control panel fabrication workshops',
+      'Integrated angle protractor gauge for repeatable precision angles',
     ],
     specs: [
-      { label: 'Spindle Type', value: 'Precision-machined high RPM spindle with ISO/R8 taper' },
-      { label: 'Table Size', value: 'Precision slotted work table with longitudinal/cross feeds' },
-      { label: 'Build Quality', value: 'Heavy ribbed Melanite cast iron structure' },
-      { label: 'Spindle Speeds', value: 'Multi-step gearbox with wide RPM range' },
-      { label: 'Lubrication', value: 'One-shot centralized lubrication system' },
+      { label: 'Material Suitability', value: 'Copper & Aluminium Busbars' },
+      { label: 'Max Bending Width', value: 'Up to 200 mm' },
+      { label: 'Max Bending Thickness', value: 'Up to 15 mm' },
+      { label: 'Max Bending Angle', value: '0° – 90° adjustable' },
+      { label: 'Hydraulic Pressure', value: 'Up to 700 Bar (70 MPa)' },
+      { label: 'Operation', value: 'Hydraulic Foot / Hand Valve Control' },
     ],
-    applications: ['Tool and Die Making', 'Mould Manufacturing', 'General Engineering Workshops', 'Precision Component Machining', 'R&D Prototyping']
+    applications: ['Electrical Control Panel Builders', 'Switchgear & Substation Manufacturing', 'Transformer Busbar Fabrication', 'Power Distribution Equipment']
   },
   {
     id: 'mach-108',
     category: 'heavy_machinery',
-    categoryName: 'Heavy Fabrication Machinery',
-    badge: 'SPM Automation',
-    tag: 'Hydraulic Series',
-    title: 'Hydraulic C-Type Press Machine — SPM',
-    subtitle: 'Special Purpose High-Speed C-Frame Hydraulic Press (10T to 250T)',
-    image: `${process.env.PUBLIC_URL}/products/c_type_press_spm.png`,
-    pdfPage: 7,
-    shortDesc: 'A Special Purpose Machine (SPM) built on a C-frame hydraulic platform, custom-engineered for dedicated, high-speed repetitive manufacturing processes.',
-    fullDesc: `A Special Purpose Machine (SPM) built on a C-frame hydraulic platform, custom-engineered for dedicated, high-speed repetitive manufacturing processes with automated or semi-automated cycles.
+    categoryName: 'Heavy Industrial Machinery',
+    badge: 'Pillar / Radial',
+    tag: 'Drilling Equipment',
+    title: 'Heavy Duty Industrial Drill Machine',
+    subtitle: 'Precision Pillar & Radial Industrial Drilling Machine for Heavy Fabrication',
+    image: `${process.env.PUBLIC_URL}/products/drill_machine.jpg`,
+    shortDesc: 'Rugged heavy-duty industrial pillar drill machine with multi-speed gearbox, precision spindle, and rigid column for accurate hole drilling and tapping.',
+    fullDesc: `Rugged heavy-duty industrial pillar drill machine engineered for rigorous hole drilling, counter-boring, and tapping across structural steel, cast iron, and non-ferrous metals.
 
-Custom-engineered tooling and fixture integration for specific component assembly or forming. Fast cycle times designed for mass production environments with advanced safety interlocks and PLC-based control integration. Complete technical configurations available from 10 TONS up to 250 TONS.`,
+Features a heavy cast-iron column, precision ground quill and spindle, multi-step pulley/gearbox speed transmission, and an adjustable tilting work table.`,
     features: [
-      'Custom-engineered tooling and fixture integration for specific component assembly or forming',
-      'Fast cycle times designed for mass production environments',
-      'Advanced safety interlocks and PLC-based control integration',
-      'Available across full tonnage spectrum from 10 Tons to 250 Tons',
-      'Variable stroke adjustment from 6mm to 150mm',
-      'Precision-machined crankshaft, bolster bed, and ram guide ways',
+      'Heavy cast iron column and base ensuring maximum vibration dampening',
+      'Precision ground spindle with hardened Morse taper bore',
+      'Wide speed selection for small precision holes up to large core drilling',
+      'Height adjustable and rotating work table with T-slots',
+      'Heavy-duty rack and pinion mechanism with depth gauge stop',
     ],
     specs: [
-      { label: 'Machine Type', value: 'Special Purpose Hydraulic C-Press (SPM)' },
-      { label: 'Control System', value: 'PLC-based automation with sensor feedback' },
-      { label: 'Customization', value: 'Tailored stroke, daylight, and table dimensions' },
-      { label: 'Tonnage Ratings', value: '10T, 20T, 30T, 50T, 80T, 100T, 150T, 200T, 250T' },
-      { label: 'Bed Sizes', value: '450×250mm up to 900×700mm' },
-      { label: 'Power Required', value: '1 HP up to 25 HP (1440 RPM)' },
-      { label: 'Approx Weight', value: '630 kg up to 9,500 kg' },
+      { label: 'Drilling Capacity (Steel)', value: 'Ø20 mm to Ø50 mm' },
+      { label: 'Spindle Taper', value: 'MT-3 / MT-4' },
+      { label: 'Spindle Travel', value: '120 mm – 200 mm' },
+      { label: 'Speed Range', value: 'Multi-speed gearbox / stepped pulleys' },
+      { label: 'Column Diameter', value: 'Heavy cast Ø90 mm – Ø160 mm' },
+      { label: 'Motor Power', value: '1.5 HP to 5.0 HP (3-Phase 415V)' },
     ],
-    specTable: {
-      headers: ['Technical Parameter', '10T', '20T', '30T', '50T', '80T', '100T', '150T', '200T', '250T'],
-      rows: [
-        ['CRANK SHAFT DIA (mm)', '57', '75', '82', '100', '115', '125', '150', '175', '200'],
-        ['BED SIZE - LR x FB (mm)', '450x250', '500x375', '550x375', '750x500', '800x550', '900x650', '900x650', '900x700', '900x700'],
-        ['STROKE ADJUSTABLE (mm)', '6-50', '6-75', '6-75', '6-100', '12-115', '12-125', '12-150', '12-150', '12-150'],
-        ['DEPTH OF THROAT (mm)', '125', '175', '190', '250', '280', '325', '325', '350', '350'],
-        ['HOLE IN RAM (mm)', '25', '32', '32', '38', '50', '50', '50', '50', '50'],
-        ['SHUT HEIGHT (mm)', '200', '200', '225', '250', '288', '325', '300', '350', '350'],
-        ['SLIDE ADJUSTMENT (mm)', '25', '40', '40', '50', '50', '65', '65', '65', '65'],
-        ['DIST BED TO RAM (mm)', '250', '275', '300', '350', '400', '450', '450', '500', '500'],
-        ['HOLE IN BED (mm)', '70', '90', '90', '100', '115', '125', '150', '150', '150'],
-        ['WHEEL DIA (mm)', '455', '550', '625', '750', '900', '1000', '1,125', '1,175', '1,200'],
-        ['STROKES PER MINUTE', '60', '35', '35', '35', '35', '35', '35', '30', '30'],
-        ['POWER REQD (HP/RPM)', '1/1440', '2/1440', '3/1440', '5/1440', '7.5/1440', '10/1440', '15/1440', '20/1440', '25/1440'],
-        ['APPROX WEIGHT (kg)', '630', '1,200', '1,450', '2,600', '3,800', '5,500', '7,500', '8,500', '9,500'],
-      ]
-    },
-    applications: ['Automotive Ancillaries', 'Dedicated Assembly Lines', 'Mass-Production Stamping', 'Specialized Pressing', 'Appliance Part Fabrication']
+    applications: ['Structural Steel Fabrication', 'Machine Component Machining', 'Maintenance Toolrooms', 'Automotive Repair Workshops']
   },
   {
     id: 'mach-109',
     category: 'heavy_machinery',
-    categoryName: 'Heavy Fabrication Machinery',
-    badge: 'CNC Synchro',
-    tag: 'Bending Series',
-    title: 'CNC Front Cylinder Hydraulic Press Brake Machine',
-    subtitle: 'Front-Cylinder Synchronized High-Accuracy Press Brake (40T to 120T)',
-    image: `${process.env.PUBLIC_URL}/products/cnc_hydraulic_press_brake.png`,
-    pdfPage: 8,
-    shortDesc: 'An advanced CNC hydraulic press brake featuring front-cylinder design for superior synchronization, high bending accuracy, and multi-axis back gauge positioning.',
-    fullDesc: `An advanced CNC hydraulic press brake featuring front-cylinder design for superior synchronization, high bending accuracy, and multi-axis back gauge positioning.
+    categoryName: 'Heavy Industrial Machinery',
+    badge: 'Dual Function',
+    tag: 'Milling & Drilling',
+    title: 'Heavy Duty Drilling-Cum-Milling Machine',
+    subtitle: 'Dual-Purpose Industrial Drilling & Face/End Milling Machine',
+    image: `${process.env.PUBLIC_URL}/products/drilling_cum_milling.jpg`,
+    shortDesc: 'A versatile dual-purpose machine combining precision drilling with compound X-Y table face and end milling capabilities in a single rigid unit.',
+    fullDesc: `A versatile dual-purpose industrial machine combining high-torque drilling capabilities with compound X-Y coordinate table milling for facing, slotting, keyway cutting, and spot drilling.
 
-CNC graphical controller for intuitive angle programming and automatic depth calculation. Rigid synchro-hydraulic design ensures parallel ram movement across the entire bending length. Quick-clamp tooling system for rapid punch and die changes.`,
+Equipped with a precision cross-slide compound table with micrometer dials, heavy column support, swivel head mechanism, and powerful drive motor for heavy metal removal.`,
     features: [
-      'CNC graphical controller for intuitive angle programming and automatic depth calculation',
-      'Rigid synchro-hydraulic design ensuring parallel ram movement across entire bending length',
-      'Quick-clamp tooling system for rapid punch and die changes',
-      'Front-mounted dual hydraulic cylinders delivering balanced bending force',
-      'Multi-axis precision back gauge with ball screw and linear guideway mechanism',
-      'Motorized auto-crowning and deflection compensation on lower table',
+      'Dual capability: heavy drilling + precise X-Y compound table milling',
+      'Precision machined cross-slide table with calibrated feed dials',
+      'Swivel milling head for angled drilling and bevel machining',
+      'Heavy-duty hardened gears and rigid cast column',
+      'Fine micro-downfeed control for accurate depth milling',
     ],
     specs: [
-      { label: 'Cylinder Configuration', value: 'Front-mounted dual hydraulic cylinders' },
-      { label: 'Controller', value: 'Advanced CNC touch screen control system' },
-      { label: 'Tonnage Range', value: '40T, 50T, 60T, 80T, 100T, 120T models' },
-      { label: 'Bending Length (M.S.)', value: '1270mm up to 3300mm' },
-      { label: 'Plate Thickness (M.S.)', value: '2mm to 12mm' },
-      { label: 'Table Width', value: '150mm to 200mm' },
-      { label: 'Motor Power', value: '5 HP to 12.5 HP' },
+      { label: 'Max Drilling Diameter', value: 'Ø32 mm – Ø45 mm' },
+      { label: 'Max Face Milling Diameter', value: 'Ø80 mm' },
+      { label: 'Max End Milling Diameter', value: 'Ø28 mm – Ø32 mm' },
+      { label: 'Table Size (L×W)', value: '800×240 mm (with T-slots)' },
+      { label: 'Head Swivel Angle', value: '±45° Left / Right' },
+      { label: 'Spindle Motor', value: '2.0 HP – 3.0 HP (3-Phase 415V)' },
     ],
-    specTable: {
-      headers: ['Tonnage', 'Bending Capacity (MS)', 'Table Width', 'Clear Distance', 'Ram Stroke', 'Open Height', 'Depth Throat', 'Power HP', 'Dimensions (LxWxH)'],
-      rows: [
-        ['40T', '1270 x 4 mm', '150 mm', '900 mm', '100 mm', '250 mm', '200 mm', '5 HP', '1400x1050x1900 mm'],
-        ['40T', '1525 x 3 mm', '150 mm', '1100 mm', '100 mm', '250 mm', '200 mm', '5 HP', '1700x1050x1900 mm'],
-        ['40T', '2540 x 2 mm', '150 mm', '2000 mm', '100 mm', '250 mm', '200 mm', '5 HP', '2700x1050x1900 mm'],
-        ['50T', '1525 x 4 mm', '175 mm', '1100 mm', '125 mm', '250 mm', '200 mm', '5 HP', '1700x1050x1900 mm'],
-        ['50T', '2030 x 3 mm', '175 mm', '1550 mm', '125 mm', '250 mm', '200 mm', '5 HP', '2200x1050x1900 mm'],
-        ['60T', '1270 x 6 mm', '175 mm', '900 mm', '125 mm', '330 mm', '200 mm', '5 HP', '1400x1200x2000 mm'],
-        ['60T', '2030 x 4 mm', '175 mm', '1550 mm', '125 mm', '330 mm', '200 mm', '5 HP', '2200x1200x2000 mm'],
-        ['60T', '2540 x 3 mm', '175 mm', '2000 mm', '125 mm', '330 mm', '200 mm', '5 HP', '2700x1200x2000 mm'],
-        ['60T', '3125 x 2 mm', '175 mm', '2500 mm', '125 mm', '330 mm', '200 mm', '5 HP', '3300x1200x2000 mm'],
-        ['80T', '1270 x 8 mm', '200 mm', '900 mm', '150 mm', '330 mm', '300 mm', '7.5 HP', '1400x1500x2200 mm'],
-        ['80T', '1525 x 6 mm', '200 mm', '1100 mm', '150 mm', '330 mm', '300 mm', '7.5 HP', '1700x1500x2200 mm'],
-        ['80T', '2540 x 4 mm', '200 mm', '2000 mm', '150 mm', '330 mm', '300 mm', '7.5 HP', '2700x1500x2200 mm'],
-        ['80T', '3125 x 3 mm', '200 mm', '2500 mm', '150 mm', '330 mm', '300 mm', '7.5 HP', '3300x1500x2200 mm'],
-        ['100T', '1270 x 10 mm', '200 mm', '900 mm', '150 mm', '330 mm', '300 mm', '10 HP', '1400x1500x2300 mm'],
-        ['100T', '1525 x 8 mm', '200 mm', '1100 mm', '150 mm', '330 mm', '300 mm', '10 HP', '1700x1500x2300 mm'],
-        ['100T', '2030 x 6 mm', '200 mm', '1550 mm', '150 mm', '330 mm', '300 mm', '10 HP', '2200x1600x2300 mm'],
-        ['100T', '3125 x 4 mm', '200 mm', '2500 mm', '150 mm', '330 mm', '300 mm', '10 HP', '3300x1600x2300 mm'],
-        ['120T', '1270 x 12 mm', '200 mm', '900 mm', '150 mm', '330 mm', '300 mm', '12.5 HP', '1400x1700x2300 mm'],
-        ['120T', '1525 x 10 mm', '200 mm', '1100 mm', '150 mm', '330 mm', '300 mm', '12.5 HP', '1700x1700x2500 mm'],
-        ['120T', '2030 x 8 mm', '200 mm', '1550 mm', '150 mm', '330 mm', '300 mm', '12.5 HP', '2200x1700x2800 mm'],
-        ['120T', '2540 x 6 mm', '200 mm', '2000 mm', '150 mm', '330 mm', '300 mm', '12.5 HP', '2700x1700x2500 mm'],
-      ]
-    },
-    applications: ['Sheet Metal Fabrication', 'Enclosure Manufacturing', 'Architectural Panel Bending', 'HVAC Ducting', 'Aerospace Components']
+    applications: ['Tool Rooms & Die Making', 'Fabrication & Maintenance Shops', 'Keyway & Slot Milling', 'Precision Prototype Machining']
   },
   {
     id: 'mach-110',
     category: 'heavy_machinery',
-    categoryName: 'Heavy Fabrication Machinery',
-    badge: 'NC Guillotine',
-    tag: 'Cutting Series',
-    title: 'NC Hydraulic Shearing Machine',
-    subtitle: 'High-Speed Precision Guillotine Shearing (1525mm to 4000mm)',
-    image: `${process.env.PUBLIC_URL}/products/hydraulic_shearing_machine.png`,
-    pdfPage: 9,
-    shortDesc: 'A precision NC-controlled hydraulic guillotine shearing machine designed for clean, high-speed straight-line cutting of sheet metals with motorized back gauge.',
-    fullDesc: `A precision NC-controlled hydraulic guillotine shearing machine designed for clean, high-speed straight-line cutting of sheet metals with motorized back gauge positioning.
+    categoryName: 'Heavy Industrial Machinery',
+    badge: 'Vertical Turret',
+    tag: 'Milling Equipment',
+    title: 'Precision Vertical Milling Machine',
+    subtitle: 'Heavy Duty Industrial Vertical Turret Milling Machine',
+    image: `${process.env.PUBLIC_URL}/products/vertical_milling_machine.jpg`,
+    shortDesc: 'High-precision heavy-duty vertical milling machine designed for flat surfacing, slotting, contouring, and multi-axis metal machining.',
+    fullDesc: `High-precision heavy-duty vertical turret milling machine engineered for continuous industrial manufacturing, die sinking, mold profiling, facing, and precision slotting.
 
-NC programmable back gauge with ball screw mechanism for precise cut length accuracy. Hydraulic hold-down jacks securely clamp sheets during the cutting stroke to prevent slippage. Adjustable rake angle and blade clearance for burr-free cuts across varying sheet thicknesses.`,
+Features precision-hardened and ground slideways with Turcite-B coating, a high-torque variable speed spindle head, power feeds on X/Y axes, and a heavy-duty ribbed casting structure for chatter-free cuts.`,
     features: [
-      'NC programmable back gauge with ball screw mechanism for precise cut length accuracy',
-      'Hydraulic hold-down jacks securely clamp sheets during cutting stroke to prevent slippage',
-      'Adjustable rake angle and blade clearance for burr-free cuts across varying sheet thicknesses',
-      'High-alloy chromium-molybdenum (CrMo) 4-edge reversible tool steel blades',
-      'Front sheet support arms with measuring scale and squaring arm',
-      'Shadow-line lighting for accurate manual alignment and narrow blank cutting',
+      'Rigid Meehanite cast iron structure for superior vibration dampening',
+      'Precision ground quill and chrome-plated spindle with high runout accuracy',
+      'Longitudinal and cross power feeds with rapid traverse',
+      'Turcite-B coated slideways for smooth stick-slip free movement',
+      'Integrated coolant pump, tray, and centralized lubrication system',
     ],
     specs: [
-      { label: 'Control System', value: 'NC controller with digital readout for back gauge' },
-      { label: 'Cutting Action', value: 'Swing beam or guillotine hydraulic shearing action' },
-      { label: 'Blade Material', value: 'High-alloy chromium-molybdenum tool steel blades' },
-      { label: 'Cutting Lengths', value: '1525mm, 2030mm, 2540mm, 3125mm, 4000mm' },
-      { label: 'Shearing Thickness', value: '4mm up to 16mm (Mild Steel) / 2mm to 10mm (SS)' },
-      { label: 'Motor Power', value: '7.5 HP up to 30 HP' },
-      { label: 'Hold-Down System', value: 'Independent Hydraulic Hold-down Pistons' },
+      { label: 'Table Working Area', value: '1270×254 mm (or 1370×300 mm)' },
+      { label: 'Table Travel (X / Y / Z)', value: '800 mm / 380 mm / 400 mm' },
+      { label: 'Spindle Taper', value: 'ISO 40 / NT40 / R8' },
+      { label: 'Spindle Speed Range', value: '60 – 4200 RPM (Step/Variable)' },
+      { label: 'Spindle Motor Power', value: '3.7 kW (5.0 HP) 3-Phase 415V' },
+      { label: 'Machine Net Weight', value: 'Approx 1400 – 1650 KG' },
+    ],
+    applications: ['Die & Mould Manufacturing', 'Precision Component Machining', 'Automotive Tooling', 'Heavy Engineering Workshops']
+  },
+
+  /* ══════════════════════════════════════════════════════════════
+     CATEGORY: INDUSTRIAL RAW MATERIALS — CRC, MS & SS COILS/SHEETS
+     ══════════════════════════════════════════════════════════════ */
+  {
+    id: 'raw-101',
+    category: 'raw_materials',
+    categoryName: 'Industrial Raw Materials',
+    badge: 'Prime / CRCA',
+    tag: 'Cold Rolled Sheets',
+    title: 'CRC Sheets (Cold Rolled Coils & Sheets)',
+    subtitle: 'Prime & Commercial Grade CRCA Sheets & Coils for Stamping & Fabrication',
+    image: `${process.env.PUBLIC_URL}/products/crc_sheets.jpg`,
+    shortDesc: 'Superior surface finish Cold Rolled Closed Annealed (CRCA) steel sheets and slit coils for precision sheet metal stamping, deep drawing, and electrical panel enclosures.',
+    fullDesc: `High-quality Cold Rolled Closed Annealed (CRCA) steel sheets and slit coils supplied in customized thicknesses, widths, and temper grades for precision stamping, automotive panels, and metal furniture fabrication.
+
+Features close dimensional tolerances, smooth uniform surface finish, excellent formability, and uniform mechanical properties across the entire coil width.`,
+    features: [
+      'Smooth, uniform surface texture ideal for powder coating, painting, and plating',
+      'Consistent thickness tolerance and excellent deep-drawing properties',
+      'Available in full coils, slit strips, and cut-to-length flat sheets',
+      'Certified chemical composition and mechanical tensile properties',
+      'Corrosion preventive oil coating for secure transit and storage',
+    ],
+    specs: [
+      { label: 'Material Grade', value: 'CR1 / CR2 / CR3 / CR4 (IS 513 / ASTM A1008)' },
+      { label: 'Thickness Range', value: '0.40 mm to 3.20 mm' },
+      { label: 'Standard Widths', value: '900 mm, 1000 mm, 1220 mm, 1250 mm & custom slit' },
+      { label: 'Lengths Available', value: 'Standard 2000 mm, 2440 mm, 2500 mm or Coil form' },
+      { label: 'Surface Finish', value: 'Matte (Oiled) / Bright / Skin Passed' },
+      { label: 'Supply Form', value: 'Cut Sheets, Slit Strips, and Full Prime Coils' },
+    ],
+    applications: ['Electrical Enclosures & Control Panels', 'Automotive Body & Component Stamping', 'Home Appliances & White Goods', 'Steel Furniture & Storage Racks', 'General Sheet Metal Fabrication']
+  },
+  {
+    id: 'raw-102',
+    category: 'raw_materials',
+    categoryName: 'Industrial Raw Materials',
+    badge: 'Hot / Cold Rolled',
+    tag: 'Mild Steel Supply',
+    title: 'MS Coils (Mild Steel Industrial Coils & Sheets)',
+    subtitle: 'High Tensile Structural Mild Steel Coils & Slit Plates',
+    image: `${process.env.PUBLIC_URL}/products/ms_coils.jpg`,
+    shortDesc: 'Prime and commercial Mild Steel (MS) coils and slit plates offering high tensile strength, excellent weldability, and uniform thickness for heavy structural fabrication.',
+    fullDesc: `Heavy-duty Mild Steel (MS) Hot Rolled (HR) and Cold Rolled coils, slit bands, and sheets supplied to fabrication units, pipe manufacturers, and engineering OEMs across India.
+
+Selected for high tensile strength, superior weldability, ductile forming characteristics, and consistent gauge accuracy across large batch supplies.`,
+    features: [
+      'High tensile and yield strength suitable for structural load-bearing applications',
+      'Exceptional weldability by MIG, TIG, and SAW processes without cracking',
+      'Precision slitting and cut-to-size sheet de-coiling available',
+      'Strict quality checks for surface defects and dimensional consistency',
+      'Available in wholesale coil lots and tailored project quantities',
+    ],
+    specs: [
+      { label: 'Standard Grades', value: 'IS 2062 E250 / E350, ASTM A36, SAE 1008 / 1018' },
+      { label: 'Thickness Range', value: '1.20 mm up to 12.0 mm (HR) / 0.50 mm to 3.0 mm (CR)' },
+      { label: 'Width Range', value: '1000 mm, 1250 mm, 1500 mm, and customized slit widths' },
+      { label: 'Coil Weight', value: '3 Tons to 15 Tons per coil' },
+      { label: 'Finish Condition', value: 'Pickled & Oiled (HRPO) / Mill Scale / Bare' },
+    ],
+    applications: ['Heavy Structural Fabrication', 'ERW Pipe & Tube Manufacturing', 'Railway Wagon & Chassis Building', 'Pressure Vessels & Storage Tanks', 'Pre-Engineered Building (PEB) Structures']
+  },
+  {
+    id: 'raw-103',
+    category: 'raw_materials',
+    categoryName: 'Industrial Raw Materials',
+    badge: 'SS 304 / 316',
+    tag: 'Stainless Steel Supply',
+    title: 'SS Coils (Stainless Steel Coils, Strips & Sheets)',
+    subtitle: 'Corrosion Resistant Austenitic & Ferritic Stainless Steel Coils',
+    image: `${process.env.PUBLIC_URL}/products/ss_coils.jpg`,
+    shortDesc: 'Premium stainless steel coils and slit strips in grades SS 304, 304L, 316, 316L, and 201 with 2B, BA, No.4 hairline, and PVC film protected surfaces.',
+    fullDesc: `High-grade Stainless Steel (SS) coils, slit strips, and precision sheets supplied for chemical processing equipment, pharmaceutical machinery, architectural trims, and food processing lines.
+
+Available in austenitic grades (SS304 / SS316) offering superior corrosion resistance, high hygienic standards, and high temperature strength. Supplied with protective PVC laser film to ensure scratch-free fabrication.`,
+    features: [
+      'Outstanding resistance to chemical corrosion, oxidation, and pitting',
+      'High ductility for deep drawing, rolling, and tight-radius bending',
+      'Diverse surface finishes: 2B (cold rolled), BA (bright annealed), No.4 hairline, mirror finish',
+      'Protected with laser-grade PE/PVC protective film',
+      'Mill test certificate (MTC) supplied with full chemical spectrometry',
+    ],
+    specs: [
+      { label: 'Available Grades', value: 'AISI / ASTM 304, 304L, 316, 316L, 201, 430' },
+      { label: 'Thickness Range', value: '0.30 mm to 6.0 mm' },
+      { label: 'Slit Width Range', value: '15 mm up to 1500 mm precision slitting' },
+      { label: 'Surface Finishes', value: '2B, BA, No.4 Satin / Hairline, Mirror (8K), Scotch Brite' },
+      { label: 'Edge Type', value: 'Slit Edge / Mill Edge / Deburred Round Edge' },
+    ],
+    applications: ['Dairy & Food Processing Machinery', 'Pharma & Chemical Process Tanks', 'Kitchenware & Industrial Sinks', 'Architectural Cladding & Handrails', 'Exhaust Systems & Flue Ducting']
+  },
+
+  /* ══════════════════════════════════════════════════════════════
+     CATEGORY: PRECISION COMPONENTS, MOUNTS & HARDWARE SPARES
+     ══════════════════════════════════════════════════════════════ */
+  {
+    id: 'spares-101',
+    category: 'hardware_spares',
+    categoryName: 'Precision Components & Spares',
+    badge: 'High Precision',
+    tag: 'Machined Components',
+    title: 'Custom Mounting & Base Plates',
+    subtitle: 'Heavy-Duty Ground & Drilled Machine Base Mounting Plates',
+    image: `${process.env.PUBLIC_URL}/products/plates_custom_mounts_1.jpg`,
+    shortDesc: 'Heavy-duty machined mounting plates with precision-located hole patterns, counterbores, and ground surfaces for machine assembly and fixture mounting.',
+    fullDesc: `Heavy-duty machined mounting plates with precision-located hole patterns, counterbores, and ground surfaces manufactured for machine assembly and fixture mounting.
+
+Fabricated from high-tensile structural steel or alloy grades, stress-relieved to prevent warping, with precise CNC bored hole center distances.`,
+    features: [
+      'Precision CNC milled hole patterns, counterbores, and threaded holes',
+      'Stress-relieved steel plates ensuring zero dimensional distortion over time',
+      'Available with black oxide, nickel plating, or zinc passivated coatings',
+      'Custom drilled to customer engineering drawings and tolerance prints',
+    ],
+    specs: [
+      { label: 'Material Options', value: 'Mild Steel (IS 2062), EN8, EN9, SS304, Tool Steel' },
+      { label: 'Thickness Range', value: '8mm to 65mm' },
+      { label: 'Surface Flatness', value: 'Within 0.05mm across 500mm span' },
+      { label: 'Hole Accuracy', value: 'CNC drilled ±0.05mm center-to-center' },
+    ],
+    applications: ['Machine Base Platforms', 'Fixture & Jig Mounts', 'Hydraulic Manifold Sub-Plates', 'Robotic Base Mounts']
+  },
+  {
+    id: 'spares-102',
+    category: 'hardware_spares',
+    categoryName: 'Precision Components & Spares',
+    badge: 'Diamond Knurl',
+    tag: 'Fasteners & Hardware',
+    title: 'Knurled Nuts & SPM Adjuster Screws',
+    subtitle: 'Precision Threaded Hand-Turn Adjuster Nuts & Thumbscrews',
+    image: `${process.env.PUBLIC_URL}/products/knurled_nuts_fasteners.jpg`,
+    shortDesc: 'Precision-turned knurled thumb nuts and adjustment collars for rapid manual tool-less locking, fixture clamping, and micro-adjustments on industrial machinery.',
+    fullDesc: `Precision-turned knurled thumb nuts and adjustment collars engineered for rapid manual tool-less locking, fixture clamping, and micro-adjustments on industrial machinery.
+
+Features sharp diamond knurling for positive hand grip even in oily workshop environments, with precision single-point CNC cut threads.`,
+    features: [
+      'High-traction diamond knurled exterior for slip-free manual adjustment',
+      'Precision single-point cut internal metric / imperial threads',
+      'Chamfered lead-in for easy thread engagement without cross-threading',
+      'Available in EN1A (free cutting steel), brass, stainless steel, and mild steel',
+    ],
+    specs: [
+      { label: 'Thread Sizes', value: 'M6, M8, M10, M12, M16, M20 & Custom pitches' },
+      { label: 'Knurl Style', value: 'Diamond (Cross) / Straight Knurl' },
+      { label: 'Materials', value: 'EN1A / Carbon Steel / Brass / SS 304' },
+      { label: 'Plating', value: 'Zinc Blue Passivated / Black Od / Nickel Chrome' },
+    ],
+    applications: ['Machine Tool Fixtures', 'Limit Switch Stops', 'Optical & Gauge Mounts', 'Manual Clamp Adjustments']
+  },
+  {
+    id: 'spares-103',
+    category: 'hardware_spares',
+    categoryName: 'Precision Components & Spares',
+    badge: 'High Rigidity',
+    tag: 'Structural Brackets',
+    title: 'Industrial Heavy Brackets & Corner Mounts',
+    subtitle: 'Reinforced Angle Brackets & Gusseted Machine Mounts',
+    image: `${process.env.PUBLIC_URL}/products/industrial_brackets.jpg`,
+    shortDesc: 'Reinforced heavy-gauge steel angle brackets with welded gussets and slotted mounting holes for structural machine framing and sensor mounting.',
+    fullDesc: `Reinforced heavy-gauge steel angle brackets with welded gussets and slotted mounting holes designed for structural machine framing, sensor bracket mounting, and perpendicular load transfer.`,
+    features: [
+      'Heavy-wall structural steel construction with reinforced support gussets',
+      'Slotted mounting holes for fast horizontal and vertical alignment adjustment',
+      'High load capacity under dynamic machine vibrations',
+      'Durable powder coated or zinc galvanised corrosion protection',
+    ],
+    specs: [
+      { label: 'Plate Thickness', value: '4mm to 16mm fabricated steel' },
+      { label: 'Angles Available', value: '90° Rigid / Custom Acute & Obtuse angles' },
+      { label: 'Hole Config', value: 'Round holes + Slotted adjustment channels' },
+    ],
+    applications: ['Machine Frame Assemblies', 'Guard Rail Support', 'Linear Rail Mounting', 'Conveyor Framing']
+  },
+  {
+    id: 'spares-104',
+    category: 'hardware_spares',
+    categoryName: 'Precision Components & Spares',
+    badge: 'Forged Steel',
+    tag: 'Lifting & Rigging',
+    title: 'Heavy Duty Eye Bolts',
+    subtitle: 'Drop-Forged High-Tensile Eye Bolts for Machinery Lifting & Rigging',
+    image: `${process.env.PUBLIC_URL}/products/eye_bolts_lifting.jpg`,
+    shortDesc: 'Drop-forged high-tensile carbon steel lifting eye bolts engineered for safe crane lifting, rigging, and hoist attachment on heavy machines and dies.',
+    fullDesc: `Drop-forged high-tensile carbon steel lifting eye bolts engineered for safe overhead crane lifting, rigging, die handling, and hoist attachment on heavy industrial equipment.
+
+Manufactured with forged shanks, precision-cut metric threads, and certified safe working load (SWL) ratings.`,
+    features: [
+      'Drop-forged high-strength carbon steel with normalized microstructure',
+      'Precision cut metric thread shank for deep secure engagement in tapped holes',
+      'Wide internal eye loop compatible with standard crane hooks and shackles',
+      'Zinc plated or self-color finish for long outdoor and workshop durability',
+    ],
+    specs: [
+      { label: 'Thread Sizes', value: 'M8, M10, M12, M16, M20, M24, M30, M36' },
+      { label: 'Material', value: 'Forged Carbon Steel (C15 / Grade 80 alloy)' },
+      { label: 'Standard', value: 'DIN 580 / IS 4190' },
+      { label: 'Safety Factor', value: '4:1 Rated Capacity' },
+    ],
+    applications: ['Machine Lifting & Transport', 'Die & Mould Handling', 'Overhead Rigging & Slings', 'Structural Tie-Down Points']
+  },
+  {
+    id: 'spares-105',
+    category: 'hardware_spares',
+    categoryName: 'Precision Components & Spares',
+    badge: 'Hydraulic / Pneumatic',
+    tag: 'Fluid Connectors',
+    title: 'Reducing Adapters & Hydraulic Connectors',
+    subtitle: 'Precision Threaded Hydraulic Hex Nipples, Bushings & Adapters',
+    image: `${process.env.PUBLIC_URL}/products/reducing_adapters_fittings.jpg`,
+    shortDesc: 'High-pressure hydraulic hex reducing nipples, BSP/NPT threaded male-female adapters, and pipe fittings engineered for leak-proof fluid power lines.',
+    fullDesc: `High-pressure hydraulic hex reducing nipples, BSP/NPT threaded male-female adapters, and pipe fittings engineered for leak-proof fluid power lines, manifold blocks, and cylinder ports.
+
+CNC machined from solid hexagonal bar stock with smooth sealing cones and cleanly cut thread flanks capable of withstanding hydraulic shock pressures.`,
+    features: [
+      'Machined from solid hexagonal steel bar stock for maximum burst pressure resistance',
+      'Precision BSP, BSPT, NPT, and Metric thread configurations',
+      '60° / 37° JIC cone seat profiles for metal-to-metal leak-tight sealing',
+      'Trivalent zinc plating with 240+ hours salt spray corrosion resistance',
+    ],
+    specs: [
+      { label: 'Thread Standards', value: 'BSP (G), NPT, BSPT (R), Metric (M)' },
+      { label: 'Pressure Rating', value: 'Up to 400 Bar (6000 PSI)' },
+      { label: 'Sizes Available', value: '1/8", 1/4", 3/8", 1/2", 3/4", 1", 1-1/2" BSP/NPT' },
+      { label: 'Material', value: 'Free Cutting Steel (11SMnPb30) / SS304 / Brass' },
+    ],
+    applications: ['Hydraulic Power Packs', 'Pneumatic Control Valves', 'Lubrication Lines', 'Machine Tool Plumbing']
+  },
+  {
+    id: 'spares-106',
+    category: 'hardware_spares',
+    categoryName: 'Precision Components & Spares',
+    badge: 'Locking Collar',
+    tag: 'Shaft Components',
+    title: 'SPM Precision Shaft Collars & Rings',
+    subtitle: 'Single-Split & Solid Clamp-On Shaft Positioning Collars',
+    image: `${process.env.PUBLIC_URL}/products/spm_collars.jpg`,
+    shortDesc: 'Precision-bored solid and split shaft clamping collars designed to position bearings, pulleys, and gears on shafts without marring or gouging.',
+    fullDesc: `Precision-bored solid and clamp-on shaft collars designed to locate bearings, sprockets, pulleys, and stop positions along drive shafts without marring or scoring the shaft surface.`,
+    features: [
+      'Uniform clamping force that wraps around shaft without set-screw indentation marks',
+      'Honed internal bore with tight H7 tolerance for perfect concentricity',
+      'Black oxide or zinc finish with high-tensile socket head cap screws',
+    ],
+    specs: [
+      { label: 'Bore Sizes', value: 'Ø10mm up to Ø80mm' },
+      { label: 'Styles', value: 'Solid Set-Screw / Single-Split Clamp / Double-Split' },
+      { label: 'Material', value: 'Carbon Steel / SS304 / Aluminium 6061' },
+    ],
+    applications: ['Linear Guide Stops', 'Conveyor Drive Shafts', 'Motor Coupling Locators', 'SPM Linkage Pivots']
+  },
+  {
+    id: 'spares-107',
+    category: 'hardware_spares',
+    categoryName: 'Precision Components & Spares',
+    badge: 'Linkage Hardware',
+    tag: 'Mechanical Linkages',
+    title: 'Clevis Linkage Ends, Pins & Yokes',
+    subtitle: 'Precision Hydraulic/Pneumatic Cylinder Rod Clevis Ends & Pins',
+    image: `${process.env.PUBLIC_URL}/products/clevis_ends_hooks_pins.jpg`,
+    shortDesc: 'Heavy-duty forged and machined clevis rod ends, linkage forks, and hardened pivot pins for connecting hydraulic cylinder rods and mechanical linkages.',
+    fullDesc: `Heavy-duty forged and machined clevis rod ends, linkage forks, and hardened pivot pins engineered for connecting hydraulic and pneumatic cylinder rods to moving press arms and linkages.`,
+    features: [
+      'High-tensile forged steel body with machined pin clearance',
+      'Hardened pivot pins with circlip or cotter pin retention grooves',
+      'Precision internal threads matching cylinder piston rod ends',
+    ],
+    specs: [
+      { label: 'Thread Types', value: 'Metric M10 to M48 (Female) / Fine Pitch' },
+      { label: 'Pin Diameters', value: 'Ø10mm to Ø50mm hardened pins' },
+      { label: 'Standard', value: 'ISO 8140 / DIN 71752' },
+    ],
+    applications: ['Cylinder Rod Connections', 'Press Brake Linkage Arms', 'Mechanical Lever Actuators', 'Agricultural Linkages']
+  },
+  {
+    id: 'spares-108',
+    category: 'hardware_spares',
+    categoryName: 'Precision Components & Spares',
+    badge: 'Industrial Pipe',
+    tag: 'Pipe Connectors',
+    title: 'MS Heavy Hex Nipples & Barrel Connectors',
+    subtitle: 'Heavy-Wall Welded & Threaded Steel Barrel Nipples & Pipe Fittings',
+    image: `${process.env.PUBLIC_URL}/products/ms_nipples_connectors.jpg`,
+    shortDesc: 'Heavy-wall mild steel hex nipples, pipe connectors, and welded pipe sockets designed for heavy industrial fluid transfer and hydraulic manifold plumbing.',
+    fullDesc: `Heavy-wall mild steel hex nipples, pipe connectors, and welded pipe sockets designed for industrial fluid transfer, steam pipes, hydraulic manifold plumbing, and structural couplings.`,
+    features: [
+      'Heavy Schedule 40/80 pipe stock with full-depth taper threads',
+      'Tapered NPT and BSPT threads for tight pressure-sealed joints with sealant',
+      'Chamfered weld-prep ends for strong butt weld connections',
+    ],
+    specs: [
+      { label: 'Sizes', value: '1/4" to 3" Nominal Bore (NB)' },
+      { label: 'Schedule', value: 'SCH 40 / SCH 80 / SCH 160' },
+      { label: 'End Types', value: 'Threaded Both Ends (TBE) / Plain End (PE) / Hex Central' },
+    ],
+    applications: ['Industrial Plumbing', 'High-Pressure Hydraulic Circuits', 'Air Compressor Distribution', 'Chemical & Water Piping']
+  },
+  {
+    id: 'spares-109',
+    category: 'hardware_spares',
+    categoryName: 'Precision Components & Spares',
+    badge: 'Flange Joint',
+    tag: 'Machined Flanges',
+    title: 'Machined Round Pipe Flanges & Blind Plates',
+    subtitle: 'Forged & Plate Steel Slip-On, Blind & Threaded Flanges',
+    image: `${process.env.PUBLIC_URL}/products/machined_round_flange.jpg`,
+    shortDesc: 'Precision CNC turned circular slip-on flanges, blind plates, and weld neck flanges manufactured to ANSI/DIN/IS standards for industrial piping.',
+    fullDesc: `Precision CNC turned circular slip-on flanges, blind plates, and weld neck flanges manufactured to ANSI B16.5, DIN, and IS 6392 standards for industrial piping, pressure vessels, and tank nozzles.`,
+    features: [
+      'Precision turned gasket face with phonographic serration grooves',
+      'Accurate CNC drilled bolt circle PCD with tight pitch accuracy',
+      'Supplied with full material test certification',
+    ],
+    specs: [
+      { label: 'Pressure Class', value: '150#, 300#, PN10, PN16, Table D/E' },
+      { label: 'Sizes', value: '1/2" (15 NB) to 12" (300 NB)' },
+      { label: 'Flange Types', value: 'Slip-On (SORF), Blind (BLRF), Threaded, Weld Neck (WNRF)' },
+    ],
+    applications: ['Industrial Pipe Lines', 'Storage Tanks & Pressure Vessels', 'Pump & Valve Assemblies', 'Process Plant Manifolds']
+  },
+
+  /* ══════════════════════════════════════════════════════════════
+     CATEGORY: INDUSTRIAL MOTORS & CNC TOOLING
+     ══════════════════════════════════════════════════════════════ */
+  {
+    id: 'cnc-101',
+    category: 'cnc_motors',
+    categoryName: 'Industrial Motors & Tooling',
+    badge: 'Carbide Turning',
+    tag: 'CNC Tooling',
+    title: 'CNC Indexable Carbide Turning Inserts',
+    subtitle: 'High-Performance CVD/PVD Coated Tungsten Carbide Cutting Inserts',
+    image: `${process.env.PUBLIC_URL}/products/cnc_carbide_inserts.png`,
+    shortDesc: 'Premium CVD/PVD coated tungsten carbide indexable inserts (CNMG, WNMG, TNMG, DNMG) engineered for high-speed CNC turning, facing, and profiling.',
+    fullDesc: `Premium CVD and PVD coated tungsten carbide indexable cutting inserts engineered for high-speed CNC lathe turning, facing, profiling, and parting across mild steel, alloy steels, stainless steel (SS304/316), and cast iron.
+
+Featuring multi-layer nano coatings with exceptional thermal wear resistance, micro-engineered chip breaker geometries that maintain tight chip control, and reinforced cutting edges that resist chipping during interrupted cutting passes.`,
+    features: [
+      'Multi-layer CVD/PVD coating technology for superior thermal hardness and wear life',
+      'Advanced 3D chip breaker geometry ensuring reliable chip breaking at low & high feeds',
+      'Micro-grain tungsten carbide substrate offering high toughness against edge fracture',
+      'Consistent tool life and dimensional accuracy across high-volume production batches',
+      'Available in standard ISO geometries: CNMG, WNMG, TNMG, DNMG, CCMT, DCMT',
+      'Optimized for steel, stainless steel, cast iron, and high-temperature alloys',
+    ],
+    specs: [
+      { label: 'Insert Geometries', value: 'CNMG 120408, WNMG 080408, TNMG 160408, DNMG 150608, CCMT, VBMT' },
+      { label: 'Substrate', value: 'Micro-grain Tungsten Carbide (WC-Co)' },
+      { label: 'Coating Types', value: 'Multi-layer CVD (TiCN+Al2O3+TiN) / PVD (AlTiN / TiAlN)' },
+      { label: 'Workpiece Materials', value: 'P (Steel), M (Stainless Steel), K (Cast Iron), N (Aluminium)' },
+      { label: 'Cutting Speeds', value: 'Vc: 120 – 350 m/min (material & grade dependent)' },
+      { label: 'Feed Range', value: 'fn: 0.10 – 0.50 mm/rev' },
     ],
     specTable: {
-      headers: ['Cutting Length', 'MS Nom/Max Angle', 'SS Nom/Max Angle', 'Rack Angle', 'Stroke/Min', 'Hold-Downs', 'Holding Force', 'Power HP', 'Blade L x W x T'],
+      headers: ['Insert Code', 'Shape', 'Relief Angle', 'Tolerance', 'Thickness', 'Corner Radius', 'Application'],
       rows: [
-        ['1525X4 MM', '4 / 6 mm', '2 / 3 mm', "1°37'", '30-15', '8', '4500 kg', '7.5 HP', '1525x75x18 mm'],
-        ['2030X4 MM', '4 / 6 mm', '2 / 3 mm', "1°37'", '28-13', '11', '6200 kg', '7.5 HP', '2030x75x18 mm'],
-        ['2540X4 MM', '4 / 6 mm', '2 / 3 mm', "1°37'", '30-8', '13', '8000 kg', '7.5 HP', '2540x75x18 mm'],
-        ['3125X4 MM', '4 / 6 mm', '2 / 3 mm', "1°37'", '28-8', '15', '10000 kg', '10 HP', '3125x75x18 mm'],
-        ['4000X4 MM', '4 / 6 mm', '2 / 3 mm', "1°37'", '22-8', '20', '12000 kg', '10 HP', '4000x75x18 mm'],
-        ['1525X6 MM', '6 / 8 mm', '3 / 4 mm', "1°35'", '24-8', '8', '6500 kg', '10 HP', '1525x75x18 mm'],
-        ['2030X6 MM', '6 / 8 mm', '3 / 4 mm', "1°37'", '22-7', '11', '6500 kg', '10 HP', '2030x75x18 mm'],
-        ['2540X6 MM', '6 / 8 mm', '3 / 4 mm', "1°37'", '28-8', '13', '8500 kg', '15 HP', '2540x75x18 mm'],
-        ['3125X6 MM', '6 / 8 mm', '3 / 4 mm', "1°15'", '24-6', '15', '10800 kg', '15 HP', '3125x75x18 mm'],
-        ['4000X6 MM', '6 / 8 mm', '3 / 4 mm', "1°35'", '24-6', '20', '13600 kg', '20 HP', '4000x75x18 mm'],
-        ['1525X8 MM', '8 / 10 mm', '4 / 5 mm', "1°27'", '20-10', '8', '10500 kg', '15 HP', '1525x90x20 mm'],
-        ['2030X8 MM', '8 / 10 mm', '4 / 6 mm', "1°37'", '18-8', '11', '12000 kg', '15 HP', '2030x90x20 mm'],
-        ['2540X8 MM', '8 / 10 mm', '4 / 5 mm', "1°37'", '28-8', '13', '16500 kg', '15 HP', '2540x90x20 mm'],
-        ['3125X8 MM', '8 / 10 mm', '4 / 5 mm', "1°37'", '20-8', '15', '18500 kg', '20 HP', '3125x90x20 mm'],
-        ['4000X8 MM', '8 / 10 mm', '4 / 5 mm', "1°37'", '20-8', '20', '23000 kg', '30 HP', '4000x90x20 mm'],
-        ['2540X10 MM', '10 / 13 mm', '5 / 16 mm', "1°37'", '28-8', '13', '17500 kg', '15 HP', '2540x90x20 mm'],
-        ['3125X10 MM', '10 / 13 mm', '6 / 8 mm', "1°37'", '18-6', '20', '25000 kg', '30 HP', '4000x90x20 mm'],
-        ['2540X13 MM', '13 / 16 mm', '6 / 16 mm', "1°37'", '22-10', '16', '37000 kg', '25 HP', '3125x100x25 mm'],
-        ['3125X16 MM', '16 / 18 mm', '8 / 10 mm', "1°37'", '12-6', '16', '43500 kg', '30 HP', '3125x100x25 mm'],
+        ['CNMG 120408', '80° Diamond', '0° (Negative)', 'Class M', '4.76 mm', 'R 0.8 mm', 'Heavy Roughing & Semi-Finishing Steel'],
+        ['WNMG 080408', '80° Trigon', '0° (Negative)', 'Class M', '4.76 mm', 'R 0.8 mm', 'Economical 6-Corner Turning & Facing'],
+        ['TNMG 160408', '60° Triangle', '0° (Negative)', 'Class M', '4.76 mm', 'R 0.8 mm', 'General Purpose Turning & Chamfering'],
+        ['DNMG 150608', '55° Diamond', '0° (Negative)', 'Class M', '6.35 mm', 'R 0.8 mm', 'Precision Copying & Profiling Turning'],
+        ['CCMT 09T304', '80° Diamond', '7° (Positive)', 'Class M', '3.97 mm', 'R 0.4 mm', 'Internal Boring & Light Finishing'],
       ]
     },
-    applications: ['Sheet Metal Processing Centres', 'Steel Service Centres', 'Fabrication Plants', 'General Metal Manufacturing', 'Automotive Blanking']
-  },
-
-  /* ══════════════════════════════════════════════════════════════
-     CATEGORY: PRECISION HARDWARE & COMPONENTS (Pages 10–18, 20)
-     ══════════════════════════════════════════════════════════════ */
-  {
-    id: 'comp-201',
-    category: 'hardware_spares',
-    categoryName: 'Precision Components & Spares',
-    badge: 'Micro-Tolerance',
-    tag: 'Structural Spares',
-    title: 'Plates & Custom Mounts (Square, Round & Heavy-Duty)',
-    subtitle: 'High-Precision Machined Industrial Plates & Enclosure Covers',
-    image: `${process.env.PUBLIC_URL}/products/plates_custom_mounts_1.jpg`,
-    pdfPage: 10,
-    shortDesc: 'High-precision industrial plates and covers designed for machinery, structural enclosures, and specialized assembly interfaces.',
-    fullDesc: `High-precision industrial plates and covers designed for machinery, structural enclosures, and specialized assembly interfaces.
-
-Manufactured with tight tolerances for exact fitment and alignment. Available in clean brushed, smooth milled, or precision-faced finishes. Offers exceptional strength, rigidity, and resistance to deformation under cyclic mechanical loads. Available in custom dimensions, hole patterns, and thicknesses as per exact project requirements.`,
-    features: [
-      'Square Cover Plates: Features 4-hole or multi-hole corner configuration with countersunk or standard bolt holes',
-      'Round Cover Plates: Precision-turned circular plates designed for sealing or mounting applications',
-      'Heavy-Duty Mounting Plates: Integrated with multiple threaded ports, pilot holes, and counterbores for complex SPM setups',
-      'High-Precision Machining: Tight tolerances for exact fitment and alignment',
-      'Surface Finish: Clean brushed, smooth milled, or precision-faced finishes',
-      'Customization: Fully tailored dimensions, hole PCDs, and thicknesses',
-    ],
-    specs: [
-      { label: 'Plate Varieties', value: 'Square Cover Plates, Round Cover Plates, Heavy-Duty Mounting Plates' },
-      { label: 'Hole Configurations', value: 'Countersunk, Counterbored, Threaded Ports, Pilot Holes' },
-      { label: 'Materials', value: 'Mild Steel (MS), Stainless Steel (SS304/316), High-Tensile Alloy' },
-      { label: 'Surface Finish', value: 'Smooth Milled, Ground Faced, Black Oxide, Zinc Plated' },
-    ],
-    applications: ['Machinery Housings & Gearboxes', 'SPM and Jig Fixtures', 'Industrial Enclosures', 'Fluid Power Manifolds', 'Structural Equipment Beds']
+    applications: ['CNC Turning Centers', 'Heavy Lathe Operations', 'Automotive Component Manufacturing', 'Hydraulic Cylinder Rod Machining', 'Die & Mould Roughing']
   },
   {
-    id: 'comp-202',
-    category: 'hardware_spares',
-    categoryName: 'Precision Components & Spares',
-    badge: 'Fasteners & Turnings',
-    tag: 'Hardware Catalog',
-    title: 'Fasteners, Knurled Nuts & Precision Machine Spares',
-    subtitle: 'Knurled Nuts, SPM Cover Nuts, Guide Pillars, Dowel Pins & Shafts',
-    image: `${process.env.PUBLIC_URL}/products/knurled_nuts_fasteners.jpg`,
-    pdfPage: 12,
-    shortDesc: 'Essential precision hardware components engineered for secure fastening, alignment, and smooth operation in industrial machinery.',
-    fullDesc: `Essential precision hardware components engineered for secure fastening, alignment, and smooth operation in industrial machinery.
-
-High strength & durability built to withstand rigorous operational stress and frequent handling. Precision threading with clean, uniform threads for smooth tightening and secure retention. Available in multiple surface finishes to prevent rust and wear.`,
-    features: [
-      'Knurled Nuts: Straight, Thin Type, Step, Long, Flange, and Internal Thread Knurled Nuts for easy manual or tool-assisted gripping',
-      'SPM Cover Nuts: Dome Cover Nuts, High Dome, Acorn, and Closed/Open-End Cap Nuts for bolt end protection and clean aesthetics',
-      'Precision Parts: Precision Shafts, Shoulder Bolts, Dowel Pins, Bushings, Spacers, Guide Pillars, Ejector Pins, Locating Pins, Round Nuts, Threaded Inserts, and Ball Plungers',
-      'High Tensile Strength & Fatigue Resistance under cyclic machine vibration',
-      'Corrosion Resistance: Natural, Passivated, Black Phosphated, Zinc Plated',
-    ],
-    specs: [
-      { label: 'Thread Standards', value: 'Metric (M3–M36), BSW, UNC, UNF Precision Threads' },
-      { label: 'Material Options', value: 'Mild Steel (Black / Zinc Plated), Stainless Steel (Natural / Passivated), Brass' },
-      { label: 'Specialty Parts', value: 'Hardened Dowel Pins, Shoulder Screws, Guide Pillars, Ejector Pins' },
-      { label: 'Hardness Grades', value: 'Case Hardened, Through Hardened (HRC 45–60 options)' },
-    ],
-    applications: ['Die & Mould Assemblies', 'SPM Automation Fixtures', 'Machine Tool Enclosures', 'Automotive Component Fastening', 'Precision Instrumentation']
-  },
-  {
-    id: 'comp-203',
-    category: 'hardware_spares',
-    categoryName: 'Precision Components & Spares',
-    badge: 'Heavy Structural',
-    tag: 'Hardware Catalog',
-    title: 'Industrial Structural Brackets (L, U, Corner, T, Clevis & Box)',
-    subtitle: 'Heavy-Duty Rigid Support & Mounting Brackets for Machinery & Piping',
-    image: `${process.env.PUBLIC_URL}/products/industrial_brackets.jpg`,
-    pdfPage: 13,
-    shortDesc: 'Heavy-duty structural brackets designed to provide rigid support, alignment, and secure mounting for frames, motors, and piping systems.',
-    fullDesc: `Heavy-duty structural brackets designed to provide rigid support, alignment, and secure mounting for frames, motors, and piping systems.
-
-Heavy-duty load bearing engineered to support substantial weight and absorb mechanical vibrations. Versatile mounting features slotted, pre-drilled, or gusset-reinforced holes for flexible and secure installation. Durable build with high structural integrity, clean edges, and robust welding.`,
-    features: [
-      'Comprehensive Variations: L Brackets, Triangle Brackets, U Brackets, Corner Brackets, T Brackets, Clevis Brackets, Z Brackets, Box Brackets, Slotted Brackets, Mounting Brackets, Pipe/Clamp Brackets, and Heavy-Duty Gusset Brackets',
-      'High load bearing capacity engineered to absorb severe dynamic vibrations',
-      'Precision laser-cut and CNC press-brake formed geometries',
-      'Slotted and elongated hole patterns for effortless on-site alignment adjustment',
-      'Rust-preventive primer, powder coat, or hot-dip galvanized finishes',
-    ],
-    specs: [
-      { label: 'Bracket Types', value: 'L, Triangle, U, Corner, T, Clevis, Z, Box, Slotted, Pipe/Clamp, Heavy-Duty' },
-      { label: 'Material Thickness', value: '2mm to 16mm High-Grade Structural Steel' },
-      { label: 'Mounting Style', value: 'Pre-drilled, Slotted, Counterbored, Gusset Reinforced' },
-      { label: 'Finishes', value: 'Raw Steel, Zinc Plated, Powder Coated, Hot-Dip Galvanized' },
-    ],
-    applications: ['Structural Framing & Assembly Lines', 'Machine Tool Builds & Automation Setups', 'Motor & Gearbox Mountings', 'Pipe Routing & Equipment Anchoring']
-  },
-  {
-    id: 'comp-204',
-    category: 'hardware_spares',
-    categoryName: 'Precision Components & Spares',
-    badge: 'High Pressure',
-    tag: 'Hydraulic & Fluid',
-    title: 'Reducing Adapters & Pipe Fittings',
-    subtitle: 'Precision Threaded Transition Fittings for Hydraulic & Fluid Pipelines',
-    image: `${process.env.PUBLIC_URL}/products/reducing_adapters_fittings.jpg`,
-    pdfPage: 14,
-    shortDesc: 'High-performance transition fittings designed to connect pipes, tubes, and hoses of varying sizes and thread standards seamlessly.',
-    fullDesc: `High-performance transition fittings designed to connect pipes, tubes, and hoses of varying sizes and thread standards seamlessly.
-
-Leak-proof seal with precision-machined threads (BSP, NPT, Metric, JIC, ORFS) ensuring tight, secure seal under intense pressure. Built to safely handle demanding industrial fluid, gas, and hydraulic applications. Premium metallic composition prevents degradation in harsh chemical or moisture-rich environments.`,
-    features: [
-      'Reducing Nipples & Bushings: Hex, Square, Cone, Parallel, Long, and Stepped variations',
-      'Couplings & Unions: Reducing couplings, sockets, and unions for flexible pipeline modifications',
-      'Specialty Adapters: Tube OD, Compression, Hydraulic, Metric, and Flare reducing adapters',
-      'Precision Machined Threads: BSP, BSPT, NPT, Metric, JIC, ORFS thread profiles',
-      'High-pressure rating capable of handling hydraulic circuits up to 400 Bar',
-    ],
-    specs: [
-      { label: 'Thread Standards', value: 'BSP, BSPT, NPT, Metric (M), JIC 37°, ORFS' },
-      { label: 'Fittings Range', value: 'Hex Nipples, Reducing Bushings, Sockets, Unions, Flange Adapters' },
-      { label: 'Pressure Rating', value: 'High Pressure (Up to 400 Bar / 6000 PSI)' },
-      { label: 'Material Grades', value: 'Forged Carbon Steel, Stainless Steel (SS304/SS316), Brass' },
-    ],
-    applications: ['Hydraulic Fluid Lines', 'Pneumatic Systems', 'Chemical Processing Plants', 'High-Pressure Oil & Gas Lines', 'Machine Tool Lubrication']
-  },
-  {
-    id: 'comp-205',
-    category: 'hardware_spares',
-    categoryName: 'Precision Components & Spares',
-    badge: 'Precision Bore',
-    tag: 'Shaft Accessories',
-    title: 'SPM Shaft Collars (Split & Solid Design)',
-    subtitle: 'Precision-Engineered Split Collars for Shaft Positioning & Mechanical Stops',
-    image: `${process.env.PUBLIC_URL}/products/spm_collars.jpg`,
-    pdfPage: 15,
-    shortDesc: 'Precision-engineered SPM collars designed for secure component positioning, bearing-face halting, and mechanical stop applications on rotating shafts.',
-    fullDesc: `Precision-engineered SPM collars designed for secure component positioning, bearing-face halting, and mechanical stop applications on rotating shafts.
-
-Precision machined to ensure a true, concentric bore for uniform clamping power without marring or scoring the shaft. High clamping strength evenly distributes holding power around the circumference using high-tensile socket head cap screws. Split-design allows for quick installation and adjustment without dismantling entire assemblies.`,
-    features: [
-      'Precision Machined: Ensures a true concentric bore for uniform clamping power without shaft damage',
-      'High Clamping Strength: Even holding force distribution via high-tensile socket head cap screws',
-      'Split-Design Architecture: Allows rapid installation and relocation without dismantling shafts',
-      'Available in Single-Split, Double-Split, and Solid Set-Screw variations',
-      'Fine micro-tolerance bore diameter for tight shaft slip-fit',
-    ],
-    specs: [
-      { label: 'Bore Diameter (d)', value: 'Customizable from Ø6mm to Ø150mm as per shaft size' },
-      { label: 'Design Styles', value: 'One-Piece (Single Split), Two-Piece (Double Split), Threaded Bore' },
-      { label: 'Fasteners Included', value: 'High-Tensile Grade 12.9 Socket Head Cap Screws' },
-      { label: 'Materials Available', value: 'Mild Steel (Black), Zinc Plated, Stainless Steel, Black Oxide Finish' },
-    ],
-    applications: ['Rotating Machinery Shafts', 'Conveyor Guide Rails', 'Motor Mount Positioning', 'Linear Actuator Mechanical Stops', 'Bearing Pre-Load Collars']
-  },
-  {
-    id: 'comp-206',
-    category: 'hardware_spares',
-    categoryName: 'Precision Components & Spares',
-    badge: 'High Shear',
-    tag: 'Linkages & Joints',
-    title: 'Clevis Ends, U Hooks & Clevis Pins',
-    subtitle: 'Robust Linkage Components for Pivoting, Steering & Motion Transfer',
-    image: `${process.env.PUBLIC_URL}/products/clevis_ends_hooks_pins.jpg`,
-    pdfPage: 16,
-    shortDesc: 'Robust linkage components designed for pivoting, motion transfer, and mechanical connection systems.',
-    fullDesc: `Robust linkage components designed for pivoting, motion transfer, and mechanical connection systems.
-
-Secure articulation allows smooth angular movement and load transfer in mechanical linkages. High shear strength pins and hooks manufactured from high-grade materials prevent bending or shearing under cyclic shock loads. Available with matching pins, washers, and R-clips/split pins for fast, secure deployment.`,
-    features: [
-      'U Hooks (Clevis Ends): Designed for high-load tension linkage with precision pin hole diameters',
-      'Clevis Pins: Available with R-Clip, Hex Head, and Plain variations for secure locking',
-      'High Shear Strength: Precision-turned alloy steel pins resisting fatigue and cyclic wear',
-      'Smooth Articulation: Low friction rotational movement for steering and cylinder linkages',
-      'Complete Assembly: Ready-to-install kits with clevis fork, pin, and retaining clip',
-    ],
-    specs: [
-      { label: 'Product Variations', value: 'U Hooks (Clevis Forks), Clevis Pins (R-Clip, Hex Head, Plain)' },
-      { label: 'Thread Connections', value: 'Female/Male Metric & Imperial Linkage Threads' },
-      { label: 'Pin Diameters', value: 'Ø5mm to Ø50mm Precision Ground' },
-      { label: 'Material & Plating', value: 'Forged Steel, Stainless Steel, Clear/Yellow Zinc Passivated' },
-    ],
-    applications: ['Mechanical Linkage Systems', 'Hydraulic/Pneumatic Cylinder Rod Ends', 'Steering Mechanisms', 'Trailer Hitches', 'Agricultural & Construction Machinery']
-  },
-  {
-    id: 'comp-207',
-    category: 'hardware_spares',
-    categoryName: 'Precision Components & Spares',
-    badge: 'Certified Rigging',
-    tag: 'Lifting & Bushings',
-    title: 'Eye Bolts & Sleeve Bushings',
-    subtitle: 'Heavy Industrial Forged Eye Bolts & Friction-Reduction Sleeve Bushings',
-    image: `${process.env.PUBLIC_URL}/products/eye_bolts_lifting.jpg`,
-    pdfPage: 17,
-    shortDesc: 'Safe lifting solutions and friction-reduction bushings built for heavy industrial lifting and moving machinery parts.',
-    fullDesc: `Safe lifting solutions and friction-reduction bushings built for heavy industrial lifting and moving machinery parts.
-
-Eye Bolts: Designed for safe lifting, hoisting, and rigging. Built with high-tensile forged steel to provide a secure anchorage point with high load capacities.
-Sleeve Bushings: Engineered to reduce friction, minimize wear, and ensure smooth linear or rotational motion between moving parts.`,
-    features: [
-      'Eye Bolt Types: Shoulder Eye Bolt, Plain Eye Bolt, Eye Bolt with Nut, Forged Eye Bolt, Swivel Eye Bolt, and Long Shank Eye Bolt',
-      'Sleeve Bushing Types: Plain, Self-Lubricating (Oilless/Graphite), Flanged, Split, Oil Grooved, and Stepped Bushings',
-      'Forged High-Tensile Construction for certified rigging and overhead crane lifting',
-      'Bushing Materials: Bronze, Phosphor Bronze, Case Hardened Steel, Stainless Steel, Sintered Bronze',
-      'High load carrying capacity and superior wear resistance under extreme pressure',
-    ],
-    specs: [
-      { label: 'Eye Bolt Thread Sizes', value: 'M6 to M48 (Shoulder, Plain, Swivel, Long Shank)' },
-      { label: 'Bushing Types', value: 'Plain, Flanged, Oil Grooved, Self-Lubricating Graphite Bushings' },
-      { label: 'Bushing Materials', value: 'Phosphor Bronze (PB1/PB2), Sintered Bronze, En31 Case Hardened' },
-      { label: 'Load Certification', value: 'Tested for Rated WLL (Working Load Limit)' },
-    ],
-    applications: ['Crane Hoisting & Equipment Rigging', 'Heavy Machinery Bearing Assemblies', 'Automotive Linkages & Pivots', 'Hydraulic Press Ram Guidance']
-  },
-  {
-    id: 'comp-208',
-    category: 'hardware_spares',
-    categoryName: 'Precision Components & Spares',
-    badge: 'Industrial Piping',
-    tag: 'Connectors & Clamps',
-    title: 'Metal Connectors, MS Nipples & U-Bolts',
-    subtitle: 'Fluid Power Connectors, Threaded MS Pipe Nipples (1/4" to 2" NB) & U-Bolts',
-    image: `${process.env.PUBLIC_URL}/products/ms_nipples_connectors.jpg`,
-    pdfPage: 18,
-    shortDesc: 'A comprehensive suite of industrial connection elements designed for fluid power, electrical routing, structural clamping, and piping networks.',
-    fullDesc: `A comprehensive suite of industrial connection elements designed for fluid power, electrical routing, structural clamping, and piping networks.
-
-MS Nipples: Short lengths of mild steel pipe with male threads on both ends (BSP/NPT), offering excellent machinability, weldability, and high-pressure suitability. Available in sizes from 1/4" to 2" NB.
-U-Bolts: Formed for a strong hold and secure fit on pipes, tubes, and hoses with corrosion-resistant finishes.`,
-    features: [
-      'MS Nipples: Short lengths of mild steel pipe with precision male threads on both ends (BSP/NPT), sizes 1/4" to 2" NB',
-      'U-Bolt Varieties: Standard, Square Bend, Round Bend, Long Leg, Offset, and V-Type U-Bolts with nuts and backing plates',
-      'Industrial Connectors: Pipe, Hose, Hydraulic, Electrical (Cable Glands/EMT), Flange, and Structural Turnbuckles',
-      'High pressure capability and excellent weldability for pipeline integration',
-      'Available in zinc plated, hot-dip galvanized, or raw black finish',
-    ],
-    specs: [
-      { label: 'MS Nipple Sizes', value: '1/4" NB to 2" NB (Length: Close, 2", 3", 4", 6", Custom)' },
-      { label: 'U-Bolt Configurations', value: 'Standard Round Bend, Square Bend, Long Leg, V-Type' },
-      { label: 'Threading Options', value: 'BSP, BSPT, NPT, Metric Male Threading' },
-      { label: 'Connector Categories', value: 'Hydraulic Hose Fittings, Beam Clamps, Flange Adapters, Turnbuckles' },
-    ],
-    applications: ['Plumbing & Piping Networks', 'Water Supply & Hydraulic Lines', 'Oil & Gas Industry', 'Heating & Cooling Systems', 'Electrical Conduit Routing & Pipe Clamping']
-  },
-  {
-    id: 'comp-209',
-    category: 'hardware_spares',
-    categoryName: 'Precision Components & Spares',
-    badge: 'Precision Machined',
-    tag: 'Flanges & Rings',
-    title: 'Industrial Round Flanges & Machined Rings',
-    subtitle: 'Heavy-Duty Circular Steel Flanges with Symmetrical Bolt PCD Circle',
-    image: `${process.env.PUBLIC_URL}/products/machined_round_flange.jpg`,
-    pdfPage: 20,
-    shortDesc: 'A heavy-duty circular steel flange featuring a uniform multi-hole bolt circle and a central bored aperture, built for piping and structural mating.',
-    fullDesc: `A heavy-duty circular steel flange featuring a uniform multi-hole bolt circle and a central bored aperture, built for piping, structural joining, or mechanical mating applications.
-
-Forged or machined from high-strength steel to handle heavy structural and fluid-handling demands. Uniformly spaced bolt holes ensure even pressure distribution and secure fastening. Smoothly turned faces and bore edges designed for reliable gasket sealing or close-tolerance mechanical fitting.`,
-    features: [
-      'Circular flange with symmetric bolt hole circle (PCD) and central through-bore',
-      'Forged or machined from high-strength steel for structural and pressure duty',
-      'Uniform bolt spacing ensures even gasket compression and zero leakages',
-      'Smoothly turned faces and chamfered bore edges for precision mating',
-      'Available in standard ANSI/DIN/BS standards and bespoke CAD dimensions',
-    ],
-    specs: [
-      { label: 'Configuration', value: 'Circular flange with symmetric bolt hole circle and central through-bore' },
-      { label: 'Material Options', value: 'Mild Steel (MS), Carbon Steel A105, Stainless Steel (SS304/SS316)' },
-      { label: 'Facing Types', value: 'Flat Face (FF), Raised Face (RF), O-Ring Grooved' },
-      { label: 'Pressure Ratings', value: 'Class 150 to Class 600 / PN6 to PN40' },
-    ],
-    applications: ['Industrial Fluid Pipeline Systems', 'Mechanical Shaft & Housing Assemblies', 'Structural Equipment Flanges', 'Pressure Vessel Ports']
-  },
-
-  /* ══════════════════════════════════════════════════════════════
-     CATEGORY: CNC TOOLING & INSERTS (Page 19)
-     ══════════════════════════════════════════════════════════════ */
-  {
-    id: 'tool-301',
-    category: 'cnc_tooling',
-    categoryName: 'CNC Tooling & Inserts',
-    badge: 'Multi-Coated',
-    tag: 'CNC Lathe Tooling',
-    title: 'CNC Indexable Carbide Turning Inserts (Catalog Collection)',
-    subtitle: 'Triangular, Rhombic/Diamond, Square & Round Coated Carbide Inserts',
-    image: `${process.env.PUBLIC_URL}/products/cnc_carbide_inserts.png`,
-    pdfPage: 19,
-    shortDesc: 'A diverse assortment of indexable carbide turning inserts featuring various geometries with specialized chip breakers and multi-colour performance coatings.',
-    fullDesc: `A diverse assortment of indexable carbide turning inserts featuring various geometries (Triangular, Rhombic/Diamond, Square, and Round) with specialized Chip breaker designs and multi-colour performance coatings.
-
-Multi-material compatibility engineered with distinct coating variants optimized for efficient cutting across steel, stainless steel, and cast iron. Advanced chip breakers with intricate molded top-face geometries ensure optimal chip curling, lower cutting resistance, and smooth chip evacuation. Micro-grain carbide substrates maintain sharp edge integrity under extreme thermal and mechanical loads.`,
-    features: [
-      'Multi-Material Compatibility: Distinct coating variants optimized for Steel (P), Stainless Steel (M), and Cast Iron (K)',
-      'Advanced Chip breakers: Molded top-face geometries for optimal chip curling and low cutting force',
-      'High Wear Resistance: Micro-grain carbide substrate with multi-layer CVD/PVD coatings',
-      'Precision Indexability: Ground to tight dimensional tolerances for repeatable positioning',
-      'Geometries: Triangular (T), Rhombic/Diamond (C, D, V, W), Square (S), Trigon (W), Round (R)',
-      'Corner Radii: 0.4mm, 0.8mm, 1.2mm options for finishing, semi-finishing, and heavy roughing',
-    ],
-    specs: [
-      { label: 'Insert Geometries', value: 'Triangular (T), Rhombic (C, D, V), Square (S), Trigon (W), Round (R)' },
-      { label: 'Corner Radii & Sizes', value: '0.4 mm, 0.8 mm, 1.2 mm for roughing, semi-finishing & finishing' },
-      { label: 'Material Grades', value: 'Tailored CVD/PVD coatings for Steel, Stainless Steel, Cast Iron' },
-      { label: 'Chip Breakers', value: 'Finishing (LF/SF), Medium (PM/MA), Heavy Roughing (HR/DR)' },
-      { label: 'Clamping Compatibility', value: 'Standard ISO Toolholders (Screw clamp, Lever clamp, Wedge clamp)' },
-    ],
-    applications: ['External & Internal Turning on CNC Lathes', 'Facing & Profiling Operations', 'Automotive Component Machining', 'Heavy Engineering Spares']
-  },
-
-  /* ══════════════════════════════════════════════════════════════
-     CATEGORY: INDUSTRIAL MOTORS & DRIVES (Page 21)
-     ══════════════════════════════════════════════════════════════ */
-  {
-    id: 'motor-401',
-    category: 'motors',
-    categoryName: 'Industrial Motors & Drives',
-    badge: 'IP55 Rated',
-    tag: 'Induction Motors',
-    title: 'Industrial Three-Phase Induction Motors (Foot & Flange Mount)',
-    subtitle: 'Rugged High-Efficiency AC Induction Motors — B3, B5, B14 & B35 Combinations',
+    id: 'motor-101',
+    category: 'cnc_motors',
+    categoryName: 'Industrial Motors & Tooling',
+    badge: 'IP55 Class F',
+    tag: 'Electric Motors',
+    title: 'Three-Phase Industrial Induction Motors (IP55)',
+    subtitle: 'High-Torque Squirrel Cage Induction Motors for Heavy Industrial Drives',
     image: `${process.env.PUBLIC_URL}/products/induction_motor_flange.png`,
-    pdfPage: 21,
-    shortDesc: 'Rugged, high-efficiency three-phase AC induction motors designed for demanding industrial machinery drives with IP55 protection and Class F insulation.',
-    fullDesc: `Rugged, high-efficiency three-phase AC induction motors designed for demanding industrial applications. Built with heavy-duty cast housings, optimal cooling fins, and precision-balanced rotors for continuous, reliable operation.
+    shortDesc: 'Heavy-duty 415V three-phase squirrel cage induction motors built in rigid cast-iron frames with IP55 protection, high starting torque, and Class F insulation.',
+    fullDesc: `Heavy-duty three-phase squirrel cage induction motors engineered for continuous duty (S1) operation driving hydraulic power packs, power presses, compressors, pumps, and industrial machine tools.
 
-High efficiency & performance engineered for low energy consumption, high starting torque, and stable operational speeds. Cast cooling ribs maximize heat dissipation preventing thermal overload during continuous duty. Sealed terminal box with cable glands provides IP55 ingress protection against dust and water jets.`,
+Built in a heavy-ribbed cast iron frame with IP55 dust and water-jet protection, Class F insulation with low temperature rise, dynamically balanced rotors for vibration-free running, and high starting torque characteristics designed for demanding industrial starts.`,
     features: [
-      'High Efficiency & Performance: Low energy consumption, high starting torque, and stable operational speeds',
-      'Robust Cooling System: Integrated cast cooling ribs maximize heat dissipation during continuous 24/7 duty',
-      'Ingress Protection (IP55): Sealed terminal box with cable glands protecting against dust and moisture',
-      'Dual Mounting Versatility: Available in foot-mounted (B3), flange-mounted (B5/B14), and combined (B35)',
-      'Class F insulation system with Class B temperature rise for extended motor lifespan',
-      'Dynamic precision-balanced rotor ensuring ultra-low vibration and quiet operation',
+      'Heavy-ribbed cast-iron construction offering maximum mechanical strength and thermal dissipation',
+      'IP55 ingress protection against abrasive industrial dust and pressurized water jets',
+      'Class F insulation system with Class B temperature rise limit for extended insulation lifespan',
+      'Dynamically balanced rotor with Grade G2.5 balance quality for minimal vibration',
+      'Vacuum Pressure Impregnation (VPI) treated windings resistant to humidity and chemical fumes',
+      'Available in Foot (B3), Flange (B5), and Foot-cum-Flange (B35) mounting configurations',
     ],
     specs: [
-      { label: 'Power Rating', value: 'Standard models from 0.75 kW to 75 kW (1 HP to 100 HP, e.g. 5.5 kW / 7.5 HP featured model)' },
-      { label: 'Voltage & Frequency', value: '380V – 415V, 50 Hz / 60 Hz three-phase supply' },
-      { label: 'Speed (RPM)', value: '1440 RPM (4-Pole standard), 2-Pole (2880 RPM), 6-Pole (960 RPM)' },
-      { label: 'Insulation & Protection', value: 'Class F insulation system with IP55 enclosure protection' },
-      { label: 'Enclosure Material', value: 'Durable Cast Iron / High-Grade Aluminium Alloy with precision bearing shields' },
-      { label: 'Mounting Styles', value: 'B3 (Foot), B5 (D-Flange), B14 (C-Face), B35 (Foot + Flange)' },
+      { label: 'Rated Voltage', value: '415 V ±10% (3-Phase)' },
+      { label: 'Rated Frequency', value: '50 Hz ±5% (60 Hz available)' },
+      { label: 'Power Range', value: '0.75 kW to 75 kW (1.0 HP to 100 HP)' },
+      { label: 'Pole Configurations', value: '2 Pole (3000 RPM) | 4 Pole (1500 RPM) | 6 Pole (1000 RPM)' },
+      { label: 'Enclosure Rating', value: 'Totally Enclosed Fan Cooled (TEFC) — IP55' },
+      { label: 'Insulation / Duty', value: 'Class F Insulation / Continuous Duty (S1)' },
+      { label: 'Mounting Types', value: 'B3 (Foot), B5 (Flange), B35 (Foot-cum-Flange)' },
+      { label: 'Frame Standards', value: 'IEC 60034 / IS 12615 standard metric frames (63 to 280M)' },
     ],
-    applications: ['Industrial Machinery Drives', 'Hydraulic Power Pack Pumps', 'Air Compressors & Industrial Blowers', 'Conveyor Systems', 'Special Purpose Machines (SPMs)', 'Manufacturing Automation']
+    specTable: {
+      headers: ['Frame Size', 'Output (kW / HP)', 'Speed (RPM)', 'Current (A at 415V)', 'Efficiency (%)', 'Power Factor (cos φ)', 'Mounting'],
+      rows: [
+        ['80M', '0.75 kW / 1.0 HP', '1420 RPM (4P)', '1.8 A', '82.5%', '0.76', 'B3 Foot / B5 Flange'],
+        ['90L', '1.5 kW / 2.0 HP', '1430 RPM (4P)', '3.4 A', '85.3%', '0.78', 'B3 Foot / B5 Flange'],
+        ['100L', '2.2 kW / 3.0 HP', '1435 RPM (4P)', '4.8 A', '86.7%', '0.80', 'B3 Foot / B5 Flange'],
+        ['112M', '3.7 kW / 5.0 HP', '1440 RPM (4P)', '7.6 A', '88.3%', '0.82', 'B3 Foot / B5 Flange'],
+        ['132M', '7.5 kW / 10.0 HP', '1450 RPM (4P)', '14.8 A', '90.4%', '0.84', 'B3 Foot / B5 Flange'],
+        ['160L', '15.0 kW / 20.0 HP', '1465 RPM (4P)', '28.5 A', '92.1%', '0.86', 'B3 Foot / B5 Flange'],
+      ]
+    },
+    applications: ['Hydraulic Power Pack Drives', 'Mechanical Power Press Flywheels', 'Air Compressors & Blowers', 'Industrial Water & Chemical Pumps', 'Heavy Workshop Machine Drives']
   },
 
   /* ══════════════════════════════════════════════════════════════
-     CATEGORY: RAW MATERIALS & METAL SCRAP TRADING (Page 22)
+     CATEGORY: RAW MATERIALS & METAL SCRAP TRADING
      ══════════════════════════════════════════════════════════════ */
   {
-    id: 'scrap-501',
+    id: 'scrap-101',
     category: 'scrap_trading',
     categoryName: 'Raw Materials & Scrap Trading',
-    badge: 'Certified Purity',
-    tag: 'Scrap Trading Streams',
-    title: 'Industrial Raw Materials & Categorized Metal Scrap Trading',
-    subtitle: 'Systematic Supply & Professional Trading of High-Grade MS, SS, Al, Cu & Brass',
+    badge: 'Direct Mill Supply',
+    tag: 'Certified Scrap Lots',
+    title: 'Categorized Non-Ferrous & Ferrous Metal Scrap',
+    subtitle: 'Wholesale Certified Metal Scrap Supply — Copper, Brass, Aluminium, SS & MS',
     image: `${process.env.PUBLIC_URL}/products/metal_scrap_trading.png`,
-    pdfPage: 22,
-    shortDesc: 'Reliable supply and professional trading of high-grade industrial metal scrap streams: Mild Steel, Stainless Steel (304/316), Aluminium, Copper, and Brass.',
-    fullDesc: `At AptisMech Corporation LLP, we specialize in the reliable supply and professional trading of high-grade industrial metal scrap and raw materials. We ensure seamless sourcing, precision categorization, and transparent transactions designed to keep your industrial production moving forward.
+    shortDesc: 'Certified wholesale supplies of segregated non-ferrous and ferrous industrial metal scrap for melting furnaces, rolling mills, and foundries across India.',
+    fullDesc: `AptisMech Corporation LLP is a trusted importer, supplier, and trader of categorized, high-purity non-ferrous and ferrous industrial metal scrap.
 
-Our systematic sorting and certified weighing procedures guarantee consistent material flow, accurate chemistry, and transparent pricing across all non-ferrous and ferrous metal recycling streams.`,
+Supplying foundries, steel melting induction furnaces, recycling plants, and extrusion mills across India with certified chemical purity, zero contamination, and accurate weighbridge documentation.`,
     features: [
-      'MS Scrap (Mild Steel): Structural Scrap, Cut Pieces, Heavy Machine Scrap, Fabrication Scrap',
-      'SS Scrap (Stainless Steel): SS 304 / 316 Scrap, Sheet & Plate Scrap, Pipe & Tube Scrap, Cutlery Scrap',
-      'Aluminium Scrap: Extrusion Scrap, Sheet & Plate Scrap, Cast Aluminium Scrap, Cable & Wire Scrap',
-      'Copper Scrap: Copper Wire Scrap (Millberry), Copper Tube Scrap, Copper Sheet Scrap, Electrical Scrap',
+      'Copper Scrap: Millberry Wire Scrap (99.9% Cu), Berry/Birch Copper, Copper Tube Scrap, Heavy Copper Busbar Scrap',
+      'Aluminium Scrap: 6063 Extrusion Scrap, Tense/Tabor Cast Aluminium, Aluminium Sheet Scrap (Taint/Tabor), Wire Scrap',
+      'Stainless Steel Scrap: SS 304 Scrap (8% Ni, 18% Cr), SS 316 Scrap (Molybdenum bearing), SS 430 Magnetic Scrap',
       'Brass Scrap: Brass Rod Scrap (Honey), Brass Sheet Scrap, Brass Pipe Scrap, Mixed Brass Scrap',
       'Accurate weighbridge measurements, certified material sortation, and pan-India logistics',
     ],
@@ -790,41 +780,41 @@ Our systematic sorting and certified weighing procedures guarantee consistent ma
   }
 ];
 
-/* Categories configuration with counts & metadata */
+/* ── Categories Configuration with Accurate Metadata & Counts ── */
 export const categoriesConfig = [
   {
     id: 'heavy_machinery',
-    name: 'Heavy Fabrication Machinery',
-    badge: '10T — 500T Machinery',
+    name: 'Heavy Industrial Machinery & Workshop Equipment',
+    badge: 'Fabrication & Utility Equipment',
     icon: '🏗️',
-    desc: 'Heavy-duty Mechanical Ironworkers, C-Type Punching, H-Frame Hydraulic Presses, Workshop Utility Presses, CNC Synchronized Press Brakes & NC Shearing Machines.'
+    desc: 'Multi-Functional Ironworkers, C-Type Hydraulic Punching, H-Frame Hydraulic Presses, Workshop Utility Presses, Busbar Bending, Heavy Radial Drills & Vertical Milling Machines.'
+  },
+  {
+    id: 'raw_materials',
+    name: 'Industrial Raw Materials (CRC, MS & SS Coils)',
+    badge: 'Prime Coils & Sheets',
+    icon: '🏭',
+    desc: 'High-grade Cold Rolled (CRCA) Sheets, Structural Mild Steel (MS) Coils, and Corrosion-Resistant Stainless Steel (SS 304/316) Coils & Slit Strips.'
   },
   {
     id: 'hardware_spares',
     name: 'Precision Components, Mounts & Hardware',
-    badge: 'CNC Machined Spares',
+    badge: 'Machined Spares & Fasteners',
     icon: '⚙️',
-    desc: 'Custom Mounting Plates, Knurled Nuts, SPM Shaft Collars, Clevis Linkage Rods, Lifting Eye Bolts, Hydraulic Adapters & Round Flanges.'
+    desc: 'Custom Mounting Base Plates, Knurled Nuts, Shaft Collars, Clevis Linkages, Drop-Forged Eye Bolts, Hydraulic Reducing Adapters & Round Flanges.'
   },
   {
-    id: 'cnc_tooling',
-    name: 'CNC Tooling & Carbide Inserts',
-    badge: 'High-Precision Cutting',
-    icon: '💎',
-    desc: 'Premium CVD/PVD coated indexable carbide inserts engineered for high-speed CNC turning, facing, and profiling across steel, stainless, and alloy stocks.'
-  },
-  {
-    id: 'motors',
-    name: 'Industrial Three-Phase Motors',
-    badge: 'IP55 High-Torque',
+    id: 'cnc_motors',
+    name: 'Industrial Electric Motors & Tooling',
+    badge: 'IP55 Motors & Tooling',
     icon: '⚡',
-    desc: 'Continuous heavy-duty 415V 50Hz foot/flange mounted three-phase squirrel cage induction motors designed for industrial machine drives and power packs.'
+    desc: 'Heavy-duty 415V Three-Phase Induction Motors (IP55) and Premium CVD/PVD Coated Indexable Tungsten Carbide Turning Inserts.'
   },
   {
     id: 'scrap_trading',
     name: 'Categorized Metal Scrap Solutions',
-    badge: 'Certified Recycling',
+    badge: 'Certified Metal Supply',
     icon: '♻️',
-    desc: 'Wholesale segregated industrial scrap lots — Copper (Millberry), Brass, Extrusion Aluminium, Stainless Steel (SS304/316) & Heavy Melting Steel (HMS).'
+    desc: 'Wholesale segregated industrial scrap lots — Millberry Copper, Honey Brass, Extrusion Aluminium, Stainless Steel (SS304/316) & Heavy Melting Steel (HMS).'
   },
 ];

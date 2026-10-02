@@ -19,12 +19,12 @@ const products = [
     specs: ['55T — 125T', 'Multi-Station', '30 SPM'],
   },
   {
-    id: 'mach-109',
-    tag: 'Bending Series',
-    title: 'CNC Front Cylinder Hydraulic Press Brake',
-    desc: 'Front-cylinder synchronized design delivering superior bending accuracy, multi-axis back gauge positioning, and auto-crowning deflection compensation.',
-    image: `${process.env.PUBLIC_URL}/products/cnc_hydraulic_press_brake.png`,
-    specs: ['40T — 120T', '1270 — 3125mm', 'CNC Touch'],
+    id: 'mach-106',
+    tag: 'Busbar Machinery',
+    title: 'Hydraulic Busbar Bending Machine',
+    desc: 'Dedicated hydraulic machinery for precise bending, cutting, and punching of copper and aluminium busbars used in electrical switchgear and panel building.',
+    image: `${process.env.PUBLIC_URL}/products/hydraulic_busbar_bending.jpg`,
+    specs: ['Up to 12mm × 200mm', 'Manual & NC', '700 Bar'],
   },
   {
     id: 'mach-108',
@@ -86,7 +86,7 @@ export default function Home() {
               <div className="hero-content">
                 <div className="hero-label">
                   <span className="hero-label-line" />
-                  Vavdi Industrial Area, Rajkot · Since 2009
+                  Vavdi Industrial Area, Rajkot, Gujarat · Importer, Supplier & Exporter
                 </div>
 
                 <h1 className="hero-heading">
@@ -97,8 +97,8 @@ export default function Home() {
                 <p className="hero-sub-heading">Power · Accuracy · Reliability</p>
 
                 <p className="hero-desc">
-                  AptisMech Corporation LLP manufactures high-tonnage power presses (10T to 500T),
-                  precision CNC synchronized press brakes, hydraulic shearing machines, and industrial hardware
+                  AptisMech Corporation LLP is an importer, supplier and exporter of high-tonnage power presses (10T to 500T),
+                  hydraulic press brakes, hydraulic shearing machines, and industrial hardware
                   trusted by leading manufacturing plants across India.
                 </p>
 
@@ -236,7 +236,7 @@ export default function Home() {
                 <div className="about-cert-badge">
                   <div className="about-cert-icon">🏆</div>
                   <div>
-                    <span className="about-cert-main">Certified Manufacturer</span>
+                    <span className="about-cert-main">Industrial Solutions</span>
                     <span className="about-cert-sub">LLP Registered · Vavdi, Rajkot</span>
                   </div>
                 </div>
@@ -314,8 +314,8 @@ export default function Home() {
 
                 <div className="inquiry-contact-cards">
                   {[
-                    { icon: <FaPhoneAlt />, label: 'Sales — Mr. Ankit Dholakiya', val: '+91 70465 00555', href: 'tel:+917046500555' },
-                    { icon: <FaPhoneAlt />, label: 'Operations — Mr. Mayurbhai Jani', val: '+91 88666 16585', href: 'tel:+918866616585' },
+                    { icon: <FaPhoneAlt />, label: 'Sales Inquiry', val: '+91 70465 00555', href: 'tel:+917046500555' },
+                    { icon: <FaPhoneAlt />, label: 'Technical Support', val: '+91 88666 16585', href: 'tel:+918866616585' },
                     { icon: <FaEnvelope />, label: 'Email Address', val: 'AptisMech.Corporation.llp@gmail.com', href: 'mailto:AptisMech.Corporation.llp@gmail.com' },
                     { icon: <FaWhatsapp />, label: 'Direct WhatsApp', val: '+91 88666 16585', href: WA },
                   ].map((item, i) => (
@@ -385,16 +385,22 @@ export default function Home() {
                             <option>Hydraulic H-Type Press Machine (20T–500T)</option>
                             <option>H-Type Workshop Press (Power Operated)</option>
                             <option>Hydraulic C-Type Press SPM (10T–250T)</option>
-                            <option>CNC Front Cylinder Press Brake (40T–120T)</option>
-                            <option>NC Hydraulic Shearing Machine (1525mm–4000mm)</option>
+                            <option>Hydraulic Busbar Bending Machine</option>
+                            <option>Drill Machine (Pillar / Bench Type)</option>
+                            <option>Drilling cum Milling Machine</option>
+                            <option>Vertical Milling Machine</option>
                           </optgroup>
-                          <optgroup label="Hardware, Motors & Scrap">
+                          <optgroup label="Hardware, Motors & Raw Materials">
                             <option>Plates & Custom Mounts</option>
                             <option>Fasteners, Knurled Nuts & SPM Cover Nuts</option>
                             <option>Industrial Brackets & Mounts</option>
                             <option>SPM Shaft Collars & Clevis Linkages</option>
+                            <option>Eye Bolts & Sleeve Bushings</option>
                             <option>CNC Indexable Carbide Turning Inserts</option>
                             <option>Three-Phase Induction Motors (IP55)</option>
+                            <option>CRC Sheets (Cold Rolled)</option>
+                            <option>MS Coils (Hot Rolled)</option>
+                            <option>SS Coils (Stainless Steel)</option>
                             <option>Categorized Metal Scrap (MS, SS, Al, Cu, Brass)</option>
                           </optgroup>
                         </select>

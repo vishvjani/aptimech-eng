@@ -176,7 +176,7 @@ const ProductModal = ({ product, onClose }) => {
               href="tel:+917046500555"
               className="btn-outline modal-call-btn"
             >
-              <FaPhoneAlt size={13} /> Call Sales (+91 70465 00555)
+              <FaPhoneAlt size={13} /> Call Partner (+91 70465 00555)
             </a>
           </div>
 
@@ -220,7 +220,7 @@ export default function Products() {
           <span className="page-hero-eyebrow">Manufacturing & Industrial Supply</span>
           <h1 className="page-hero-title">Industrial Product Catalog</h1>
           <p className="page-hero-desc">
-            Explore 22+ precision engineering solutions manufactured and supplied by AptisMech Corporation LLP.
+            Explore complete range of Industrial Machinery, Workshop Tools, Raw Materials & Hardware Spares manufactured and supplied by AptisMech Corporation LLP.
             Categorized below: heavy fabrication machinery, precision mounts, industrial hardware, CNC tooling, electric motors, and metal scrap solutions.
           </p>
         </div>

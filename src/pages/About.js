@@ -1,324 +1,206 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  FaArrowRight, FaWhatsapp, FaShieldAlt, FaCogs,
-  FaCheckCircle, FaQuoteLeft, FaBoxes, FaTruckMoving
+  FaCheckCircle, FaAward, FaShieldAlt, FaCogs,
+  FaArrowRight, FaWhatsapp, FaMapMarkerAlt, FaGlobeAsia,
+  FaPhoneAlt, FaEnvelope
 } from 'react-icons/fa';
 import './About.css';
 
-const WA = "https://wa.me/918866616585?text=Hello%20AptisMech%2C%20I%20would%20like%20to%20know%20more%20about%20your%20company%20and%20manufacturing%20capabilities.";
-
-const whyTradeCards = [
-  {
-    icon: <FaShieldAlt />,
-    num: '01',
-    title: 'Uncompromising Quality & Precision',
-    desc: 'Manufactured with strict dimensional tolerances, high-grade structural steels, and rigorous quality controls to ensure maximum durability and performance under heavy industrial loads.',
-  },
-  {
-    icon: <FaBoxes />,
-    num: '02',
-    title: 'Comprehensive Product Portfolio',
-    desc: 'A one-stop solution covering heavy machinery (Presses, Press Brakes, Shears, Ironworkers), precision components (Brackets, Fasteners, Adapters, Bushings, Collars), and categorized metal scrap trading.',
-  },
-  {
-    icon: <FaCogs />,
-    num: '03',
-    title: 'Customized Engineering Solutions',
-    desc: 'Tailor-made machinery specifications, custom mountings, and specialized tooling designed precisely around your unique manufacturing workflow and production cycles.',
-  },
-  {
-    icon: <FaTruckMoving />,
-    num: '04',
-    title: 'Reliable Supply & Transparency',
-    desc: 'Consistent material flow, accurate weighing, transparent transactions, and on-time delivery engineered to keep your production lines moving forward without interruption.',
-  },
-];
-
-const partners = [
-  {
-    name: 'Mr. Ankit Dholakiya',
-    role: 'Designated Partner — Sales & Strategic Partnerships',
-    phone: '+91 70465 00555',
-    tel: 'tel:+917046500555',
-    initials: 'AD',
-    expertise: ['Industrial Machinery Sales', 'Client Partnerships', 'Commercial Strategy', 'Scrap Trading Alliances'],
-  },
-  {
-    name: 'Mr. Mayurbhai Jani',
-    role: 'Designated Partner — Operations & Technical Governance',
-    phone: '+91 88666 16585',
-    tel: 'tel:+918866616585',
-    initials: 'MJ',
-    expertise: ['Fabrication Engineering', 'Quality Assurance & Calibration', 'Custom SPM Development', 'Logistics Operations'],
-  },
-];
+const WA = "https://wa.me/918866616585?text=Hello%20AptisMech%20Corporation%2C%20I%20would%20like%20to%20inquire%20about%20your%20products%20and%20materials.";
 
 export default function About() {
   return (
     <>
-      {/* ════ PAGE HERO ════ */}
-      <section className="about-hero">
+      {/* ════ HERO HEADER ════ */}
+      <section className="page-hero">
         <div className="container">
-          <div className="row justify-content-center text-center">
-            <div className="col-lg-9">
-              <span className="about-hero-eyebrow">
-                <span className="dot-pulse" />
-                APTISMECH CORPORATION LLP · RAJKOT, GUJARAT
-              </span>
-              <h1 className="about-hero-title">
-                Precision Manufacturing &<br />
-                <span style={{ color: '#F5A623' }}>Engineering Solutions</span>
-              </h1>
-              <p className="about-hero-desc mx-auto">
-                Premier machinery manufacturer, precision hardware supplier, and industrial scrap trading partner
-                dedicated to driving excellence across modern engineering and manufacturing sectors.
-              </p>
-              <div className="d-flex gap-3 justify-content-center flex-wrap mt-4">
-                <a href={WA} target="_blank" rel="noreferrer" className="btn-brand">
-                  <FaWhatsapp size={15} /> WhatsApp Company Inquiry
-                </a>
-                <Link to="/products" className="btn-outline-white">
-                  Explore 22+ Products <FaArrowRight size={12} />
-                </Link>
-              </div>
-            </div>
-          </div>
+          <span className="page-hero-eyebrow">AptisMech Corporation LLP</span>
+          <h1 className="page-hero-title">About Our Enterprise</h1>
+          <p className="page-hero-desc">
+            Premier Importer, Supplier &amp; Exporter of Heavy Industrial Machinery, Workshop Equipment, Industrial Raw Materials (CRC, MS &amp; SS Coils), and Certified Metal Scrap based in Rajkot, Gujarat.
+          </p>
         </div>
       </section>
 
       {/* ════ COMPANY OVERVIEW ════ */}
-      <section className="company-overview-section">
+      <section className="section bg-white">
         <div className="container">
           <div className="row align-items-center gy-5">
-
             <div className="col-lg-6">
-              <span className="eyebrow">Corporate Profile</span>
-              <h2 className="section-title">Company Overview</h2>
-              <div className="rule" />
-              
-              <div className="overview-main-text">
-                <p className="lead-overview-p">
-                  <strong style={{ color: 'var(--navy)' }}>AptisMech Corporation LLP</strong>, based in Rajkot,
-                  is a premier engineering solutions provider, specialized machinery manufacturer, precision hardware supplier,
-                  and industrial scrap trading firm.
-                </p>
-                <p className="sub-overview-p">
-                  We deliver high-performance fabrication machinery, robust industrial components, precision fasteners,
-                  and categorized metal scrap streams tailored to support modern manufacturing plants, tool rooms,
-                  and heavy engineering industries with unwavering reliability and efficiency.
-                </p>
-              </div>
-
-              <div className="about-highlights-list">
-                {[
-                  'LLP Registered Corporate Engineering Firm in Gujarat',
-                  'Heavy Hydraulic & Mechanical Press Machinery (10T–500T)',
-                  'Micro-Tolerance CNC Turned Components & Precision Hardware',
-                  'Categorized Metal Scrap Supply (MS, SS, Aluminium, Brass, Copper)',
-                  'Zero-Deflection High-Tensile Stress-Relieved Structural Frames',
-                ].map((item, idx) => (
-                  <div className="highlight-item" key={idx}>
-                    <FaCheckCircle className="highlight-icon" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="overview-card-grid">
-                {[
-                  {
-                    icon: '🏛️',
-                    label: 'Corporate Entity',
-                    val: 'Limited Liability Partnership (LLP)',
-                    sub: 'Incorporated under MCA, Govt. of India',
-                  },
-                  {
-                    icon: '📍',
-                    label: 'Manufacturing Hub',
-                    val: 'Vavdi Industrial Area, Rajkot',
-                    sub: 'Jasmatnagar, Street No. 4, Plot No. 6',
-                  },
-                  {
-                    icon: '⚙️',
-                    label: 'Core Specialization',
-                    val: 'Heavy Presses, CNC & Hardware',
-                    sub: 'Custom Tonnage & Tailored SPM Builds',
-                  },
-                  {
-                    icon: '♻️',
-                    label: 'Industrial Trading',
-                    val: 'Categorized Metal Scrap',
-                    sub: 'Transparent Weighing & Supply',
-                  },
-                ].map((card, i) => (
-                  <div className="overview-info-card" key={i}>
-                    <div className="overview-card-icon">{card.icon}</div>
-                    <div>
-                      <span className="overview-card-label">{card.label}</span>
-                      <h4 className="overview-card-val">{card.val}</h4>
-                      <p className="overview-card-sub">{card.sub}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ════ WHY TRADE AND DO BUSINESS WITH US ════ */}
-      <section className="why-trade-section">
-        <div className="container">
-          <div className="row justify-content-center text-center mb-5">
-            <div className="col-lg-8">
-              <span className="eyebrow">Our Competitive Advantage</span>
-              <h2 className="section-title">Why Trade and Do Business with Us?</h2>
-              <div className="rule center" />
-              <p className="section-subtitle mx-auto">
-                Built on engineering rigor, transparent commercial ethics, and long-term customer partnerships.
-              </p>
-            </div>
-          </div>
-
-          <div className="row gy-4">
-            {whyTradeCards.map((c, i) => (
-              <div className="col-lg-6" key={i}>
-                <div className="why-card">
-                  <div className="why-card-top">
-                    <div className="why-icon-box">{c.icon}</div>
-                    <span className="why-num">{c.num}</span>
-                  </div>
-                  <h3 className="why-title">{c.title}</h3>
-                  <p className="why-desc">{c.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ════ VISION STATEMENT (HIGHLIGHT BLOCK) ════ */}
-      <section className="vision-banner-section">
-        <div className="container">
-          <div className="vision-banner-card">
-            <div className="vision-quote-icon">
-              <FaQuoteLeft />
-            </div>
-            <span className="vision-badge">Official Vision Statement</span>
-            <blockquote className="vision-quote-text">
-              "To be the definitive global benchmark for engineering excellence, transforming industrial landscapes
-              by seamlessly bridging the gap between heavy-duty power and high-tech automation through unmatched precision manufacturing."
-            </blockquote>
-            <div className="vision-author">
-              <span className="author-corp">AptisMech Corporation LLP</span>
-              <span className="author-sub">Rajkot, Gujarat · India</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ════ TECHNICAL LEADERSHIP TEAM ════ */}
-      <section className="leadership-section">
-        <div className="container">
-          <div className="row justify-content-center text-center mb-5">
-            <div className="col-lg-7">
-              <span className="eyebrow">Leadership</span>
-              <h2 className="section-title">Technical Leadership Team</h2>
-              <div className="rule center" />
-              <p className="section-subtitle mx-auto">
-                Experienced designated partners leading engineering innovation, quality control, and client relationships.
-              </p>
-            </div>
-          </div>
-
-          <div className="row justify-content-center gy-4">
-            {partners.map((p, i) => (
-              <div className="col-lg-6 col-md-8" key={i}>
-                <div className="partner-card">
-                  <div className="d-flex align-items-center gap-3 mb-3">
-                    <div className="partner-avatar">{p.initials}</div>
-                    <div>
-                      <h3 className="partner-name">{p.name}</h3>
-                      <p className="partner-role">{p.role}</p>
-                    </div>
-                  </div>
-
-                  <div className="partner-expertise-strip">
-                    {p.expertise.map((e, j) => (
-                      <span className="expertise-tag" key={j}>{e}</span>
-                    ))}
-                  </div>
-
-                  <div className="partner-contact-links">
-                    <a href={p.tel} className="partner-c-btn">
-                      📞 {p.phone}
-                    </a>
-                    <a href="mailto:AptisMech.Corporation.llp@gmail.com" className="partner-c-btn">
-                      ✉️ Email
-                    </a>
-                    <a
-                      href={`https://wa.me/${p.phone.replace(/\D/g, '')}?text=Hello%20${encodeURIComponent(p.name)}%2C%20I%20would%20like%20to%20connect%20with%20AptisMech.`}
-                      target="_blank" rel="noreferrer"
-                      className="partner-c-btn partner-wa-btn"
-                    >
-                      <FaWhatsapp size={13} /> WhatsApp
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ════ STRATEGIC LOCATION & FACILITY ════ */}
-      <section className="location-section">
-        <div className="container">
-          <div className="row align-items-center gy-5">
-            <div className="col-lg-7">
-              <span className="eyebrow" style={{ color: 'var(--orange)' }}>Strategic Footprint</span>
-              <h2 className="location-title">
-                Operating in Gujarat's Premier Industrial Corridor
+              <span className="section-eyebrow">Enterprise Overview</span>
+              <h2 className="section-title mb-4">
+                Delivering Industrial Precision &amp; Certified Material Reliability
               </h2>
-              <div className="rule" />
-              <p className="location-desc">
-                Shed No. 3, Jasmatnagar, Street No. 4, Plot No. 6,<br />
-                <strong style={{ color: '#F5A623' }}>Vavdi Industrial Area, Rajkot-360004, Gujarat, India.</strong>
+              <p className="lead-text mb-3">
+                <strong>AptisMech Corporation LLP</strong> is a distinguished industrial supply enterprise headquartered in Vavdi Industrial Area, Rajkot — the prominent engineering hub of Gujarat, India.
               </p>
-              <p className="location-sub-desc">
-                Rajkot's Vavdi Industrial Area gives AptisMech direct access to top-tier metallurgy supply chains,
-                advanced casting foundries, skilled precision machinists, and multi-modal logistics networks across India.
+              <p className="body-text mb-3">
+                We specialize as an <strong>Importer, Supplier, and Exporter</strong> providing complete industrial solutions: Heavy Fabrication Machinery, Hydraulic Power Presses, Busbar Bending Machines, Radial Drills, Milling Equipment, Prime Industrial Raw Materials (CRC Sheets, MS Coils, SS Coils), Precision Machined Hardware Spares, and High-Purity Metal Scrap.
               </p>
+              <p className="body-text mb-4">
+                With deep domain expertise and verified supplier networks across domestic and global markets, we ensure high quality standards, transparent weighment, certified material metallurgy, and fast pan-India &amp; export dispatch.
+              </p>
+
+              <div className="row gy-3 mb-4">
+                {[
+                  'Comprehensive Heavy Machinery & Workshop Solutions',
+                  'Prime & Commercial Grade CRC, MS & SS Coils & Sheets',
+                  'Precision Turned Spares, Collars, Mounts & Connectors',
+                  'Certified Chemical Purity & Fast Dispatch Logistics',
+                ].map((item, i) => (
+                  <div className="col-12 d-flex align-items-center gap-2" key={i}>
+                    <FaCheckCircle size={15} color="#F5A623" style={{ flexShrink: 0 }} />
+                    <span style={{ fontSize: '0.9rem', color: 'var(--navy)', fontWeight: 600, fontFamily: 'Inter' }}>
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="d-flex gap-3 flex-wrap">
+                <Link to="/products" className="btn-brand">
+                  Explore Products <FaArrowRight size={12} />
+                </Link>
+                <a href={WA} target="_blank" rel="noreferrer" className="btn-outline">
+                  <FaWhatsapp size={14} /> WhatsApp Inquiries
+                </a>
+              </div>
             </div>
 
-            <div className="col-lg-5">
-              <div className="location-box-card">
-                <div className="location-pin-icon">📍</div>
-                <h3 className="location-box-title">APTISMECH CORPORATION LLP</h3>
-                <p className="location-box-addr">
-                  Shed No. 3, Jasmatnagar,<br />
-                  Street No. 4, Plot No. 6,<br />
-                  Vavdi Industrial Area,<br />
-                  Rajkot-360004, Gujarat, India.
-                </p>
-                <div className="d-flex gap-2 justify-content-center flex-wrap">
-                  <a
-                    href="https://maps.google.com/?q=Vavdi+Industrial+Area+Rajkot+Gujarat"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-brand"
-                    style={{ fontSize: '0.78rem', padding: '10px 18px' }}
-                  >
-                    📍 View on Google Maps
-                  </a>
-                  <Link to="/contact" className="btn-outline-white" style={{ fontSize: '0.78rem', padding: '10px 18px' }}>
-                    Contact Us <FaArrowRight size={11} />
-                  </Link>
+            <div className="col-lg-6">
+              <div className="about-visual-card">
+                <div className="about-visual-header">
+                  <div className="d-flex align-items-center gap-3">
+                    <img
+                      src={`${process.env.PUBLIC_URL}/images/logo.png`}
+                      alt="AptisMech Logo"
+                      style={{ height: 48, width: 'auto' }}
+                    />
+                    <div>
+                      <h4 style={{ fontFamily: 'Barlow', fontWeight: 800, color: 'var(--navy)', margin: 0 }}>
+                        APTISMECH CORPORATION LLP
+                      </h4>
+                      <span style={{ fontSize: '0.72rem', color: 'var(--orange-dark)', fontWeight: 700, textTransform: 'uppercase' }}>
+                        Rajkot, Gujarat · India
+                      </span>
+                    </div>
+                  </div>
                 </div>
+
+                <div className="about-pillars-grid">
+                  {[
+                    {
+                      icon: <FaShieldAlt size={22} color="#F5A623" />,
+                      title: 'Certified Reliability',
+                      desc: 'Guaranteed material grade composition, strict inspection, and reliable machinery builds.',
+                    },
+                    {
+                      icon: <FaGlobeAsia size={22} color="#F5A623" />,
+                      title: 'Import & Export Capabilities',
+                      desc: 'Pan-India supply logistics and seamless export documentation for international clients.',
+                    },
+                    {
+                      icon: <FaCogs size={22} color="#F5A623" />,
+                      title: 'Complete Industrial Range',
+                      desc: 'From 500-ton presses and milling machines to prime coils and hardware spares.',
+                    },
+                    {
+                      icon: <FaAward size={22} color="#F5A623" />,
+                      title: 'Transparent Transactions',
+                      desc: 'Accurate weighbridge certificates, fair market pricing, and dedicated client support.',
+                    },
+                  ].map((p, i) => (
+                    <div className="about-pillar-item" key={i}>
+                      <div className="pillar-icon-box">{p.icon}</div>
+                      <h5 className="pillar-title">{p.title}</h5>
+                      <p className="pillar-desc">{p.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════ LEADERSHIP & PARTNERS ════ */}
+      <section className="section bg-light">
+        <div className="container">
+          <div className="text-center max-w-700 mx-auto mb-5">
+            <span className="section-eyebrow">Enterprise Leadership</span>
+            <h2 className="section-title">Key Management &amp; Partners</h2>
+            <p className="section-sub">
+              Direct access to our partners for machinery procurement, raw material orders, and trade partnerships.
+            </p>
+          </div>
+
+          <div className="row g-4 justify-content-center">
+            <div className="col-md-5 col-12">
+              <div className="partner-card">
+                <div className="partner-avatar">AD</div>
+                <h4 className="partner-name">Mr. Ankit Dholakiya</h4>
+                <span className="partner-role">Partner</span>
+                <p className="partner-desc">
+                  Oversees machinery imports, client project consultations, and international trade partnerships.
+                </p>
+                <div className="partner-contact-links">
+                  <a href="tel:+917046500555" className="partner-link">
+                    <FaPhoneAlt size={12} /> +91 70465 00555
+                  </a>
+                  <a href="mailto:AptisMech.Corporation.llp@gmail.com" className="partner-link">
+                    <FaEnvelope size={12} /> AptisMech.Corporation.llp@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-5 col-12">
+              <div className="partner-card">
+                <div className="partner-avatar">MJ</div>
+                <h4 className="partner-name">Mr. Mayurbhai Jani</h4>
+                <span className="partner-role">Partner</span>
+                <p className="partner-desc">
+                  Directs raw material supplies, metal scrap procurement, domestic logistics, and supply chain management.
+                </p>
+                <div className="partner-contact-links">
+                  <a href="tel:+918866616585" className="partner-link">
+                    <FaPhoneAlt size={12} /> +91 88666 16585
+                  </a>
+                  <a href="https://wa.me/918866616585" target="_blank" rel="noreferrer" className="partner-link" style={{ color: '#25D366' }}>
+                    <FaWhatsapp size={13} /> WhatsApp Direct
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════ LOCATION & DISPATCH ════ */}
+      <section className="section bg-white">
+        <div className="container">
+          <div className="location-banner">
+            <div className="row align-items-center gy-4">
+              <div className="col-lg-8">
+                <div className="d-flex align-items-center gap-2 mb-2">
+                  <FaMapMarkerAlt size={18} color="#F5A623" />
+                  <span style={{ fontFamily: 'Inter', fontWeight: 700, color: '#fff', fontSize: '0.88rem', letterSpacing: 1, textTransform: 'uppercase' }}>
+                    Industrial Facility &amp; Head Office
+                  </span>
+                </div>
+                <h3 style={{ fontFamily: 'Barlow', fontWeight: 800, color: '#fff', fontSize: '1.8rem', marginBottom: '8px' }}>
+                  Vavdi Industrial Area, Rajkot — Logistics &amp; Trade Hub
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Inter', fontSize: '0.92rem', margin: 0, lineHeight: 1.7 }}>
+                  Shed No. 3, Jasmatnagar, St. No. 4, Plot No. 6, Vavdi Industrial Area, Rajkot-360004, Gujarat, India.<br />
+                  Strategically connected to major state and national highways for prompt dispatch across Gujarat and all Indian states.
+                </p>
+              </div>
+              <div className="col-lg-4 text-lg-end">
+                <Link to="/contact" className="btn-brand" style={{ padding: '14px 28px', fontSize: '0.88rem' }}>
+                  Contact Us <FaArrowRight size={12} />
+                </Link>
               </div>
             </div>
           </div>

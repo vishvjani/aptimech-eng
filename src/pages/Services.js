@@ -1,70 +1,78 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaWhatsapp, FaArrowRight, FaCheckCircle } from 'react-icons/fa';
+import { FaWhatsapp, FaArrowRight, FaCheckCircle, FaIndustry, FaRecycle, FaCogs, FaBoxes } from 'react-icons/fa';
 import './Services.css';
 
-const WA = "https://wa.me/918866616585?text=Hello%20Aptismech%2C%20I%20am%20interested%20in%20your%20industrial%20services.";
+const WA = "https://wa.me/918866616585?text=Hello%20AptisMech%2C%20I%20am%20interested%20in%20your%20industrial%20supplies%20and%20materials.";
 
 const services = [
   {
     id: 1,
-    emoji: '⚙️',
-    title: 'Precision CNC Custom Machining',
-    subtitle: 'High-Tolerance Multi-Axis Fabrication',
-    badge: 'Core Service',
-    color: 'var(--navy)',
-    desc: `High-tolerance multi-axis vertical milling, lathe turning, and custom-profile components executed from rigorous CAD blueprint assets. Our CNC machining facility handles complex geometries with sub-millimeter tolerances, serving automotive, aerospace, and general engineering sectors.`,
+    icon: <FaIndustry size={28} color="#F5A623" />,
+    title: 'Machinery Import, Supply & Export',
+    subtitle: 'Heavy Industrial Fabrication & Workshop Systems',
+    badge: 'Core Division',
+    desc: `Import, procurement, and supply of high-tonnage mechanical ironworkers, hydraulic C-frame & H-frame presses, busbar bending machines, pillar drills, and vertical milling equipment with full warranty and technical spares support.`,
     features: [
-      'Multi-axis CNC Vertical Milling',
-      'Precision CNC Lathe Turning',
-      'Custom Profile Component Fabrication',
-      'CAD/CAM Blueprint Execution',
-      'Sub-millimeter Dimensional Tolerance',
-      'Surface Finish Verification',
-      'Material: SS, MS, Aluminium, Brass, Copper',
-      'Prototype to Production Batches',
+      'Multi-Functional Mechanical Ironworkers (55T – 125T)',
+      'Hydraulic H-Type Straight-Side Presses (20T – 500T)',
+      'Hydraulic Busbar Bending & Punching Equipment',
+      'Heavy Duty Industrial Radial & Pillar Drills',
+      'Precision Vertical Turret Milling Machines',
+      'Full Technical Spares & Operating Documentation',
     ],
-    applications: ['Automotive Components', 'Machine Parts', 'Flanges & Shafts', 'Custom Profiles', 'Prototype Development'],
+    applications: ['Structural Steel Fabrication', 'Automotive Press Shops', 'Control Panel Manufacturing', 'Machine Maintenance Toolrooms'],
   },
   {
     id: 2,
-    emoji: '♻️',
-    title: 'Non-Ferrous Scrap Trading',
-    subtitle: 'Wholesale Aluminium, Copper & Brass',
-    badge: 'Wholesale',
-    color: 'var(--orange)',
-    desc: `Authorized large-scale processing, sortation, and trading for premium raw scrap variants, specializing in high-purity Copper, Brass, and Aluminium recycling streams. We provide competitive wholesale rates backed by certified weight and purity documentation.`,
+    icon: <FaBoxes size={28} color="#F5A623" />,
+    title: 'Industrial Raw Material Supply',
+    subtitle: 'Prime CRC Sheets, MS Coils & SS Coils',
+    badge: 'Raw Materials',
+    desc: `Wholesale sourcing and supply of high-grade steel raw materials: Cold Rolled Closed Annealed (CRCA) sheets, structural Mild Steel (MS) coils, and Stainless Steel (SS304/316) coils in standard and custom-slit widths.`,
     features: [
-      'High-Purity Copper Scrap',
-      'Premium Brass Scrap Trading',
-      'Aluminium Scrap Processing',
-      'Authorized Large-Scale Processing',
-      'Certified Sortation & Grading',
-      'Competitive Wholesale Pricing',
-      'Weight & Purity Documentation',
-      'Pan-India Logistics Support',
+      'Prime & Commercial Grade CRC Sheets (0.4mm – 3.2mm)',
+      'Hot Rolled & Cold Rolled MS Coils (IS 2062 / ASTM A36)',
+      'Austenitic Stainless Steel Coils (SS 304, 304L, 316, 316L)',
+      'Precision Coil Slitting & Cut-to-Length Flat Sheets',
+      'Certified Chemical Composition & Tensile Metallurgy',
+      'Prompt Pan-India Bulk Lot Logistics',
     ],
-    applications: ['Metal Recycling Plants', 'Foundries & Smelters', 'Cable Manufacturers', 'Brass Component Makers', 'Export Trading'],
+    applications: ['Electrical Panel Fabrication', 'Automotive Component Stamping', 'Storage Tank & PEB Construction', 'Kitchen & Chemical Equipment'],
   },
   {
     id: 3,
-    emoji: '🔧',
-    title: 'Industrial Spares & Maintenance',
-    subtitle: 'Complete Machine Support Hub',
-    badge: 'Support',
-    color: 'var(--navy-light)',
-    desc: `Comprehensive industrial spares maintenance support hub ensuring your production lines never go down. We supply genuine and equivalent spare parts for power presses, pneumatic systems, and custom machinery, backed by on-site technical service.`,
+    icon: <FaCogs size={28} color="#F5A623" />,
+    title: 'Precision Hardware Spares & Fasteners',
+    subtitle: 'Engineered Components, Collars & Connectors',
+    badge: 'Spares Hub',
+    desc: `Supply of precision-machined base plates, diamond knurled nuts, SPM shaft collars, drop-forged eye bolts, hydraulic adapters, and three-phase induction electric motors for equipment builders and maintenance plants.`,
     features: [
-      'Genuine Power Press Spare Parts',
-      'Pneumatic System Components',
-      'Clutch & Brake Assembly Kits',
-      'Flywheel & Drive Components',
-      'CNC Tooling & Inserts',
-      'On-Site Technical Service',
-      'Preventive Maintenance Plans',
-      'Emergency Breakdown Support',
+      'Custom Milled Mounting Plates & Flanges',
+      'Diamond Knurled Adjustment Nuts (M6 – M20)',
+      'Single-Split & Clamp-On SPM Shaft Collars',
+      'Drop-Forged High-Tensile Eye Bolts (DIN 580)',
+      'High-Pressure Hydraulic Hex Adapters & Connectors',
+      'Three-Phase IP55 Squirrel Cage Induction Motors',
     ],
-    applications: ['Power Press Maintenance', 'Pneumatic System Repair', 'CNC Servicing', 'Breakdown Response', 'Scheduled Maintenance'],
+    applications: ['Machine Assembly Lines', 'Hydraulic Power Units', 'Heavy Rigging & Lifting', 'Industrial Fluid Plumbing'],
+  },
+  {
+    id: 4,
+    icon: <FaRecycle size={28} color="#F5A623" />,
+    title: 'Categorized Metal Scrap Solutions',
+    subtitle: 'Wholesale Non-Ferrous & Ferrous Scrap Lots',
+    badge: 'Recycling',
+    desc: `Authorized large-scale supply, sortation, and trading for premium raw scrap variants, specializing in high-purity Millberry Copper, Honey Brass, Extrusion Aluminium, and Stainless Steel scrap for melting furnaces and foundries.`,
+    features: [
+      'Millberry Copper Wire Scrap (99.9% Cu)',
+      '6063 Aluminium Extrusion & Cast Scrap',
+      'Honey Brass Rod & Sheet Scrap',
+      'SS 304 / 316 Non-Magnetic Scrap Lots',
+      'Certified Sortation with Spectrometer Purity Checks',
+      'Accurate Weighbridge Documentation',
+    ],
+    applications: ['Melting Furnaces & Smelters', 'Foundries & Casting Units', 'Extrusion & Billet Plants', 'Recycling Facilities'],
   },
 ];
 
@@ -75,149 +83,62 @@ const Services = () => (
       <div className="container">
         <div className="row justify-content-center text-center">
           <div className="col-lg-8">
-            <span className="page-hero-eyebrow">Industrial Services Portfolio</span>
+            <span className="page-hero-eyebrow">Enterprise Solutions</span>
             <h1 className="page-hero-title">
-              Beyond Machines —<br />
-              <span style={{ color: '#F5A623' }}>Complete Industrial Solutions.</span>
+              Complete Industrial Supply Portfolio
             </h1>
             <p className="page-hero-desc mx-auto">
-              Precision CNC machining, non-ferrous scrap trading, and industrial spares support —
-              a complete manufacturing ecosystem under one roof.
+              From heavy fabrication machinery and raw material coils to precision hardware spares and certified metal scrap trading.
             </p>
-            <div className="d-flex gap-3 justify-content-center flex-wrap">
-              <a href={WA} target="_blank" rel="noreferrer" className="btn-brand">
-                <FaWhatsapp size={14} /> Get a Quote
-              </a>
-              <Link to="/contact" className="btn-outline-white">
-                Contact Us <FaArrowRight size={12} />
-              </Link>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-    {/* SERVICES DETAIL */}
-    <section style={{ padding: '90px 0', background: 'var(--off-white)', borderTop: '1px solid var(--border)' }}>
+    {/* SERVICES LIST */}
+    <section className="section bg-white">
       <div className="container">
-        <div className="row gy-4">
-          {services.map((srv, i) => (
-            <div className="col-12" key={srv.id}>
-              <div className={`service-detail-card${i % 2 !== 0 ? ' reverse' : ''}`}>
-                <div className="service-visual" style={{
-                  background: `${srv.color}0d`,
-                  borderLeft: `4px solid ${srv.color}`,
-                }}>
-                  <span className="service-visual-emoji">{srv.emoji}</span>
-                  <span className="service-visual-badge" style={{ background: srv.color }}>
-                    {srv.badge}
-                  </span>
-                  <div className="service-apps">
-                    <div style={{ fontFamily: 'Inter', fontSize: '0.65rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '1.2px', marginBottom: '0.5rem', fontWeight: 700 }}>
-                      Applications
-                    </div>
-                    <div className="d-flex flex-wrap gap-2">
-                      {srv.applications.map((a, j) => (
-                        <span key={j} style={{
-                          background: `${srv.color}14`,
-                          color: srv.color,
-                          fontSize: '0.7rem',
-                          padding: '4px 10px',
-                          borderRadius: 20,
-                          fontFamily: 'Inter',
-                          fontWeight: 600,
-                          border: `1px solid ${srv.color}30`,
-                        }}>{a}</span>
-                      ))}
-                    </div>
+        <div className="row gy-5">
+          {services.map((svc) => (
+            <div className="col-lg-6" key={svc.id}>
+              <div className="service-card-full h-100 d-flex flex-column">
+                <div className="d-flex align-items-center gap-3 mb-3">
+                  <div className="service-icon-box">{svc.icon}</div>
+                  <div>
+                    <span className="service-badge">{svc.badge}</span>
+                    <h3 className="service-title">{svc.title}</h3>
+                    <span className="service-sub">{svc.subtitle}</span>
                   </div>
                 </div>
 
-                <div className="service-detail-content">
-                  <span className="service-detail-tag" style={{ color: srv.color }}>{srv.subtitle}</span>
-                  <h2 className="service-detail-title">{srv.title}</h2>
-                  <div className="rule" style={{ background: srv.color }} />
-                  <p className="service-detail-desc">{srv.desc}</p>
+                <p className="service-desc">{svc.desc}</p>
 
-                  <div className="row">
-                    {srv.features.map((f, j) => (
-                      <div className="col-md-6 mb-2" key={j}>
-                        <div className="d-flex align-items-start gap-2">
-                          <FaCheckCircle size={12} color={srv.color} style={{ marginTop: 3, flexShrink: 0 }} />
-                          <span style={{ fontFamily: 'Inter', fontSize: '0.84rem', color: 'var(--text)' }}>{f}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                <div className="service-features-grid mt-auto mb-4">
+                  {svc.features.map((feat, i) => (
+                    <div className="service-feat-item" key={i}>
+                      <FaCheckCircle size={13} color="#F5A623" style={{ flexShrink: 0 }} />
+                      <span>{feat}</span>
+                    </div>
+                  ))}
+                </div>
 
-                  <div className="d-flex gap-3 flex-wrap mt-4">
-                    <a
-                      href={`https://wa.me/918866616585?text=Hello%20Aptismech%2C%20I%20need%20${encodeURIComponent(srv.title)}.%20Please%20share%20details.`}
-                      target="_blank" rel="noreferrer"
-                      className="btn-brand"
-                      style={{ background: srv.color, borderColor: srv.color }}
-                    >
-                      <FaWhatsapp size={14} /> Inquire via WhatsApp
-                    </a>
-                    <Link to="/contact" className="btn-outline">
-                      Get Quote <FaArrowRight size={12} />
-                    </Link>
-                  </div>
+                <div className="d-flex gap-2 flex-wrap mb-4">
+                  {svc.applications.map((app, i) => (
+                    <span className="svc-app-tag" key={i}>{app}</span>
+                  ))}
+                </div>
+
+                <div className="d-flex gap-3 pt-3 border-top">
+                  <Link to="/products" className="btn-brand" style={{ fontSize: '0.8rem', padding: '10px 18px' }}>
+                    View Catalog <FaArrowRight size={11} />
+                  </Link>
+                  <a href={WA} target="_blank" rel="noreferrer" className="btn-outline" style={{ fontSize: '0.8rem', padding: '10px 18px' }}>
+                    <FaWhatsapp size={13} /> Quick RfQ
+                  </a>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
-
-    {/* WHY APTISMECH */}
-    <section style={{ padding: '90px 0', background: '#fff', borderTop: '1px solid var(--border)' }}>
-      <div className="container">
-        <div className="row justify-content-center text-center mb-5">
-          <div className="col-lg-6">
-            <span className="eyebrow">Service Advantages</span>
-            <h2 className="section-title">Why Partner With Aptismech?</h2>
-            <div className="rule center" />
-          </div>
-        </div>
-        <div className="row gy-4">
-          {[
-            { icon: '🎯', title: 'CAD-Driven Precision',  desc: 'Every CNC job is executed against verified CAD drawings with documented dimensional inspection reports.' },
-            { icon: '⏱️', title: 'Fast Turnaround',      desc: 'Our Vavdi Industrial Hub location ensures rapid material sourcing, reduced lead times, and efficient dispatch.' },
-            { icon: '🤝', title: 'Trusted Wholesale',    desc: 'Established non-ferrous scrap trading operations with certified processing and competitive bulk pricing.' },
-            { icon: '🔧', title: 'End-to-End Support',  desc: 'From initial inquiry to after-delivery technical support — our engineering team is available at every step.' },
-            { icon: '📋', title: 'Documented Quality',  desc: 'Material test reports, dimensional inspection certificates, and delivery documentation for every order.' },
-            { icon: '📞', title: 'Direct Technical Access', desc: 'Speak directly with our technical partners — no call centers. Real engineers, real answers.' },
-          ].map((item, i) => (
-            <div className="col-lg-4 col-md-6" key={i}>
-              <div className="why-card">
-                <span className="why-icon">{item.icon}</span>
-                <h5 className="why-title">{item.title}</h5>
-                <p className="why-text">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* CTA */}
-    <section style={{ background: 'var(--navy)', padding: '80px 0', borderTop: '4px solid var(--orange)' }}>
-      <div className="container text-center">
-        <h2 style={{ fontFamily: 'Barlow', fontWeight: 900, color: '#fff', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', marginBottom: '1rem' }}>
-          Ready to Partner With Us?
-        </h2>
-        <p style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'Inter', marginBottom: '2rem', maxWidth: 520, margin: '0 auto 2rem', fontSize: '0.93rem' }}>
-          Whether you need precision CNC components, bulk scrap trading, or machine maintenance — Aptismech is your reliable industrial partner.
-        </p>
-        <div className="d-flex gap-3 justify-content-center flex-wrap">
-          <a href={WA} target="_blank" rel="noreferrer" className="btn-brand">
-            <FaWhatsapp size={14} /> WhatsApp Now
-          </a>
-          <Link to="/contact" className="btn-outline-white">
-            Full Contact Details <FaArrowRight size={12} />
-          </Link>
         </div>
       </div>
     </section>

@@ -37,7 +37,7 @@ const Navbar = () => {
           <div className="d-flex justify-content-between align-items-center">
             <span className="top-bar-text d-flex align-items-center gap-2">
               <FaMapMarkerAlt size={10} color="#F5A623" />
-              Vavdi Industrial Area, Rajkot-360004, Gujarat
+              Vavdi Industrial Area, Rajkot-360004, Gujarat · Importer, Supplier & Exporter
             </span>
             <div className="d-flex gap-4 align-items-center">
               <a href="mailto:AptisMech.Corporation.llp@gmail.com">
@@ -45,7 +45,7 @@ const Navbar = () => {
               </a>
               <a href="tel:+917046500555"><FaPhone size={10} /> +91 70465 00555</a>
               <a
-                href="https://wa.me/918866616585?text=Hello%20Aptismech%2C%20I%20would%20like%20to%20request%20a%20quotation."
+                href="https://wa.me/918866616585?text=Hello%20AptisMech%20Corporation%2C%20I%20would%20like%20to%20request%20a%20quotation."
                 target="_blank" rel="noreferrer"
                 style={{ color: '#25D366' }}
               >
@@ -60,20 +60,13 @@ const Navbar = () => {
       <nav className={`aptis-navbar${scrolled ? ' scrolled' : ''}`}>
         <div className="aptis-navbar-inner container">
 
-          {/* Brand with Official 3D Logo */}
+          {/* Brand with Official Transparent 3D Logo */}
           <Link to="/" className="navbar-brand-wrapper" onClick={close}>
             <img
               src={`${process.env.PUBLIC_URL}/images/logo.png`}
               alt="AptisMech Corporation LLP"
               className="brand-logo-img"
-              onError={(e) => {
-                e.currentTarget.style.display = 'none';
-                if (e.currentTarget.nextElementSibling) {
-                  e.currentTarget.nextElementSibling.style.display = 'flex';
-                }
-              }}
             />
-            <div className="brand-logo-fallback" style={{ display: 'none' }}>AM</div>
             <div>
               <span className="brand-text-main">APTISMECH</span>
               <span className="brand-text-sub">Corporation LLP</span>
@@ -121,13 +114,13 @@ const Navbar = () => {
             <img
               src={`${process.env.PUBLIC_URL}/images/logo.png`}
               alt="AptisMech Logo"
-              style={{ height: 34, width: 'auto', borderRadius: 4 }}
+              style={{ height: 38, width: 'auto' }}
             />
             <div>
               <span style={{ fontFamily: 'Barlow, sans-serif', fontWeight: 900, color: '#fff', fontSize: '1rem', letterSpacing: 1, display: 'block', lineHeight: 1 }}>
                 APTISMECH
               </span>
-              <span style={{ fontSize: '0.52rem', color: 'var(--orange)', letterSpacing: 2, textTransform: 'uppercase', fontFamily: 'Inter' }}>
+              <span style={{ fontSize: '0.55rem', color: 'var(--orange)', letterSpacing: 2, textTransform: 'uppercase', fontFamily: 'Inter' }}>
                 Corporation LLP
               </span>
             </div>
@@ -154,17 +147,20 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Drawer footer */}
+        {/* Drawer footer with partner direct phones */}
         <div className="mobile-drawer-footer">
           <a href="tel:+917046500555" className="mobile-quick-contact">
-            <FaPhone size={12} /> +91 70465 00555
+            <FaPhone size={12} /> Mr. Ankit: +91 70465 00555
+          </a>
+          <a href="tel:+918866616585" className="mobile-quick-contact">
+            <FaPhone size={12} /> Mr. Mayurbhai: +91 88666 16585
           </a>
           <a
             href="https://wa.me/918866616585"
             target="_blank" rel="noreferrer"
             className="mobile-quick-contact wa"
           >
-            <FaWhatsapp size={13} /> WhatsApp
+            <FaWhatsapp size={13} /> WhatsApp Direct
           </a>
         </div>
       </div>
