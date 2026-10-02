@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import {
   FaWhatsapp, FaArrowRight, FaCheckCircle,
   FaTimes, FaExpand, FaTable, FaPhoneAlt,
-  FaLayerGroup
+  FaLayerGroup, FaSearch, FaBolt
 } from 'react-icons/fa';
 import { productsData, categoriesConfig } from '../data/productsData';
 import { ProductCardSkeleton } from '../components/SkeletonLoader';
@@ -38,9 +38,10 @@ const ProductImage = ({ src, alt, className = '' }) => {
   );
 };
 
-/* ── Product Details Modal (Image on TOP, Description & Specs UNDERNEATH) ── */
-const ProductModal = ({ product, onClose }) => {
+/* ── Product Details Modal (With Related / Relevant Products) ── */
+const ProductModal = ({ product, onSelectProduct, onClose }) => {
   const [activeTab, setActiveTab] = useState('overview');
+  const modalBodyRef = useRef(null);
 
   useEffect(() => {
     const handleKey = (e) => { if (e.key === 'Escape') onClose(); };
@@ -50,14 +51,27 @@ const ProductModal = ({ product, onClose }) => {
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
+    if (modalBodyRef.current) {
+      modalBodyRef.current.scrollTop = 0;
+    }
     return () => { document.body.style.overflow = ''; };
-  }, []);
+  }, [product]);
+
+  // Compute 3 relevant / related products from same category or complementary range
+  const relatedProducts = useMemo(() => {
+    const sameCat = productsData.filter(p => p.id !== product.id && p.category === product.category);
+    if (sameCat.length >= 3) {
+      return sameCat.slice(0, 3);
+    }
+    const otherProducts = productsData.filter(p => p.id !== product.id && p.category !== product.category);
+    return [...sameCat, ...otherProducts].slice(0, 3);
+  }, [product]);
 
   const waLink = `https://wa.me/918866616585?text=Hello%20AptisMech%20Corporation%2C%20I%20am%20interested%20in%20"${encodeURIComponent(product.title)}"%20(Model%20Ref:%20${product.id}).%20Please%20share%20quotation%2C%20lead%20time%2C%20and%20technical%20specs.`;
 
   return (
     <div className="product-modal-backdrop" onClick={onClose}>
-      <div className="product-modal" onClick={e => e.stopPropagation()}>
+      <div className="product-modal" onClick={e => e.stopPropagation()} ref={modalBodyRef}>
         
         {/* Modal Header */}
         <div className="modal-header-bar">
@@ -101,7 +115,7 @@ const ProductModal = ({ product, onClose }) => {
                 className={`tab-btn ${activeTab === 'overview' ? 'active' : ''}`}
                 onClick={() => setActiveTab('overview')}
               >
-                Overview & Engineering
+                Overview &amp; Engineering
               </button>
               <button
                 className={`tab-btn ${activeTab === 'specs' ? 'active' : ''}`}
@@ -139,6 +153,9 @@ const ProductModal = ({ product, onClose }) => {
             <div className="modal-table-container">
               <div className="modal-section-head">Model Technical Specification Matrix</div>
               <p className="text-muted small mb-2">{product.specTable.title}</p>
+              <div className="mobile-table-hint d-md-none">
+                👉 Swipe table horizontally to see all models &amp; specs
+              </div>
               <div className="table-responsive">
                 <table className="modal-spec-table">
                   <thead>
@@ -170,7 +187,7 @@ const ProductModal = ({ product, onClose }) => {
               rel="noreferrer"
               className="btn-brand modal-wa-btn"
             >
-              <FaWhatsapp size={17} /> Request Quotation & Specs via WhatsApp
+              <FaWhatsapp size={17} /> Request Quotation &amp; Specs via WhatsApp
             </a>
             <a
               href="tel:+917046500555"
@@ -180,6 +197,37 @@ const ProductModal = ({ product, onClose }) => {
             </a>
           </div>
 
+          {/* ════ RELEVANT / RELATED PRODUCTS SECTION ════ */}
+          {relatedProducts.length > 0 && (
+            <div className="modal-related-section">
+              <div className="modal-section-head mb-3">
+                <FaBolt size={13} color="#F5A623" className="me-2" />
+                Related Machinery &amp; Complementary Products
+              </div>
+              <div className="row g-3">
+                {relatedProducts.map(rel => (
+                  <div className="col-md-4 col-12" key={rel.id}>
+                    <div
+                      className="related-prod-card"
+                      onClick={() => onSelectProduct(rel)}
+                    >
+                      <div className="related-prod-img-wrap">
+                        <ProductImage src={rel.image} alt={rel.title} className="related-prod-img" />
+                      </div>
+                      <div className="related-prod-info">
+                        <span className="related-prod-cat">{rel.categoryName}</span>
+                        <h4 className="related-prod-title">{rel.title}</h4>
+                        <span className="related-prod-btn">
+                          View Details <FaArrowRight size={10} />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
         </div>
 
       </div>
@@ -187,11 +235,18 @@ const ProductModal = ({ product, onClose }) => {
   );
 };
 
-/* ── Main Products Page (Category-Divided Sections) ── */
+/* ── Main Products Page (With Real-Time Search & Category Grouping) ── */
 export default function Products() {
   const [selectedCat, setSelectedCat] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // Popular search keywords
+  const popularSearches = [
+    'Ironworker', 'Hydraulic Press', 'CRC Sheets', 'MS Coils',
+    'SS 304', 'Busbar Bending', 'Drill Machine', 'Eye Bolts', 'Induction Motors', 'Copper Scrap'
+  ];
 
   const handleCatSelect = (catId) => {
     if (catId === selectedCat) return;
@@ -205,30 +260,104 @@ export default function Products() {
           el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
-    }, 200);
+    }, 150);
   };
 
-  const displayedCategories = selectedCat === 'all'
-    ? categoriesConfig
-    : categoriesConfig.filter(c => c.id === selectedCat);
+  // Smart Search Matching Algorithm
+  const filteredProducts = useMemo(() => {
+    const q = searchQuery.toLowerCase().trim();
+    if (!q) {
+      if (selectedCat === 'all') return productsData;
+      return productsData.filter(p => p.category === selectedCat);
+    }
+
+    return productsData.filter(p => {
+      const matchCat = selectedCat === 'all' || p.category === selectedCat;
+      if (!matchCat) return false;
+
+      const titleMatch = p.title.toLowerCase().includes(q);
+      const subMatch = p.subtitle?.toLowerCase().includes(q);
+      const catMatch = p.categoryName.toLowerCase().includes(q);
+      const tagMatch = p.tag.toLowerCase().includes(q);
+      const badgeMatch = p.badge?.toLowerCase().includes(q);
+      const descMatch = p.shortDesc.toLowerCase().includes(q) || p.fullDesc.toLowerCase().includes(q);
+      const featuresMatch = p.features?.some(f => f.toLowerCase().includes(q));
+      const specsMatch = p.specs?.some(s => s.label.toLowerCase().includes(q) || s.value.toLowerCase().includes(q));
+      const appMatch = p.applications?.some(a => a.toLowerCase().includes(q));
+      const tableMatch = p.specTable?.rows?.some(row => row.some(cell => cell.toLowerCase().includes(q)));
+
+      return titleMatch || subMatch || catMatch || tagMatch || badgeMatch || descMatch || featuresMatch || specsMatch || appMatch || tableMatch;
+    });
+  }, [searchQuery, selectedCat]);
+
+  // Suggested products if search yields few or 0 results
+  const suggestedProducts = useMemo(() => {
+    if (!searchQuery.trim() || filteredProducts.length >= 4) return [];
+    const ids = new Set(filteredProducts.map(p => p.id));
+    return productsData.filter(p => !ids.has(p.id)).slice(0, 3);
+  }, [searchQuery, filteredProducts]);
 
   return (
     <>
       {/* ════ HERO HEADER ════ */}
       <section className="page-hero">
         <div className="container">
-          <span className="page-hero-eyebrow">Manufacturing & Industrial Supply</span>
+          <span className="page-hero-eyebrow">Manufacturing &amp; Industrial Supply</span>
           <h1 className="page-hero-title">Industrial Product Catalog</h1>
           <p className="page-hero-desc">
-            Explore complete range of Industrial Machinery, Workshop Tools, Raw Materials & Hardware Spares manufactured and supplied by AptisMech Corporation LLP.
-            Categorized below: heavy fabrication machinery, precision mounts, industrial hardware, CNC tooling, electric motors, and metal scrap solutions.
+            Explore our complete catalog of Heavy Industrial Machinery, Workshop Equipment, Prime Raw Materials (CRC, MS &amp; SS Coils), Precision Machined Spares, and Metal Scrap Solutions based in Rajkot, Gujarat.
           </p>
         </div>
       </section>
 
-      {/* ════ CATEGORY STICKY JUMP BAR ════ */}
+      {/* ════ SEARCH & CATEGORY FILTER CONTROL HUB ════ */}
       <section className="cat-sticky-bar">
         <div className="container">
+          
+          {/* 1. Live Instant Search Bar */}
+          <div className="search-bar-wrapper">
+            <div className="search-input-box">
+              <FaSearch className="search-icon" />
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Search by machine model, CRC sheets, SS 304, eye bolts, motors..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              {searchQuery && (
+                <button
+                  className="search-clear-btn"
+                  onClick={() => setSearchQuery('')}
+                  aria-label="Clear search"
+                >
+                  <FaTimes size={14} />
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* 2. Popular Search Suggestion Pills */}
+          {!searchQuery && (
+            <div className="popular-search-row">
+              <span className="popular-label">
+                <FaBolt size={11} color="#F5A623" /> Quick Search:
+              </span>
+              <div className="popular-tags-scroll">
+                {popularSearches.map((tag) => (
+                  <button
+                    key={tag}
+                    className="popular-tag-btn"
+                    onClick={() => setSearchQuery(tag)}
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 3. Category Filter Tabs */}
           <div className="cat-pills-wrap">
             <button
               className={`cat-tab-pill${selectedCat === 'all' ? ' active' : ''}`}
@@ -254,53 +383,121 @@ export default function Products() {
               );
             })}
           </div>
+
+          {/* Active Search Result Status Banner */}
+          {searchQuery && (
+            <div className="search-status-bar">
+              <span>
+                Found <strong>{filteredProducts.length}</strong> matching product{filteredProducts.length === 1 ? '' : 's'} for "<em>{searchQuery}</em>"
+              </span>
+              <button className="search-reset-link" onClick={() => setSearchQuery('')}>
+                Reset Search
+              </button>
+            </div>
+          )}
+
         </div>
       </section>
 
-      {/* ════ CATEGORY-DIVIDED CATALOG SECTIONS ════ */}
+      {/* ════ CATALOG CONTENT WRAPPER ════ */}
       <div className="catalog-content-wrapper">
         <div className="container">
 
           {loading ? (
-            <div className="row gy-4 py-5">
+            <div className="row gy-4 py-4">
               {Array.from({ length: 6 }).map((_, idx) => (
                 <div className="col-lg-4 col-md-6" key={idx}>
                   <ProductCardSkeleton />
                 </div>
               ))}
             </div>
-          ) : (
-            displayedCategories.map(cat => {
-              const catProducts = productsData.filter(p => p.category === cat.id);
-              if (catProducts.length === 0) return null;
-
-              return (
-                <section key={cat.id} id={`cat-sec-${cat.id}`} className="category-section-block">
-                  
-                  {/* Category Section Header Banner */}
-                  <div className="category-section-header">
-                    <div className="cat-header-left">
-                      <div className="cat-header-icon-box">{cat.icon}</div>
-                      <div>
-                        <div className="d-flex align-items-center gap-2 flex-wrap">
-                          <span className="cat-header-badge">{cat.badge}</span>
-                          <span className="cat-header-count">{catProducts.length} Items</span>
+          ) : filteredProducts.length === 0 ? (
+            /* No Results Found State */
+            <div className="no-results-card text-center py-5">
+              <div className="no-results-icon mb-3">🔍</div>
+              <h3 className="no-results-title">No Exact Matches Found</h3>
+              <p className="no-results-desc mx-auto">
+                We couldn't find any products matching "<strong>{searchQuery}</strong>". Try checking the spelling or browse our key categories.
+              </p>
+              <div className="d-flex gap-2 justify-content-center flex-wrap mt-4">
+                <button className="btn-brand" onClick={() => setSearchQuery('')}>
+                  View All {productsData.length} Products
+                </button>
+                <a
+                  href={`https://wa.me/918866616585?text=Hello%20AptisMech%2C%20I%20am%20looking%20for%20a%20specific%20product%3A%20${encodeURIComponent(searchQuery)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-outline"
+                >
+                  <FaWhatsapp size={14} /> Inquire via WhatsApp
+                </a>
+              </div>
+            </div>
+          ) : searchQuery.trim() !== '' ? (
+            /* Search Results Grid View */
+            <div className="search-results-section">
+              <div className="row gy-4">
+                {filteredProducts.map(p => (
+                  <div className="col-lg-4 col-md-6 col-12" key={p.id}>
+                    <div
+                      className="product-card"
+                      onClick={() => setSelectedProduct(p)}
+                    >
+                      <div className="product-card-img-wrap">
+                        <ProductImage
+                          src={p.image}
+                          alt={p.title}
+                          className="product-card-img"
+                        />
+                        <span className="product-badge">{p.badge}</span>
+                        <div className="product-overlay">
+                          <span><FaExpand size={13} className="me-1" /> View Full Specifications</span>
                         </div>
-                        <h2 className="cat-section-title">{cat.name}</h2>
-                        <p className="cat-section-desc">{cat.desc}</p>
+                      </div>
+
+                      <div className="product-card-body">
+                        <span className="prod-tag">{p.tag}</span>
+                        <h3 className="product-card-title">{p.title}</h3>
+                        <p className="product-card-sub">{p.subtitle}</p>
+                        <p className="product-card-desc">{p.shortDesc}</p>
+
+                        <div className="product-card-specs">
+                          {p.specs.slice(0, 3).map((s, i) => (
+                            <div className="product-spec-badge" key={i}>
+                              <span className="spec-badge-val">{s.value}</span>
+                            </div>
+                          ))}
+                        </div>
+
+                        <button
+                          className="btn-card-action"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedProduct(p);
+                          }}
+                        >
+                          View Specifications <FaArrowRight size={11} />
+                        </button>
                       </div>
                     </div>
                   </div>
+                ))}
+              </div>
 
-                  {/* 3-Column Card Grid for this Category */}
+              {/* Complementary Suggestions if limited search matches */}
+              {suggestedProducts.length > 0 && (
+                <div className="mt-5 pt-4 border-top">
+                  <h4 className="suggested-heading mb-3">
+                    <FaBolt size={14} color="#F5A623" className="me-2" />
+                    Recommended Complementary Equipment &amp; Materials
+                  </h4>
                   <div className="row gy-4">
-                    {catProducts.map(p => (
-                      <div className="col-lg-4 col-md-6" key={p.id}>
+                    {suggestedProducts.map(p => (
+                      <div className="col-lg-4 col-md-6 col-12" key={`sugg-${p.id}`}>
                         <div
                           className="product-card"
                           onClick={() => setSelectedProduct(p)}
                         >
-                          {/* Image Box with Enhanced Hover */}
                           <div className="product-card-img-wrap">
                             <ProductImage
                               src={p.image}
@@ -308,35 +505,12 @@ export default function Products() {
                               className="product-card-img"
                             />
                             <span className="product-badge">{p.badge}</span>
-                            <div className="product-overlay">
-                              <span><FaExpand size={13} className="me-1" /> View Full Specifications</span>
-                            </div>
                           </div>
-
-                          {/* Card Body */}
                           <div className="product-card-body">
                             <span className="prod-tag">{p.tag}</span>
                             <h3 className="product-card-title">{p.title}</h3>
                             <p className="product-card-sub">{p.subtitle}</p>
-                            <p className="product-card-desc">{p.shortDesc}</p>
-
-                            {/* Specs Tags */}
-                            <div className="product-card-specs">
-                              {p.specs.slice(0, 3).map((s, i) => (
-                                <div className="product-spec-badge" key={i}>
-                                  <span className="spec-badge-val">{s.value}</span>
-                                </div>
-                              ))}
-                            </div>
-
-                            {/* Action Button */}
-                            <button
-                              className="btn-card-action"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setSelectedProduct(p);
-                              }}
-                            >
+                            <button className="btn-card-action mt-auto">
                               View Specifications <FaArrowRight size={11} />
                             </button>
                           </div>
@@ -344,10 +518,87 @@ export default function Products() {
                       </div>
                     ))}
                   </div>
+                </div>
+              )}
+            </div>
+          ) : (
+            /* Standard Categorized View */
+            categoriesConfig
+              .filter(c => selectedCat === 'all' || c.id === selectedCat)
+              .map(cat => {
+                const catProducts = productsData.filter(p => p.category === cat.id);
+                if (catProducts.length === 0) return null;
 
-                </section>
-              );
-            })
+                return (
+                  <section key={cat.id} id={`cat-sec-${cat.id}`} className="category-section-block">
+                    
+                    {/* Category Section Header Banner */}
+                    <div className="category-section-header">
+                      <div className="cat-header-left">
+                        <div className="cat-header-icon-box">{cat.icon}</div>
+                        <div>
+                          <div className="d-flex align-items-center gap-2 flex-wrap">
+                            <span className="cat-header-badge">{cat.badge}</span>
+                            <span className="cat-header-count">{catProducts.length} Items</span>
+                          </div>
+                          <h2 className="cat-section-title">{cat.name}</h2>
+                          <p className="cat-section-desc">{cat.desc}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 3-Column Responsive Grid */}
+                    <div className="row gy-4">
+                      {catProducts.map(p => (
+                        <div className="col-lg-4 col-md-6 col-12" key={p.id}>
+                          <div
+                            className="product-card"
+                            onClick={() => setSelectedProduct(p)}
+                          >
+                            <div className="product-card-img-wrap">
+                              <ProductImage
+                                src={p.image}
+                                alt={p.title}
+                                className="product-card-img"
+                              />
+                              <span className="product-badge">{p.badge}</span>
+                              <div className="product-overlay">
+                                <span><FaExpand size={13} className="me-1" /> View Full Specifications</span>
+                              </div>
+                            </div>
+
+                            <div className="product-card-body">
+                              <span className="prod-tag">{p.tag}</span>
+                              <h3 className="product-card-title">{p.title}</h3>
+                              <p className="product-card-sub">{p.subtitle}</p>
+                              <p className="product-card-desc">{p.shortDesc}</p>
+
+                              <div className="product-card-specs">
+                                {p.specs.slice(0, 3).map((s, i) => (
+                                  <div className="product-spec-badge" key={i}>
+                                    <span className="spec-badge-val">{s.value}</span>
+                                  </div>
+                                ))}
+                              </div>
+
+                              <button
+                                className="btn-card-action"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setSelectedProduct(p);
+                                }}
+                              >
+                                View Specifications <FaArrowRight size={11} />
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                  </section>
+                );
+              })
           )}
 
         </div>
@@ -357,6 +608,7 @@ export default function Products() {
       {selectedProduct && (
         <ProductModal
           product={selectedProduct}
+          onSelectProduct={(p) => setSelectedProduct(p)}
           onClose={() => setSelectedProduct(null)}
         />
       )}
