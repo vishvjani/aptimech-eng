@@ -1,10 +1,10 @@
 /* ================================================================
-   SERVICES PAGE — Streamlined & Punchy Design (No Boring Overdescription)
+   SERVICES PAGE — Streamlined & Punchy Design (100% Mobile Ready)
    AptisMech Corporation LLP
    ================================================================ */
 
 .services-section {
-  padding: 70px 0 90px;
+  padding: 70px 0 85px;
 }
 
 .division-card {
@@ -26,7 +26,7 @@
 }
 
 .division-icon-box {
-  width: 52px; height: 52px;
+  width: 50px; height: 50px;
   background: rgba(245, 166, 35, 0.12);
   border: 1px solid rgba(245, 166, 35, 0.3);
   border-radius: var(--r);
@@ -49,7 +49,7 @@
 
 .division-title {
   font-family: 'Barlow', sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--navy);
   margin-bottom: 2px;
@@ -65,7 +65,7 @@
 }
 
 .division-highlights {
-  margin: 1.4rem 0 1.6rem;
+  margin: 1.3rem 0 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -110,7 +110,7 @@
 .div-action-btn {
   flex: 1;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   padding: 11px 16px;
 }
 
@@ -137,15 +137,16 @@
 
 .cta-banner-title {
   font-family: 'Barlow', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.55rem;
   font-weight: 800;
   color: #fff;
   margin-bottom: 6px;
+  line-height: 1.2;
 }
 
 .cta-banner-desc {
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.78);
   line-height: 1.7;
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -161,7 +162,7 @@
   font-size: 0.78rem;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
-  padding: 6px 14px;
+  padding: 7px 14px;
   border-radius: 20px;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -173,7 +174,13 @@
 }
 
 @media (max-width: 768px) {
-  .division-card { padding: 1.5rem; }
-  .services-bottom-cta { padding: 1.6rem 1.4rem; }
+  .services-section { padding: 45px 0 60px; }
+  .division-card { padding: 1.4rem 1.1rem; }
+  .division-title { font-size: 1.22rem; }
+  .division-actions { flex-direction: column; }
   .div-action-btn { width: 100%; flex: auto; }
+  
+  .services-bottom-cta { padding: 1.6rem 1.2rem; border-left-width: 4px; }
+  .cta-banner-title { font-size: 1.35rem; }
+  .cta-phone-pill { width: 100%; justify-content: center; }
 }

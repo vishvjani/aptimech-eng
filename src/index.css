@@ -1,6 +1,6 @@
 /* ================================================================
    APTISMECH CORPORATION LLP — 2026 MINIMALIST INDUSTRIAL DESIGN SYSTEM
-   Modern, Clean, High-Precision Aesthetics
+   Modern, Clean, High-Precision Aesthetics & 100% Mobile Responsive
    ================================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
@@ -45,6 +45,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+html, body, #root, .App {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  width: 100%;
 }
 
 html {
@@ -58,7 +66,6 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 /* Typography Base */
@@ -66,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Barlow', sans-serif;
   color: var(--navy);
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 p {
@@ -82,27 +89,39 @@ a {
 /* Prevent auto-zoom on mobile inputs */
 input, select, textarea, button {
   font-size: 16px;
+  font-family: inherit;
+}
+
+/* ── Container Responsive Gutter ── */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }
 
 /* ── Section & Layout Utilities ── */
 .section {
-  padding: 85px 0;
+  padding: 80px 0;
   position: relative;
 }
 @media (max-width: 768px) {
-  .section { padding: 55px 0; }
+  .section { padding: 50px 0; }
+}
+@media (max-width: 480px) {
+  .section { padding: 40px 0; }
 }
 
 .section-title {
-  font-size: clamp(2rem, 3.8vw, 2.8rem);
+  font-size: clamp(1.6rem, 4.5vw, 2.6rem);
   font-weight: 800;
   color: var(--navy);
   margin-bottom: 0.8rem;
-  line-height: 1.15;
+  line-height: 1.18;
 }
 
 .section-sub {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
   max-width: 620px;
   line-height: 1.7;
@@ -128,7 +147,7 @@ input, select, textarea, button {
 /* ── Page Hero (Universal Clean 2026 Header) ── */
 .page-hero {
   background: linear-gradient(145deg, #051A40 0%, #0A3981 60%, #0d469b 100%);
-  padding: 130px 0 75px;
+  padding: 120px 0 70px;
   position: relative;
   overflow: hidden;
   border-bottom: 3px solid var(--orange);
@@ -160,22 +179,23 @@ input, select, textarea, button {
 }
 
 .page-hero-title {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-size: clamp(1.75rem, 5.5vw, 3.4rem);
   font-weight: 900;
   color: #fff;
-  line-height: 1.1;
+  line-height: 1.12;
   margin-bottom: 0.9rem;
 }
 
 .page-hero-desc {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.96rem;
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.75;
   max-width: 680px;
 }
 
 @media (max-width: 768px) {
-  .page-hero { padding: 95px 0 50px; }
+  .page-hero { padding: 85px 0 45px; }
+  .page-hero-desc { font-size: 0.88rem; line-height: 1.65; }
 }
 
 /* ── 2026 Modern Minimalist Buttons ── */
@@ -186,7 +206,7 @@ input, select, textarea, button {
   background: var(--orange);
   color: var(--navy-dark);
   font-family: 'Inter', sans-serif;
-  font-size: 0.84rem;
+  font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.4px;
   padding: 12px 24px;
@@ -213,7 +233,7 @@ input, select, textarea, button {
   background: transparent;
   color: var(--navy);
   font-family: 'Inter', sans-serif;
-  font-size: 0.84rem;
+  font-size: 0.85rem;
   font-weight: 700;
   padding: 11px 22px;
   border-radius: var(--r-pill);
@@ -235,7 +255,7 @@ input, select, textarea, button {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
   font-family: 'Inter', sans-serif;
-  font-size: 0.84rem;
+  font-size: 0.85rem;
   font-weight: 700;
   padding: 11px 22px;
   border-radius: var(--r-pill);
@@ -250,7 +270,14 @@ input, select, textarea, button {
   transform: translateY(-2px);
 }
 
-/* ── Floating WhatsApp Button (With Soft Breathing Animation) ── */
+@media (max-width: 576px) {
+  .btn-brand, .btn-outline, .btn-outline-white {
+    padding: 12px 18px;
+    font-size: 0.84rem;
+  }
+}
+
+/* ── Floating WhatsApp Button ── */
 .wa-float {
   position: fixed;
   bottom: 24px;
@@ -281,10 +308,10 @@ input, select, textarea, button {
 
 @media (max-width: 768px) {
   .wa-float {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
     bottom: 18px;
     right: 16px;
-    font-size: 1.45rem;
+    font-size: 1.4rem;
   }
 }
