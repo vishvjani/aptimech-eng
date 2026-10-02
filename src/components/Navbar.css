@@ -86,22 +86,23 @@
   margin-top: 2px;
 }
 
-/* Desktop Nav Links */
+/* Desktop Nav Links (Prominent & Legible) */
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .aptis-nav-link {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.84rem;
-  font-weight: 600;
+  font-family: 'Barlow', 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
   color: var(--navy);
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: var(--r-pill);
   transition: var(--transition);
 }
@@ -111,16 +112,18 @@
 }
 .aptis-nav-link.active {
   color: var(--navy);
-  background: rgba(10, 57, 129, 0.08);
-  font-weight: 700;
+  background: rgba(10, 57, 129, 0.1);
+  font-weight: 800;
 }
 
 .nav-cta-btn {
   background: var(--orange);
   color: var(--navy-dark) !important;
   font-weight: 800;
-  box-shadow: 0 3px 10px rgba(245, 166, 35, 0.25);
-  margin-left: 6px;
+  font-size: 0.95rem;
+  padding: 9px 22px;
+  box-shadow: 0 4px 14px rgba(245, 166, 35, 0.3);
+  margin-left: 8px;
 }
 .nav-cta-btn:hover {
   background: #f7b23b !important;
@@ -227,11 +230,12 @@
 }
 
 .mobile-nav-link {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
-  padding: 10px 16px;
+  font-family: 'Barlow', 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 12px 18px;
   border-radius: var(--r);
   transition: var(--transition);
 }

@@ -1,5 +1,6 @@
 /* ================================================================
-   CONTACT PAGE
+   CONTACT PAGE — Modern 2026 Minimalist Form & Contact Hub
+   AptisMech Corporation LLP
    ================================================================ */
 
 /* Contact info card */
@@ -7,19 +8,21 @@
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  padding: 14px 16px;
-  background: var(--off-white);
+  padding: 16px 18px;
+  background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--r-md);
   margin-bottom: 12px;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
 }
 .contact-info-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgba(245,166,35,0.3);
+  border-color: rgba(245, 166, 35, 0.4);
+  transform: translateY(-2px);
 }
 .contact-info-icon {
-  width: 40px; height: 40px;
+  width: 42px; height: 42px;
   background: var(--navy);
   border-radius: var(--r);
   display: flex;
@@ -28,22 +31,22 @@
   flex-shrink: 0;
 }
 .contact-info-label {
-  font-size: 0.65rem;
-  font-weight: 700;
+  font-size: 0.68rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: var(--text-muted);
+  color: var(--orange-dark);
   font-family: 'Inter', sans-serif;
   display: block;
   margin-bottom: 2px;
 }
 .contact-info-value {
-  font-size: 0.88rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--navy);
   font-family: 'Inter', sans-serif;
   display: block;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 .contact-link {
   text-decoration: none;
@@ -57,11 +60,16 @@
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--r-md);
-  padding: 1.2rem;
+  padding: 1.4rem;
   margin-bottom: 12px;
-  transition: box-shadow 0.2s ease;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
 }
-.contact-partner-card:hover { box-shadow: var(--shadow-md); }
+.contact-partner-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(245, 166, 35, 0.4);
+  transform: translateY(-2px);
+}
 
 .partner-card-header {
   display: flex;
@@ -72,26 +80,29 @@
 .partner-mini-avatar {
   width: 46px; height: 46px;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-  border-radius: var(--r-md);
+  border-radius: var(--r);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Barlow', sans-serif;
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--orange);
   flex-shrink: 0;
 }
 .partner-mini-name {
   font-family: 'Barlow', sans-serif;
-  font-size: 0.98rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--navy);
   line-height: 1.2;
 }
 .partner-mini-role {
   font-size: 0.72rem;
-  color: var(--text-muted);
+  font-weight: 700;
+  color: var(--orange-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
   font-family: 'Inter', sans-serif;
 }
 .partner-contact-row { display: flex; gap: 8px; flex-wrap: wrap; }
@@ -100,13 +111,13 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 700;
   font-family: 'Inter', sans-serif;
   color: var(--navy);
   background: var(--off-white);
   border: 1px solid var(--border);
-  padding: 6px 12px;
+  padding: 7px 14px;
   border-radius: var(--r);
   text-decoration: none;
   transition: all 0.2s ease;
@@ -117,8 +128,8 @@
   color: #fff;
 }
 .partner-wa-pill {
-  background: #e8fef0;
-  border-color: #b8f0cb;
+  background: rgba(37, 211, 102, 0.1);
+  border-color: rgba(37, 211, 102, 0.3);
   color: #1a7a3a;
 }
 .partner-wa-pill:hover {
@@ -127,7 +138,7 @@
   color: #fff;
 }
 
-/* Contact form card */
+/* ════ CONTACT FORM CARD & INPUTS (FIXED & 2026 SLEEK STYLED) ════ */
 .contact-form-card {
   background: #fff;
   border: 1px solid var(--border);
@@ -144,75 +155,93 @@
   height: 4px;
   background: var(--orange);
 }
+
 .contact-form-title {
   font-family: 'Barlow', sans-serif;
   font-weight: 900;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--navy);
   margin-bottom: 0.3rem;
 }
 .contact-form-sub {
-  font-size: 0.83rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
   font-family: 'Inter', sans-serif;
   margin-bottom: 1.8rem;
-  padding-bottom: 1.4rem;
+  padding-bottom: 1.2rem;
   border-bottom: 1px solid var(--border);
 }
+
+/* Field Labels */
+.field-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Field Inputs (Full-Width, Rounded, Modern Focus) */
+.field-input {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r);
+  transition: all 0.25s ease;
+  outline: none;
+}
+.field-input:focus {
+  background: #fff;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 4px rgba(10, 57, 129, 0.1);
+}
+.field-input::placeholder {
+  color: var(--text-light);
+  font-size: 0.88rem;
+}
+
+/* Select Dropdown */
+select.field-input {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230A3981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Textarea */
+textarea.field-input {
+  min-height: 110px;
+  line-height: 1.6;
+}
+
 .form-notice {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: #f0fdf4;
   border: 1px solid #b8f0cb;
   border-radius: var(--r);
-  padding: 10px 14px;
-  font-size: 0.8rem;
+  padding: 12px 16px;
+  font-size: 0.82rem;
   color: #1a7a3a;
   font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
-
-/* Map section */
-.map-wrapper {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-.map-header {
-  padding: 1.5rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.map-title {
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--navy);
-  margin-bottom: 0.2rem;
-}
-.map-subtitle {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-}
-.map-embed-container iframe { display: block; }
 
 @media (max-width: 768px) {
   .contact-form-card { padding: 1.5rem; }
-  .map-header { padding: 1rem 1.2rem; }
-}
-
-/* ── Mobile Responsive ── */
-@media (max-width: 768px) {
-  .contact-form-card { padding: 1.5rem; }
-  .map-header { padding: 1rem 1.2rem; }
   .partner-contact-row { flex-direction: column; }
   .partner-contact-pill { width: 100%; justify-content: center; }
 }
@@ -220,6 +249,5 @@
 @media (max-width: 480px) {
   .contact-info-card { padding: 12px; gap: 10px; }
   .contact-info-icon { width: 36px; height: 36px; }
-  .contact-form-title { font-size: 1.2rem; }
-  .partner-mini-avatar { width: 40px; height: 40px; font-size: 0.9rem; }
+  .contact-form-title { font-size: 1.3rem; }
 }
