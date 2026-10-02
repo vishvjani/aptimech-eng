@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   FaCheckCircle, FaAward, FaShieldAlt, FaCogs,
   FaArrowRight, FaWhatsapp, FaMapMarkerAlt, FaGlobeAsia,
-  FaPhoneAlt, FaEnvelope, FaExternalLinkAlt
+  FaPhoneAlt, FaExternalLinkAlt
 } from 'react-icons/fa';
 import './About.css';
 
@@ -16,24 +16,24 @@ export default function About() {
       <section className="page-hero">
         <div className="container">
           <span className="page-hero-eyebrow">AptisMech Corporation LLP</span>
-          <h1 className="page-hero-title">About Our Enterprise</h1>
+          <h1 className="page-hero-title">About AptisMech Corporation</h1>
           <p className="page-hero-desc">
             Premier Importer, Supplier &amp; Exporter of Heavy Industrial Machinery, Workshop Equipment, Industrial Raw Materials (CRC, MS &amp; SS Coils), and Certified Metal Scrap based in Rajkot, Gujarat.
           </p>
         </div>
       </section>
 
-      {/* ════ COMPANY OVERVIEW ════ */}
+      {/* ════ COMPANY PROFILE ════ */}
       <section className="section bg-white">
         <div className="container">
           <div className="row align-items-center gy-5">
             <div className="col-lg-6">
-              <span className="section-eyebrow">Enterprise Overview</span>
+              <span className="section-eyebrow">Company Profile</span>
               <h2 className="section-title mb-4">
                 Delivering Industrial Precision &amp; Certified Material Reliability
               </h2>
               <p className="lead-text mb-3">
-                <strong>AptisMech Corporation LLP</strong> is a distinguished industrial supply enterprise headquartered in Vavdi Industrial Area, Rajkot — the prominent engineering hub of Gujarat, India.
+                <strong>AptisMech Corporation LLP</strong> is a distinguished industrial supply partner headquartered in Vavdi Industrial Area, Rajkot — the prominent engineering hub of Gujarat, India.
               </p>
               <p className="body-text mb-3">
                 We specialize as an <strong>Importer, Supplier, and Exporter</strong> providing complete industrial solutions: Heavy Fabrication Machinery, Hydraulic Power Presses, Busbar Bending Machines, Radial Drills, Milling Equipment, Prime Industrial Raw Materials (CRC Sheets, MS Coils, SS Coils), Precision Machined Hardware Spares, and High-Purity Metal Scrap.
@@ -124,18 +124,19 @@ export default function About() {
         </div>
       </section>
 
-      {/* ════ LEADERSHIP & PARTNERS ════ */}
+      {/* ════ KEY PARTNERS & DIRECT CONTACTS ════ */}
       <section className="section bg-light">
         <div className="container">
           <div className="text-center max-w-700 mx-auto mb-5">
-            <span className="section-eyebrow">Enterprise Leadership</span>
-            <h2 className="section-title">Key Management &amp; Partners</h2>
+            <span className="section-eyebrow">Key Management</span>
+            <h2 className="section-title">Direct Partner Contacts</h2>
             <p className="section-sub">
-              Direct access to our partners for machinery procurement, raw material orders, and trade partnerships.
+              Connect directly with our partners on Call or WhatsApp for machinery inquiries and raw material procurement.
             </p>
           </div>
 
           <div className="row g-4 justify-content-center">
+            {/* Mr. Ankit Dholakiya */}
             <div className="col-md-5 col-12">
               <div className="partner-card">
                 <div className="partner-avatar">AD</div>
@@ -148,13 +149,19 @@ export default function About() {
                   <a href="tel:+917046500555" className="partner-link">
                     <FaPhoneAlt size={12} /> +91 70465 00555
                   </a>
-                  <a href="mailto:AptisMech.Corporation.llp@gmail.com" className="partner-link">
-                    <FaEnvelope size={12} /> Email Directly
+                  <a
+                    href="https://wa.me/917046500555?text=Hello%20Mr.%20Ankit%2C%20I%20would%20like%20to%20discuss%20an%20industrial%20requirement%20with%20AptisMech."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="partner-link partner-wa-link"
+                  >
+                    <FaWhatsapp size={13} /> WhatsApp Direct
                   </a>
                 </div>
               </div>
             </div>
 
+            {/* Mr. Mayurbhai Jani */}
             <div className="col-md-5 col-12">
               <div className="partner-card">
                 <div className="partner-avatar" style={{ background: 'var(--navy-dark)' }}>MJ</div>
@@ -167,7 +174,12 @@ export default function About() {
                   <a href="tel:+918866616585" className="partner-link">
                     <FaPhoneAlt size={12} /> +91 88666 16585
                   </a>
-                  <a href="https://wa.me/918866616585" target="_blank" rel="noreferrer" className="partner-link" style={{ color: '#25D366' }}>
+                  <a
+                    href="https://wa.me/918866616585?text=Hello%20Mr.%20Mayurbhai%2C%20I%20would%20like%20to%20discuss%20raw%20materials%20or%20spares%20with%20AptisMech."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="partner-link partner-wa-link"
+                  >
                     <FaWhatsapp size={13} /> WhatsApp Direct
                   </a>
                 </div>

@@ -168,7 +168,7 @@ const Contact = () => {
                           <input className="field-input" type="text" name="name" value={formData.name} onChange={handleChange} placeholder="e.g. Rajesh Patel" required />
                         </div>
                         <div className="col-md-6">
-                          <label className="field-label">Company / Enterprise *</label>
+                          <label className="field-label">Company Name *</label>
                           <input className="field-input" type="text" name="company" value={formData.company} onChange={handleChange} placeholder="e.g. Apex Engineering Works" required />
                         </div>
                         <div className="col-md-6">

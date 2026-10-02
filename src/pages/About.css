@@ -264,3 +264,16 @@
     grid-template-columns: 1fr;
   }
 }
+
+.partner-wa-link {
+  color: #25D366 !important;
+  background: rgba(37, 211, 102, 0.08) !important;
+  border-color: rgba(37, 211, 102, 0.3) !important;
+}
+.partner-wa-link:hover {
+  background: #25D366 !important;
+  color: #fff !important;
+  border-color: #25D366 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}

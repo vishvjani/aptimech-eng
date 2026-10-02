@@ -71,7 +71,7 @@ const Services = () => (
     {/* PAGE HERO */}
     <section className="page-hero">
       <div className="container text-center">
-        <span className="page-hero-eyebrow">Enterprise Divisions</span>
+        <span className="page-hero-eyebrow">Our Core Divisions</span>
         <h1 className="page-hero-title">Industrial Supply &amp; Machinery Portfolio</h1>
         <p className="page-hero-desc mx-auto">
           Comprehensive supply solutions across heavy fabrication machinery, industrial raw materials, precision hardware spares, and metal recycling.
